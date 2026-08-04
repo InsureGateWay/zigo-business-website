@@ -4,13 +4,11 @@ import {
   Phone, 
   Mail, 
   Clock, 
-  ArrowRight, 
   Send, 
   CheckCircle,
   Building2,
   Globe,
   Users,
-  MessageCircle,
   ShieldCheck,
   Zap,
   ChevronRight

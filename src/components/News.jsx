@@ -1,32 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Calendar, 
   ArrowRight, 
   Clock, 
-  Tag, 
-  User,
   ChevronLeft,
   ChevronRight,
-  TrendingUp,
-  Award,
-  Briefcase,
-  Globe,
-  Zap,
   MessageCircle,
   Share2,
-  Bookmark,
   Eye,
   X,
   Heart,
-  Send,
-  Link2,
-  ChevronDown
+  Link2
 } from 'lucide-react';
 
 function News() {
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredCard, setHoveredCard] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -294,8 +283,6 @@ function News() {
               <div
                 key={article.id}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
-                onMouseEnter={() => setHoveredCard(article.id)}
-                onMouseLeave={() => setHoveredCard(null)}
                 onClick={() => openModal(article)}
               >
                 <div className="relative overflow-hidden h-52">

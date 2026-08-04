@@ -8,10 +8,6 @@ import {
   Wifi,
   ArrowRight,
   CheckCircle,
-  TrendingUp,
-  Shield,
-  Zap,
-  Users,
   Globe
 } from 'lucide-react';
 

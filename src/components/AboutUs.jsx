@@ -4,7 +4,6 @@ import {
   Users, 
   Globe, 
   Target, 
-  Clock, 
   CheckCircle,
   ArrowRight,
   Shield,
@@ -13,10 +12,7 @@ import {
   Heart,
   Lightbulb,
   Handshake,
-  Rocket,
-  MapPin,
-  Phone,
-  Mail
+  Rocket
 } from 'lucide-react';
 
 function AboutUs() {
@@ -33,13 +29,15 @@ function AboutUs() {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const section = sectionRef.current;
+
+    if (section) {
+      observer.observe(section);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (section) {
+        observer.unobserve(section);
       }
     };
   }, []);

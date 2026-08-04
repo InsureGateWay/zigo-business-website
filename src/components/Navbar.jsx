@@ -10,15 +10,7 @@ import {
   Database,
   Shield,
   Users,
-  Zap,
-  Package,
-  BarChart3,
-  Factory,
-  Droplet,
-  Building2,
-  Landmark,
-  Wifi,
-  Grid
+  Zap
 } from 'lucide-react';
 
 function Navbar() {
@@ -172,13 +164,13 @@ function Navbar() {
 
                 <div className="space-y-1 ml-12">
                   {category.items.map((item, idx) => (
-                    <a
+                    <button
+                      type="button"
                       key={idx}
-                      href="#"
-                      className="block text-xs text-gray-500 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 px-2 py-1 rounded transition-all"
+                      className="block w-full text-left text-xs text-gray-500 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 px-2 py-1 rounded transition-all"
                     >
                       {item}
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -214,13 +206,13 @@ function Navbar() {
               ))}
             </div>
 
-            <a
-              href="#"
+            <button
+              type="button"
               className="flex items-center justify-center gap-2 text-sm text-[#7D582E] font-medium hover:bg-[#ECD5AB]/20 p-2 rounded-lg transition-all"
             >
               View All {title}
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -230,15 +222,15 @@ function Navbar() {
         <div className="flex items-center gap-6">
           <span className="text-xs text-gray-400">Need help?</span>
 
-          <a href="#" className="text-xs text-[#7D582E] hover:underline">
+          <Link to="/contact" className="text-xs text-[#7D582E] hover:underline">
             Contact Sales
-          </a>
+          </Link>
 
           <span className="text-xs text-gray-300">|</span>
 
-          <a href="#" className="text-xs text-[#7D582E] hover:underline">
+          <button type="button" className="text-xs text-[#7D582E] hover:underline">
             View Case Studies
-          </a>
+          </button>
         </div>
 
         <div className="flex items-center gap-2">
@@ -342,13 +334,13 @@ function Navbar() {
               {dropdownOpen === 'products' && (
                 <div className="absolute top-8 left-0 bg-white shadow-xl rounded-lg w-56 py-2 border border-gray-100">
                   {productItems.map((item, index) => (
-                    <a
+                    <button
+                      type="button"
                       key={index}
-                      href="#"
-                      className="block px-5 py-2.5 text-sm text-gray-600 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 transition-colors"
+                      className="block w-full text-left px-5 py-2.5 text-sm text-gray-600 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 transition-colors"
                     >
                       {item}
-                    </a>
+                    </button>
                   ))}
                 </div>
               )}
@@ -437,13 +429,13 @@ function Navbar() {
                       </div>
                       <div className="pl-8 space-y-1">
                         {category.items.map((item, idx) => (
-                          <a
+                          <button
+                            type="button"
                             key={idx}
-                            href="#"
-                            className="block py-1.5 text-xs text-gray-500 hover:text-[#7D582E]"
+                            className="block w-full text-left py-1.5 text-xs text-gray-500 hover:text-[#7D582E]"
                           >
                             {item}
-                          </a>
+                          </button>
                         ))}
                       </div>
                     </div>
@@ -473,13 +465,13 @@ function Navbar() {
               >
                 <div className="pl-4 space-y-1 mt-2 pb-2">
                   {productItems.map((item, index) => (
-                    <a
+                    <button
+                      type="button"
                       key={index}
-                      href="#"
-                      className="block py-2.5 px-4 text-sm text-gray-500 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 rounded-lg transition-colors"
+                      className="block w-full text-left py-2.5 px-4 text-sm text-gray-500 hover:text-[#7D582E] hover:bg-[#ECD5AB]/10 rounded-lg transition-colors"
                     >
                       {item}
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>

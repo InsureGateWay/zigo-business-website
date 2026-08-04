@@ -208,15 +208,15 @@ function Footer() {
               &copy; {currentYear} ZigoBiz LTD. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center gap-6">
-              <a href="#" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
+              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
+              </button>
+              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
+              </button>
+              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
                 Cookie Policy
-              </a>
+              </button>
             </div>
           </div>
         </div>
