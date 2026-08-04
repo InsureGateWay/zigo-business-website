@@ -1,38 +1,454 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ============================================
+   CONTACT PAGE - FLIP CARD & FORM STYLES
+   ============================================ */
+
+
+/* 3D Flip Card Styles */
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+
+/* Floating Animations */
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes float-delayed {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes float-delayed-2 {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float-delayed 3.5s ease-in-out infinite;
+}
+
+.animate-float-delayed-2 {
+    animation: float-delayed-2 4s ease-in-out infinite;
+}
+
+
+/* Contact Card Hover Effects */
+
+.contact-card {
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form Input Styles */
+
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    transform: scale(1.01);
+}
+
+
+/* Trust Badge Styles */
+
+.trust-badge {
+    transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+    background-color: #ECD5AB;
+    transform: translateY(-2px);
+}
+
+
+/* Map Overlay Card */
+
+.map-overlay-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Flip Card Adjustments */
+
+@media (max-width: 1024px) {
+    .flip-card-container {
+        height: 450px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card-container {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .flip-card-container {
+        height: 350px !important;
+    }
+}
+
+
+/* Glassmorphism Effect */
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Hover Scale Effect */
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+
+/* Smooth Transitions */
+
+.smooth-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Gradient Text */
+
+.gradient-text {
+    background: linear-gradient(135deg, #7D582E, #ECD5AB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Custom Scrollbar for Contact Form */
+
+.contact-form textarea::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-form textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb {
+    background: #ECD5AB;
+    border-radius: 10px;
+}
+
+.contact-form textarea::-webkit-scrollbar-thumb:hover {
+    background: #7D582E;
+}
+
+
+/* Loading State Animation */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+
+/* Success Animation */
+
+@keyframes successPop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-pop {
+    animation: successPop 0.5s ease-out;
+}
+
+
+/* Pulse Animation for Support Badge */
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.pulse-ring {
+    position: relative;
+}
+
+.pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 2px solid #7D582E;
+    animation: pulse-ring 1.5s ease-out infinite;
+}
+
+
+/* ============================================
+   FULL WIDTH SECTIONS - NO GAPS
+   ============================================ */
+
+
+/* Remove default padding from full-width sections */
+
+.full-width-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Ensure no extra spacing on newsletter section */
+
+.newsletter-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* Override any conflicting padding */
+
+.no-gap {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* Ensure containers inside full-width sections have proper padding */
+
+.full-width-section .container-inner {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/* Responsive adjustments for full-width sections */
+
+@media (max-width: 768px) {
+    .full-width-section .container-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .newsletter-section .container-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+
+/* ============================================
+   NEWSLETTER SECTION SPECIFIC STYLES
+   ============================================ */
+
+
+/* Newsletter section full width fix */
+
+.newsletter-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.newsletter-wrapper .newsletter-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+
+/* Ensure the newsletter background extends fully */
+
+.newsletter-bg {
+    width: 100%;
+    background-color: rgb(236, 213, 171);
+}
+
+
+/* ============================================
+   RESPONSIVE FIXES FOR ALL SECTIONS
+   ============================================ */
+
+
+/* Remove horizontal scroll */
+
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+
+/* Ensure all sections respect full width */
+
+section,
+footer,
+header {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Fix for any overflowing elements */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ============================================
+   ADDITIONAL UTILITY CLASSES
+   ============================================ */
+
+
+/* Center content within full-width sections */
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Remove padding from specific elements */
+
+.remove-padding {
+    padding: 0 !important;
+}
+
+
+/* Ensure proper spacing on mobile */
+
+@media (max-width: 640px) {
+    .container-inner {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
 }
