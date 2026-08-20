@@ -1,0 +1,416 @@
+import React, { useEffect, useRef, useState } from 'react';
+import { 
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Shield,
+  TrendingUp,
+  Zap,
+  Award,
+  GitBranch,
+  FileSearch,
+  Code,
+  Workflow,
+  Lightbulb,
+  BarChart3,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Globe,
+  Building
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+function ITConsulting() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = sectionRef.current;
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  const serviceCategories = [
+    {
+      icon: <FileSearch className="w-8 h-8" />,
+      title: "Business Analysis & Project Management",
+      description: "Effectively manage and modify projects with expert guidance",
+      items: [
+        "Requirements Management",
+        "Enterprise Analysis",
+        "Agile Project Management",
+        "Risk Management",
+        "Service Management"
+      ]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Quality Management",
+      description: "Ensure delivery of high-quality solutions",
+      items: [
+        "Quality Assurance Framework",
+        "Automated Testing",
+        "Performance Testing",
+        "Functional Testing",
+        "Change Management (Prosci ADKAR)"
+      ]
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Data & Technical Consultancy",
+      description: "Become data-driven and optimize your IT strategy",
+      items: [
+        "Data Governance Frameworks",
+        "Solution Architecture",
+        "Enterprise Analysis",
+        "Big Data Solutions",
+        "IT Strategy Consulting"
+      ]
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Industry & SME Expertise",
+      description: "Specialized expertise across multiple industries",
+      items: [
+        "Banking & Financial Services",
+        "Telecommunications",
+        "Oil & Gas",
+        "Manufacturing",
+        "SME Business Support"
+      ]
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Business Efficiency",
+      description: "Streamlined processes and improved operational performance"
+    },
+    {
+      icon: <Lightbulb className="w-6 h-6" />,
+      title: "Innovation",
+      description: "Cutting-edge solutions for digital transformation"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Risk Mitigation",
+      description: "Robust risk management strategies and compliance"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Client-Centric",
+      description: "Tailored solutions that meet your unique needs"
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Industry Expertise",
+      description: "Deep knowledge across multiple sectors"
+    }
+  ];
+
+  const industries = [
+    { name: "Banking & Finance", icon: <Building className="w-8 h-8" /> },
+    { name: "Telecommunications", icon: <Smartphone className="w-8 h-8" /> },
+    { name: "Oil & Gas", icon: <Globe className="w-8 h-8" /> },
+    { name: "Manufacturing", icon: <Building className="w-8 h-8" /> },
+    { name: "Public Sector", icon: <Building className="w-8 h-8" /> },
+    { name: "SMEs", icon: <Users className="w-8 h-8" /> }
+  ];
+
+  const caseStudies = [
+    {
+      title: "Digital Transformation Strategy",
+      description: "Developed comprehensive digital strategy for financial services institution"
+    },
+    {
+      title: "Business Process Optimization",
+      description: "Streamlined operations for improved efficiency and cost reduction"
+    },
+    {
+      title: "Data Governance Framework",
+      description: "Implemented enterprise-wide data governance for compliance and security"
+    },
+    {
+      title: "IT Strategy & Architecture",
+      description: "Designed scalable IT architecture for business growth and innovation"
+    }
+  ];
+
+  return (
+    <section ref={sectionRef} className="bg-white overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative bg-gradient-to-br from-[#7D582E] to-[#a87a4a] py-24 px-6">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzR2MkgyNHYtMmgxMnpNMzYgMjR2MkgyNHYtMmgxMnoiLz48L2c+PC9nPjwvc3ZnPg==')] bg-repeat" />
+        </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block mb-4">
+                <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full bg-white/20 text-white backdrop-blur-sm">
+                  IT Consulting & Advisory
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-4">
+                Client-Centric
+                <br />
+                <span className="font-bold">Consultancy Services</span>
+              </h1>
+              <p className="text-lg text-white/80 max-w-xl font-light mb-6">
+                We collaborate closely with your business to understand your unique challenges and goals, delivering tailored consultancy services that drive tangible improvements in efficiency, innovation, and sustainable growth.
+              </p>
+              <Link to="/contact">
+                <button className="bg-white text-[#7D582E] px-8 py-3 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 flex items-center gap-2">
+                  Schedule a Free Consultation
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </Link>
+            </div>
+            <div className="hidden lg:flex justify-center">
+              <div className="relative w-80 h-80">
+                <div className="absolute inset-0 bg-white/10 rounded-full backdrop-blur-sm border border-white/20"></div>
+                <div className="absolute inset-8 bg-white/5 rounded-full border border-white/10"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Users className="w-32 h-32 text-white/90" strokeWidth={1} />
+                </div>
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#ECD5AB] rounded-xl flex items-center justify-center shadow-lg">
+                  <FileSearch className="w-8 h-8 text-[#7D582E]" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#ECD5AB] rounded-xl flex items-center justify-center shadow-lg">
+                  <Shield className="w-8 h-8 text-[#7D582E]" />
+                </div>
+                <div className="absolute top-1/2 -right-8 -translate-y-1/2 w-16 h-16 bg-[#ECD5AB] rounded-xl flex items-center justify-center shadow-lg">
+                  <Database className="w-8 h-8 text-[#7D582E]" />
+                </div>
+                <div className="absolute top-1/2 -left-8 -translate-y-1/2 w-16 h-16 bg-[#ECD5AB] rounded-xl flex items-center justify-center shadow-lg">
+                  <Network className="w-8 h-8 text-[#7D582E]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Categories */}
+      <div className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-semibold tracking-widest uppercase text-[#7D582E]">
+              Our Competencies
+            </span>
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-4">
+              Comprehensive <span className="font-bold text-[#7D582E]">Consultancy</span>
+            </h2>
+            <p className="text-gray-500 text-lg font-light">
+              Expertise across business analysis, quality management, data consultancy, and industry knowledge
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceCategories.map((service, index) => (
+              <div
+                key={index}
+                className={`group bg-white rounded-2xl border border-gray-100 p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-14 h-14 rounded-xl bg-[#ECD5AB]/20 flex items-center justify-center transition-all duration-300 group-hover:bg-[#ECD5AB] group-hover:scale-110">
+                      <div className="text-[#7D582E]">
+                        {service.icon}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm mb-4">
+                      {service.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {service.items.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-[#7D582E] flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Industries Section */}
+      <div className="bg-gray-50 py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Industries <span className="font-bold text-[#7D582E]">We Serve</span>
+            </h2>
+            <p className="text-gray-500 text-lg font-light">
+              Deep industry expertise across multiple sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className={`group text-center p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#ECD5AB] transition-all duration-300 hover:shadow-lg ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="flex justify-center mb-3">
+                  <div className="p-3 rounded-full bg-[#ECD5AB]/20 text-[#7D582E] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#ECD5AB]">
+                    {industry.icon}
+                  </div>
+                </div>
+                <span className="text-sm font-medium text-gray-700">{industry.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <div className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Why Choose Our <span className="font-bold text-[#7D582E]">Consultancy Services</span>
+            </h2>
+            <p className="text-gray-500 text-lg font-light">
+              Partner with us for strategic IT consulting and advisory
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl p-6 border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#ECD5AB]/20 flex items-center justify-center mb-4 text-[#7D582E]">
+                  {benefit.icon}
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">{benefit.title}</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Case Studies Section */}
+      <div className="bg-gray-50 py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              <span className="font-bold text-[#7D582E]">Case Studies</span>
+            </h2>
+            <p className="text-gray-500 text-lg font-light">
+              Real-world success stories from our consultancy engagements
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {caseStudies.map((study, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl p-8 border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#7D582E] flex items-center justify-center flex-shrink-0">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 mb-2">{study.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{study.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="relative bg-gradient-to-r from-[#7D582E] to-[#a87a4a] py-20 px-6">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNGRkZGRkYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzR2MkgyNHYtMmgxMnpNMzYgMjR2MkgyNHYtMmgxMnoiLz48L2c+PC9nPjwvc3ZnPg==')] bg-repeat" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-white/80 mb-8 font-light">
+            Let's discuss how our consultancy services can help you achieve your goals
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <button className="bg-white text-[#7D582E] px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 inline-flex items-center gap-2">
+                Schedule a Free Consultation
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
+            <Link to="/services">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white hover:text-[#7D582E] inline-flex items-center gap-2">
+                View All Services
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/70">
+            <span className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" /> Client-oriented
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" /> Independent
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" /> Competent
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" /> Results-driven
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default ITConsulting;
