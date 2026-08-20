@@ -2,25 +2,6 @@ import React from 'react';
 import { ArrowRight, Cloud, Database, Cpu, Shield } from 'lucide-react';
 
 function Hero() {
-  // Logo data
-  const logos = [
-    { name: 'Shell', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Shell_logo.svg/1200px-Shell_logo.svg.png' },
-    { name: 'Ericsson', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Ericsson_logo.svg/1200px-Ericsson_logo.svg.png' },
-    { name: 'MTN', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/MTN_Group_logo.svg/1200px-MTN_Group_logo.svg.png' },
-    { name: 'Agip', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Eni_logo.svg/1200px-Eni_logo.svg.png' },
-    { name: 'Nestle', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Nestl%C3%A9.svg/1200px-Nestl%C3%A9.svg.png' },
-    { name: 'Unilever', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Unilever_logo.svg/1200px-Unilever_logo.svg.png' },
-    { name: 'Coca-Cola', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Coca-Cola_logo.svg/1200px-Coca-Cola_logo.svg.png' },
-    { name: 'Pepsi', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Pepsi_logo.svg/1200px-Pepsi_logo.svg.png' },
-    { name: 'Samsung', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png' },
-    { name: 'Apple', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png' },
-    { name: 'Microsoft', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png' },
-    { name: 'Google', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png' },
-  ];
-
-  // Duplicate logos for seamless scrolling
-  const scrollingLogos = [...logos, ...logos, ...logos];
-
   return (
     <>
       {/* Desktop Layout */}
@@ -221,31 +202,6 @@ function Hero() {
                 <div className="text-[10px] text-gray-400 tracking-wider uppercase">Pros</div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Logo Strip - Animated Scroll Right to Left */}
-      <div className="w-full bg-gray-50 border-y border-gray-100 overflow-hidden py-4">
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-right-to-left whitespace-nowrap">
-            {scrollingLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 mx-8 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
-                style={{ minWidth: '120px' }}
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className="h-8 md:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.parentElement.innerHTML = `<span class="text-sm font-semibold text-gray-400">${logo.name}</span>`;
-                  }}
-                />
-              </div>
-            ))}
           </div>
         </div>
       </div>
