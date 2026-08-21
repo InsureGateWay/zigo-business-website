@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
+import ProductsShowcase from './components/ProductsShowcase';
 import Industries from './components/Industries';
 import WhyZigo from './components/WhyZigo';
 import AboutUs from './components/AboutUs';
@@ -39,6 +40,7 @@ function HomePage() {
     <>
       <Hero />
       <WhatWeDo />
+      <ProductsShowcase />
       <Industries />
       <WhyZigo />
       <News />
