@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, BriefcaseBusiness, Cloud, Database, Cpu, Shield, ShieldCheck, TrendingUp, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -21,44 +22,13 @@ function Hero() {
               <p className="text-xl md:text-2xl text-gray-500 font-light mb-6">
                 Creating Insights, Empowering Decisions
               </p>
-              <button className="bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2 mb-8">
-                Schedule a Free Consultation
+              <Link to="/contact" className="inline-flex bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 items-center gap-2 mb-8">
+                Book a Consultation
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed mb-12">
+              </Link>
+              <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed">
                 Zigo Business Solutions helps organizations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
               </p>
-              <div className="grid grid-cols-4 gap-8">
-                <div className="group">
-                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
-                    <BriefcaseBusiness className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
-                  </div>
-                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Business</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">First</div>
-                  <div className="text-xs text-gray-300">Goal-aligned solutions</div>
-                </div>
-                <div className="group">
-                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
-                    <ShieldCheck className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
-                  </div>
-                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Secure</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">By Design</div>
-                </div>
-                <div className="group">
-                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
-                    <TrendingUp className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
-                  </div>
-                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Scalable</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Foundations</div>
-                </div>
-                <div className="group">
-                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
-                    <Wrench className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
-                  </div>
-                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Practical</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Delivery</div>
-                </div>
-              </div>
             </div>
 
             {/* Right - Cloud with Data Flow */}
@@ -117,6 +87,24 @@ function Hero() {
                 </svg>
               </div>
             </div>
+          </div>
+          <div className="grid grid-cols-4 gap-4 rounded-2xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-5">
+            {[
+              { icon: BriefcaseBusiness, title: 'Business First', text: 'Goal-aligned solutions' },
+              { icon: ShieldCheck, title: 'Secure by Design', text: 'Protection from the start' },
+              { icon: TrendingUp, title: 'Scalable Foundations', text: 'Ready for sustainable growth' },
+              { icon: Wrench, title: 'Practical Delivery', text: 'Clear, usable outcomes' },
+            ].map(({ icon: Icon, title, text }) => (
+              <div key={title} className="flex items-center gap-3 border-r border-[#ECD5AB]/60 last:border-r-0 px-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#7D582E] shadow-sm">
+                  <Icon className="h-5 w-5" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{title}</p>
+                  <p className="text-xs text-gray-500">{text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -189,10 +177,10 @@ function Hero() {
             <p className="text-sm sm:text-base text-gray-500 font-light mb-3">
               Creating Insights, Empowering Decisions
             </p>
-            <button className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3">
-              Schedule a Free Consultation
+            <Link to="/contact" className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3 w-fit">
+              Book a Consultation
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
             <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto leading-relaxed mb-4">
               We help organizations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
             </p>

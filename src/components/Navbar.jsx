@@ -132,19 +132,11 @@ function Navbar() {
               Contact
             </Link>
 
-            <Link to="/contact">
-              <button
-                className="text-white px-6 xl:px-8 py-2 rounded-full text-sm font-medium transition-all hover:shadow-lg transform hover:scale-105"
-                style={{ backgroundColor: '#7D582E' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#6a4a26';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#7D582E';
-                }}
-              >
-                Get Started
-              </button>
+            <Link
+              to="/contact"
+              className="rounded-full bg-[#7D582E] px-6 py-2 text-sm font-medium text-white transition-all hover:scale-105 hover:bg-[#6a4a26] hover:shadow-lg xl:px-8"
+            >
+              Book a Consultation
             </Link>
           </div>
 
@@ -240,13 +232,12 @@ function Navbar() {
               Contact
             </Link>
 
-            <Link to="/contact" onClick={() => setIsOpen(false)}>
-              <button
-                className="w-full mt-4 text-white px-8 py-3 rounded-full text-sm font-medium transition-all hover:shadow-lg"
-                style={{ backgroundColor: '#7D582E' }}
-              >
-                Get Started
-              </button>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="mt-4 block w-full rounded-full bg-[#7D582E] px-8 py-3 text-center text-sm font-medium text-white transition-all hover:bg-[#6a4a26] hover:shadow-lg"
+            >
+              Book a Consultation
             </Link>
           </div>
         </div>

@@ -2,90 +2,66 @@ import React from 'react';
 import { ArrowRight, BarChart3, BrainCircuit, CloudCog } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const insights = [
+const challenges = [
   {
-    title: 'How AI Can Improve Everyday Business Operations',
-    description:
-      'Discover practical ways to automate repetitive work, improve customer service, and help your teams make faster decisions.',
+    title: 'Reduce repetitive work with practical AI',
+    description: 'Identify focused opportunities to automate routine tasks, support customer service, and help teams make faster decisions.',
     icon: BrainCircuit,
-    label: 'Artificial Intelligence',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&h=600&fit=crop&q=80',
+    label: 'AI & Automation',
   },
   {
-    title: 'Building a Secure and Scalable Cloud Environment',
-    description:
-      'Learn what to consider when moving business systems and data to the cloud without compromising security or reliability.',
+    title: 'Modernize without compromising security',
+    description: 'Plan cloud and infrastructure improvements that balance flexibility, reliability, cost, and protection.',
     icon: CloudCog,
     label: 'Cloud & Security',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&h=600&fit=crop&q=80',
   },
   {
-    title: 'Turning Business Data into Better Decisions',
-    description:
-      'See how clear reporting and analytics can reveal opportunities, reduce risk, and support confident business growth.',
+    title: 'Turn scattered data into clearer decisions',
+    description: 'Connect reporting and analytics so leaders can see performance, identify risk, and act with confidence.',
     icon: BarChart3,
     label: 'Data & Analytics',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&h=600&fit=crop&q=80',
   },
 ];
 
 function News() {
   return (
-    <section className="bg-white px-6 py-20">
+    <section className="bg-white px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span
-            className="inline-block rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-widest"
-            style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}
-          >
-            Business Technology Insights
-          </span>
-          <h2 className="mt-6 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
-            Insights for <span className="font-bold text-[#7D582E]">Growing Businesses</span>
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Where We Can Help</span>
+          <h2 className="mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
+            Challenges we help businesses <span className="font-bold text-[#7D582E]">solve</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-500">
-            Practical guidance to help your business use technology securely, efficiently, and with purpose.
+            Start with a pressing business challenge and build the right technology response around it.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {insights.map((insight) => {
-            const Icon = insight.icon;
+        <div className="grid gap-6 md:grid-cols-3">
+          {challenges.map(({ icon: Icon, title, description, label }, index) => (
+            <article key={title} className="relative overflow-hidden rounded-3xl border border-gray-100 bg-gray-50 p-8 transition-all hover:-translate-y-1 hover:border-[#ECD5AB] hover:shadow-xl">
+              <span className="absolute right-6 top-5 text-6xl font-bold text-[#ECD5AB]/35">0{index + 1}</span>
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#7D582E]">
+                <Icon className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
+              </div>
+              <p className="mt-7 text-xs font-semibold uppercase tracking-widest text-[#7D582E]">{label}</p>
+              <h3 className="mt-3 text-2xl font-semibold leading-snug text-gray-900">{title}</h3>
+              <p className="mt-4 leading-relaxed text-gray-500">{description}</p>
+              <Link to="/contact" className="mt-7 inline-flex items-center gap-2 font-semibold text-[#7D582E] hover:text-[#5f421f]">
+                Discuss this challenge
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+          ))}
+        </div>
 
-            return (
-              <article
-                key={insight.title}
-                className="group overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <img
-                    src={insight.image}
-                    alt=""
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-white/95 px-3 py-2 text-xs font-semibold text-[#7D582E] shadow-sm">
-                    <Icon className="h-4 w-4" />
-                    {insight.label}
-                  </div>
-                </div>
-
-                <div className="p-7">
-                  <h3 className="mb-3 text-xl font-bold leading-snug text-gray-900">
-                    {insight.title}
-                  </h3>
-                  <p className="mb-6 leading-relaxed text-gray-500">{insight.description}</p>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 font-semibold text-[#7D582E] transition-colors hover:text-[#5f421f]"
-                  >
-                    Talk to an expert
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </article>
-            );
-          })}
+        <div className="mt-14 rounded-3xl bg-[#faf7f2] px-6 py-10 text-center md:px-12">
+          <h3 className="text-2xl font-semibold text-gray-900">Have a different technology challenge?</h3>
+          <p className="mx-auto mt-3 max-w-2xl text-gray-500">Tell us what you are trying to improve, and we will help you identify a practical next step.</p>
+          <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6a4a26] hover:shadow-xl">
+            Book a Consultation
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>
