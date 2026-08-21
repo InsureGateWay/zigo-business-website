@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, Edit, Trash2, X, Briefcase, MapPin, Clock, ArrowRight, Upload, Check, ChevronLeft, ChevronRight, Send, User, Phone, Mail, Briefcase as BriefcaseIcon, Award, FileText, Globe, Linkedin } from 'lucide-react';
+import { Plus, Edit, Trash2, X, Briefcase, MapPin, Clock, ArrowRight, Upload, Check, ChevronLeft, ChevronRight, Send, User, Phone, Mail, Briefcase as BriefcaseIcon, Award, FileText, Globe } from 'lucide-react';
 
 function Careers() {
   const [jobs, setJobs] = useState([]);

@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
 import Industries from './components/Industries';
 import WhyZigo from './components/WhyZigo';
-import Feedback from './components/Feedback';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import News from './components/News';
@@ -34,7 +33,6 @@ function HomePage() {
       <WhatWeDo />
       <Industries />
       <WhyZigo />
-      <Feedback />
       <News />
     </>
   );
