@@ -1,225 +1,111 @@
 import React from 'react';
+import { ArrowRight, Clock, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  ArrowRight
-} from 'lucide-react';
+
+const quickLinks = [
+  { name: 'Home', to: '/' },
+  { name: 'About Us', to: '/about' },
+  { name: 'Services', to: '/services' },
+  { name: 'Contact', to: '/contact' },
+];
+
+const serviceLinks = [
+  { name: 'Data Services', to: '/services/data-services' },
+  { name: 'AI Services', to: '/services/ai-services' },
+  { name: 'Infrastructure Services', to: '/services/infrastructure-services' },
+  { name: 'Applications Services', to: '/services/applications-services' },
+  { name: 'Platform Services', to: '/services/platforms-services' },
+  { name: 'IT Consulting', to: '/services/it-consulting' },
+];
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const quickLinks = [
-    { name: 'Home', to: '/' },
-    { name: 'About Us', to: '/about' },
-    { name: 'Services', to: '/services' },
-    { name: 'Products', to: '#' }, // No product listing page yet
-     { name: 'Careers', to: '/careers' },   // <-- now points to the new page
-    { name: 'Contact', to: '/contact' }
-  ];
-
-  const services = [
-    { name: 'IT Consulting', to: '/services/it-consulting' },
-    { name: 'Data Solutions', to: '/services/data-services' },
-    { name: 'AI & Analytics', to: '/services/ai-services' },
-    { name: 'Cloud Services', to: '/services/infrastructure-services' },
-    { name: 'Cybersecurity', to: '/services/it-consulting' }, // mapped to consulting
-    { name: 'Digital Transformation', to: '/services' } // overview page
-  ];
-
-  // Social Media Icons as SVG components (unchanged)
-  const FacebookIcon = () => (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-  );
-
-  const TwitterIcon = () => (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-  );
-
-  const LinkedinIcon = () => (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-    </svg>
-  );
-
-  const InstagramIcon = () => (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-    </svg>
-  );
-
-  const YoutubeIcon = () => (
-    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-    </svg>
-  );
-
-  const socialIcons = [
-    { icon: FacebookIcon, href: '#', label: 'Facebook' },
-    { icon: TwitterIcon, href: '#', label: 'Twitter' },
-    { icon: LinkedinIcon, href: '#', label: 'LinkedIn' },
-    { icon: InstagramIcon, href: '#', label: 'Instagram' },
-    { icon: YoutubeIcon, href: '#', label: 'YouTube' }
-  ];
-
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          {/* Company Info - 4 columns */}
-          <div className="lg:col-span-4">
-            <div className="flex items-center gap-3 mb-6">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <Link to="/" className="mb-6 flex w-fit items-center gap-3">
               <img
                 src="/logo512.png"
                 alt="Zigo Business Solutions Logo"
                 className="h-12 w-12 object-contain"
               />
               <div>
-                <span className="text-3xl font-light tracking-wide" style={{ color: '#ECD5AB' }}>
-                  ZIGO
-                  <span className="font-bold text-white">BIZ</span>
+                <span className="text-3xl font-light tracking-wide text-[#ECD5AB]">
+                  ZIGO<span className="font-bold text-white">BIZ</span>
                 </span>
-                <span className="text-xs text-gray-400 ml-1 font-light">LTD</span>
+                <span className="ml-1 text-xs font-light text-gray-400">LTD</span>
               </div>
-            </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md">
-              Africa's Premier IT Firm. We provide innovative and reliable solutions that empower businesses to thrive in a data-driven world.
+            </Link>
+
+            <p className="mb-6 max-w-md text-sm leading-relaxed text-gray-400">
+              Practical data, AI, cloud, security, and digital-platform solutions designed around real business needs.
             </p>
-            
-            {/* Contact Info */}
+
             <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-[#ECD5AB] flex-shrink-0 mt-0.5" strokeWidth={1.5} />
-                <span className="text-sm text-gray-400">
-                  123 Victoria Island,<br />
-                  Lagos, Nigeria
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#ECD5AB] flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-sm text-gray-400">+234 800 000 0000</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#ECD5AB] flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-sm text-gray-400">admin@zigoservices.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-[#ECD5AB] flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-sm text-gray-400">Mon - Fri: 8:00 AM - 6:00 PM</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Links - 2 columns */}
-          <div className="lg:col-span-2">
-            <h4 className="text-white font-semibold text-lg mb-4">Quick Links</h4>
-            <ul className="space-y-2.5">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.to} 
-                    className="text-sm text-gray-400 hover:text-[#ECD5AB] transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" strokeWidth={2} />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services - 3 columns */}
-          <div className="lg:col-span-3">
-            <h4 className="text-white font-semibold text-lg mb-4">Our Services</h4>
-            <ul className="space-y-2.5">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.to} 
-                    className="text-sm text-gray-400 hover:text-[#ECD5AB] transition-colors duration-300 flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" strokeWidth={2} />
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Newsletter - 3 columns */}
-          <div className="lg:col-span-3">
-            <h4 className="text-white font-semibold text-lg mb-4">Stay Connected</h4>
-            <p className="text-sm text-gray-400 mb-4">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-[#7D582E] transition-colors text-sm"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg hover:scale-105 whitespace-nowrap"
-                style={{ backgroundColor: '#7D582E' }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#6a4a26';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = '#7D582E';
-                }}
+              <a
+                href="mailto:admin@zigoservices.com"
+                className="flex w-fit items-center gap-3 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]"
               >
-                Subscribe
-              </button>
-            </form>
-
-            {/* Social Icons */}
-            <div className="flex gap-3 mt-6">
-              {socialIcons.map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#7D582E] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg"
-                  >
-                    <Icon />
-                  </a>
-                );
-              })}
+                <Mail className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
+                admin@zigoservices.com
+              </a>
+              <div className="flex items-center gap-3 text-sm text-gray-400">
+                <Clock className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
+                Monday–Friday, 8:00 AM–6:00 PM
+              </div>
             </div>
+          </div>
+
+          <nav className="lg:col-span-2" aria-label="Footer navigation">
+            <h2 className="mb-4 text-lg font-semibold text-white">Quick Links</h2>
+            <ul className="space-y-2.5">
+              {quickLinks.map(({ name, to }) => (
+                <li key={to}>
+                  <Link to={to} className="group flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]">
+                    <ArrowRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" strokeWidth={2} />
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav className="lg:col-span-3" aria-label="Service navigation">
+            <h2 className="mb-4 text-lg font-semibold text-white">Our Services</h2>
+            <ul className="space-y-2.5">
+              {serviceLinks.map(({ name, to }) => (
+                <li key={to}>
+                  <Link to={to} className="group flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]">
+                    <ArrowRight className="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" strokeWidth={2} />
+                    {name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className="lg:col-span-2">
+            <h2 className="mb-4 text-lg font-semibold text-white">Start a Conversation</h2>
+            <p className="mb-5 text-sm leading-relaxed text-gray-400">
+              Tell us about the business challenge you want technology to solve.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-[#7D582E] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#6a4a26] hover:shadow-lg"
+            >
+              Contact Us
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-400">
-              &copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.
-            </p>
-            <div className="flex flex-wrap items-center gap-6">
-              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
-                Privacy Policy
-              </button>
-              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
-                Terms of Service
-              </button>
-              <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">
-                Cookie Policy
-              </button>
-            </div>
-          </div>
+        <div className="mx-auto max-w-7xl px-6 py-6 text-center text-sm text-gray-400">
+          &copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.
         </div>
       </div>
     </footer>

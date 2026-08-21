@@ -1,37 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, Cloud, Database, Cpu, Shield, X } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, BriefcaseBusiness, Cloud, Database, Cpu, Shield, ShieldCheck, TrendingUp, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function Hero() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
-  // Close modal on Escape key press
-  useEffect(() => {
-    const handleEsc = (e) => {
-      if (e.key === 'Escape') closeModal();
-    };
-    if (isModalOpen) {
-      document.addEventListener('keydown', handleEsc);
-      // Prevent scrolling when modal is open
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.removeEventListener('keydown', handleEsc);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isModalOpen]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // For now, just show an alert
-    alert('Thank you! We will contact you shortly.');
-    closeModal();
-  };
-
   return (
     <>
       {/* Desktop Layout */}
@@ -51,35 +22,13 @@ function Hero() {
               <p className="text-xl md:text-2xl text-gray-500 font-light mb-6">
                 Creating Insights, Empowering Decisions
               </p>
-              <button
-                onClick={openModal}
-                className="bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2 mb-8"
-              >
-                Schedule a Free Consultation
+              <Link to="/contact" className="inline-flex bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 items-center gap-2 mb-8">
+                Book a Consultation
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <p className="text-gray-400 text-sm max-w-xl leading-relaxed mb-12">
-                We are Africa's Premier IT Firm. Our commitment to excellence drives us to provide innovative and reliable solutions that empower businesses to thrive in a data-driven world.
+              </Link>
+              <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed">
+                Zigo Business Solutions helps organizations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
               </p>
-              <div className="grid grid-cols-4 gap-8">
-                <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">18</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Years</div>
-                  <div className="text-xs text-gray-300">Proven Track Record</div>
-                </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">9</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Operating Countries</div>
-                </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">50+</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Corporate Customers</div>
-                </div>
-                <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">400+</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Professionals</div>
-                </div>
-              </div>
             </div>
 
             {/* Right - Cloud with Data Flow */}
@@ -138,6 +87,24 @@ function Hero() {
                 </svg>
               </div>
             </div>
+          </div>
+          <div className="grid grid-cols-4 gap-4 rounded-2xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-5">
+            {[
+              { icon: BriefcaseBusiness, title: 'Business First', text: 'Goal-aligned solutions' },
+              { icon: ShieldCheck, title: 'Secure by Design', text: 'Protection from the start' },
+              { icon: TrendingUp, title: 'Scalable Foundations', text: 'Ready for sustainable growth' },
+              { icon: Wrench, title: 'Practical Delivery', text: 'Clear, usable outcomes' },
+            ].map(({ icon: Icon, title, text }) => (
+              <div key={title} className="flex items-center gap-3 border-r border-[#ECD5AB]/60 last:border-r-0 px-3">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#7D582E] shadow-sm">
+                  <Icon className="h-5 w-5" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">{title}</p>
+                  <p className="text-xs text-gray-500">{text}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -210,146 +177,46 @@ function Hero() {
             <p className="text-sm sm:text-base text-gray-500 font-light mb-3">
               Creating Insights, Empowering Decisions
             </p>
-            <button
-              onClick={openModal}
-              className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3"
-            >
-              Schedule a Free Consultation
+            <Link to="/contact" className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3 w-fit">
+              Book a Consultation
               <ArrowRight className="w-4 h-4" />
-            </button>
-            <p className="text-gray-400 text-xs sm:text-sm max-w-md mx-auto leading-relaxed mb-4">
-              We are Africa's Premier IT Firm. Our commitment to excellence drives us to provide innovative and reliable solutions.
+            </Link>
+            <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto leading-relaxed mb-4">
+              We help organizations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
             </p>
             <div className="grid grid-cols-4 gap-4 max-w-sm mx-auto">
-              <div>
-                <div className="text-xl font-light text-[#7D582E]">18</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Years</div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <BriefcaseBusiness className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div className="text-base font-semibold text-[#7D582E]">Business</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">First</div>
               </div>
-              <div>
-                <div className="text-xl font-light text-[#7D582E]">9</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Countries</div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <ShieldCheck className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div className="text-base font-semibold text-[#7D582E]">Secure</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">By Design</div>
               </div>
-              <div>
-                <div className="text-xl font-light text-[#7D582E]">50+</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Clients</div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div className="text-base font-semibold text-[#7D582E]">Scalable</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Foundations</div>
               </div>
-              <div>
-                <div className="text-xl font-light text-[#7D582E]">400+</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Pros</div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <Wrench className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
+                <div className="text-base font-semibold text-[#7D582E]">Practical</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Delivery</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto relative animate-fade-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close button */}
-            <button
-              onClick={closeModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-[#7D582E] transition-colors p-1"
-              aria-label="Close modal"
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            <div className="p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl font-light text-[#7D582E] mb-2">
-                Schedule a <span className="font-bold">Free Consultation</span>
-              </h2>
-              <p className="text-gray-500 text-sm mb-6">
-                Fill in your details and we'll get back to you within 24 hours.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
-                    placeholder="john@company.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-                    Company Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
-                    placeholder="Your company"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
-                    placeholder="+234 800 000 0000"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
-                    Preferred Date & Time
-                  </label>
-                  <input
-                    type="datetime-local"
-                    id="date"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message (Optional)
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="3"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition resize-none"
-                    placeholder="Tell us about your needs..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#7D582E] text-white py-3 rounded-lg font-semibold hover:bg-[#6a4a26] transition-all transform hover:scale-[1.02] shadow-md flex items-center justify-center gap-2"
-                >
-                  Send Request
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

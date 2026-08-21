@@ -21,10 +21,8 @@ import AISolutions from './components/AISolutions';
 import CloudProducts from './components/CloudProducts';
 import SecuritySuite from './components/SecuritySuite';
 import AnalyticsTools from './components/AnalyticsTools';
-// NEW: Careers
-import Careers from './components/Careers';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
+import ChatBot from './components/ChatBot'; // Import ChatBot
 
 function HomePage() {
   return (
@@ -47,7 +45,6 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/careers" element={<Careers />} /> {/* NEW */}
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/data-services" element={<DataServices />} />
             <Route path="/services/ai-services" element={<AIServices />} />
@@ -65,6 +62,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        {/* Add ChatBot - it will appear on all pages */}
         <ChatBot />
       </div>
     </Router>
