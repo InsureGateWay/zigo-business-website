@@ -26,25 +26,25 @@ function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </button>
               <p className="text-gray-400 text-sm max-w-xl leading-relaxed mb-12">
-                We are Africa's Premier IT Firm. Our commitment to excellence drives us to provide innovative and reliable solutions that empower businesses to thrive in a data-driven world.
+                Zigo Business Solutions helps organizations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
               </p>
               <div className="grid grid-cols-4 gap-8">
                 <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">18</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Years</div>
-                  <div className="text-xs text-gray-300">Proven Track Record</div>
+                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Business</div>
+                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">First</div>
+                  <div className="text-xs text-gray-300">Goal-aligned solutions</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">9</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Operating Countries</div>
+                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Secure</div>
+                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">By Design</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">50+</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Corporate Customers</div>
+                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Scalable</div>
+                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Foundations</div>
                 </div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-light text-[#7D582E]">400+</div>
-                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Professionals</div>
+                  <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Practical</div>
+                  <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Delivery</div>
                 </div>
               </div>
             </div>
@@ -182,24 +182,24 @@ function Hero() {
               <ArrowRight className="w-4 h-4" />
             </button>
             <p className="text-gray-400 text-xs sm:text-sm max-w-md mx-auto leading-relaxed mb-4">
-              We are Africa's Premier IT Firm. Our commitment to excellence drives us to provide innovative and reliable solutions.
+              We help organizations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
             </p>
             <div className="grid grid-cols-4 gap-4 max-w-sm mx-auto">
               <div>
-                <div className="text-xl font-light text-[#7D582E]">18</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Years</div>
+                <div className="text-base font-semibold text-[#7D582E]">Business</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">First</div>
               </div>
               <div>
-                <div className="text-xl font-light text-[#7D582E]">9</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Countries</div>
+                <div className="text-base font-semibold text-[#7D582E]">Secure</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">By Design</div>
               </div>
               <div>
-                <div className="text-xl font-light text-[#7D582E]">50+</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Clients</div>
+                <div className="text-base font-semibold text-[#7D582E]">Scalable</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Foundations</div>
               </div>
               <div>
-                <div className="text-xl font-light text-[#7D582E]">400+</div>
-                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Pros</div>
+                <div className="text-base font-semibold text-[#7D582E]">Practical</div>
+                <div className="text-[10px] text-gray-400 tracking-wider uppercase">Delivery</div>
               </div>
             </div>
           </div>
