@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { 
   Factory, 
@@ -153,158 +154,88 @@ function Industries() {
     }, 1500);
   };
 
+=======
+import React from 'react';
+import { ArrowRight, Building2, CheckCircle, Droplet, Factory, Landmark, Package, Wifi } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const industries = [
+  {
+    icon: Factory,
+    name: 'Manufacturing',
+    description: 'Improve visibility, reliability, and efficiency across production operations.',
+    solutions: ['Predictive maintenance', 'Quality analytics', 'Process automation'],
+  },
+  {
+    icon: Droplet,
+    name: 'Energy',
+    description: 'Use secure digital systems to support asset-intensive and field operations.',
+    solutions: ['Asset monitoring', 'Operational analytics', 'Safety reporting'],
+  },
+  {
+    icon: Package,
+    name: 'Consumer Goods',
+    description: 'Connect demand, inventory, distribution, and customer information.',
+    solutions: ['Demand forecasting', 'Inventory visibility', 'Consumer insights'],
+  },
+  {
+    icon: Building2,
+    name: 'Financial Services',
+    description: 'Modernize data and customer operations with security at the core.',
+    solutions: ['Risk analytics', 'Fraud monitoring', 'Customer experience'],
+  },
+  {
+    icon: Landmark,
+    name: 'Public Sector',
+    description: 'Create dependable digital services that improve access and accountability.',
+    solutions: ['Digital service delivery', 'Data governance', 'Secure platforms'],
+  },
+  {
+    icon: Wifi,
+    name: 'Telecommunications',
+    description: 'Turn network and customer data into actionable operational insight.',
+    solutions: ['Network analytics', 'Service assurance', 'Customer retention'],
+  },
+];
+
+function Industries() {
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
   return (
-    <section className="py-28 px-6 bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full" style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}>
-              Industries We Serve
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mt-4 mb-6 leading-tight">
-            Solving IT Challenges Across
-            <br />
-            <span className="font-bold relative">
-              <span className="relative" style={{ color: '#7D582E' }}>
-                Diverse Industries
-              </span>
-              <span className="absolute -bottom-2 left-0 w-full h-1 rounded-full" style={{ backgroundColor: '#ECD5AB' }}></span>
-            </span>
+    <section className="bg-[#faf7f2] px-6 py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <span className="inline-block rounded-full bg-[#ECD5AB] px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#7D582E]">
+            Industries We Support
+          </span>
+          <h2 className="mt-6 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
+            Technology shaped around <span className="font-bold text-[#7D582E]">industry realities</span>
           </h2>
-          <p className="text-gray-500 text-lg font-light max-w-2xl mx-auto">
-            We deliver specialized solutions tailored to your industry's unique demands and challenges.
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-500">
+            We adapt our capabilities to the workflows, risks, and opportunities that matter in your sector.
           </p>
         </div>
-        
-        {/* Industries Grid - Flip Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => {
-            const isFlipped = flippedIndex === index;
-            
-            return (
-              <div
-                key={index}
-                className="relative h-[380px] cursor-pointer perspective-1000"
-                onClick={() => handleFlip(index)}
-              >
-                <div
-                  className={`relative w-full h-full transition-all duration-700 transform-style-3d ${
-                    isFlipped ? 'rotate-y-180' : ''
-                  }`}
-                >
-                  {/* Front Side */}
-                  <div
-                    className="absolute w-full h-full backface-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
-                    style={{ backgroundColor: '#ffffff' }}
-                  >
-                    {/* Decorative Top Bar */}
-                    <div
-                      className="h-2 w-full"
-                      style={{ backgroundColor: industry.color }}
-                    ></div>
-                    
-                    <div className="p-8 flex flex-col items-center justify-center h-full">
-                      {/* Icon with Animation */}
-                      <div
-                        className="p-4 rounded-full mb-6 transition-all duration-300 hover:scale-110 hover:rotate-6"
-                        style={{ backgroundColor: industry.bgColor }}
-                      >
-                        <div style={{ color: industry.color }}>{industry.icon}</div>
-                      </div>
-                      
-                      {/* Industry Name */}
-                      <h3 className="text-xl font-bold text-gray-800 mb-2 text-center">
-                        {industry.name}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="text-gray-500 text-sm text-center mb-4">
-                        {industry.description}
-                      </p>
-                      
-                      {/* Hover/Click Indicator */}
-                      <div className="flex items-center gap-2 text-xs font-medium transition-all duration-300 group-hover:gap-3">
-                        <span style={{ color: industry.color }}>Click to explore</span>
-                        <ArrowRight 
-                          className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                          style={{ color: industry.color }}
-                        />
-                      </div>
-                      
-                      {/* Floating Decorative Element */}
-                      <div
-                        className="absolute -top-4 -right-4 w-20 h-20 rounded-full opacity-10"
-                        style={{ backgroundColor: industry.color }}
-                      ></div>
-                      <div
-                        className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full opacity-10"
-                        style={{ backgroundColor: industry.color }}
-                      ></div>
-                    </div>
-                  </div>
 
-                  {/* Back Side */}
-                  <div
-                    className="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl shadow-lg overflow-hidden"
-                    style={{ backgroundColor: '#ffffff' }}
-                  >
-                    {/* Decorative Top Bar */}
-                    <div
-                      className="h-2 w-full"
-                      style={{ backgroundColor: industry.color }}
-                    ></div>
-                    
-                    <div className="p-8 flex flex-col h-full">
-                      {/* Industry Name on Back */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <div
-                          className="p-2 rounded-lg"
-                          style={{ backgroundColor: industry.bgColor }}
-                        >
-                          <div className="w-5 h-5" style={{ color: industry.color }}>
-                            {industry.icon}
-                          </div>
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-800">
-                          {industry.name}
-                        </h3>
-                      </div>
-                      
-                      {/* Key Benefits */}
-                      <div className="flex-1">
-                        <p className="text-xs text-gray-400 uppercase tracking-wider mb-3 font-semibold">
-                          Key Solutions
-                        </p>
-                        <ul className="space-y-2.5">
-                          {industry.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-start gap-2.5">
-                              <CheckCircle 
-                                className="w-4 h-4 flex-shrink-0 mt-0.5" 
-                                style={{ color: industry.color }}
-                                strokeWidth={2}
-                              />
-                              <span className="text-sm text-gray-700">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      {/* Click to Flip Back */}
-                      <div className="mt-4 pt-4 border-t border-gray-100 flex justify-center">
-                        <span className="text-xs text-gray-400">
-                          Click to flip back
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {industries.map(({ icon: Icon, name, description, solutions }) => (
+            <article key={name} className="rounded-2xl border border-[#ECD5AB]/45 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg">
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECD5AB]/50 text-[#7D582E]">
+                <Icon className="h-6 w-6" strokeWidth={1.6} aria-hidden="true" />
               </div>
-            );
-          })}
+              <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-500">{description}</p>
+              <ul className="mt-5 space-y-2 border-t border-gray-100 pt-5">
+                {solutions.map((solution) => (
+                  <li key={solution} className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckCircle className="h-4 w-4 shrink-0 text-[#7D582E]" strokeWidth={1.8} />
+                    {solution}
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
 
+<<<<<<< HEAD
         {/* Simplified CTA Section - No country list */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl md:text-3xl font-light text-gray-800 mb-4">
@@ -507,6 +438,15 @@ function Industries() {
           transform: rotateY(180deg);
         }
       `}</style>
+=======
+        <div className="mt-12 text-center">
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6a4a26] hover:shadow-xl">
+            Book a Consultation
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
     </section>
   );
 }

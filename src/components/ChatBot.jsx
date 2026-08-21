@@ -69,12 +69,20 @@ function ChatBot() {
     
     // Contact/Consultation
     if (lowerMsg.includes('contact') || lowerMsg.includes('consult') || lowerMsg.includes('schedule') || lowerMsg.includes('meeting')) {
+<<<<<<< HEAD
       return "You can schedule a free consultation by:\n• Clicking the 'Get Started' button in the navigation\n• Visiting our Contact page\n• Email us at info@zigobiz.com\n\nWould you like me to connect you with our sales team?";
+=======
+      return "You can schedule a free consultation by:\n• Clicking the 'Get Started' button in the navigation\n• Visiting our Contact page\n• Email us at admin@zigoservices.com\n\nWould you like me to connect you with our sales team?";
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
     }
     
     // About
     if (lowerMsg.includes('about') || lowerMsg.includes('who') || lowerMsg.includes('company')) {
+<<<<<<< HEAD
       return "ZigoBiz is Africa's Premier IT Firm. We are a pan-African IT company committed to transforming businesses through innovative technology solutions. With 18 years of experience, we've helped over 50 corporate customers across 9 countries achieve their digital ambitions.";
+=======
+      return "Zigo Business Solutions is Africa's Premier IT Firm. We are a pan-African IT company committed to transforming businesses through innovative technology solutions. With 18 years of experience, we've helped over 50 corporate customers across 9 countries achieve their digital ambitions.";
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
     }
     
     // Industries
@@ -280,4 +288,8 @@ function ChatBot() {
   );
 }
 
+<<<<<<< HEAD
 export default ChatBot;
+=======
+export default ChatBot;
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c

@@ -5,7 +5,6 @@ import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
 import Industries from './components/Industries';
 import WhyZigo from './components/WhyZigo';
-import Feedback from './components/Feedback';
 import AboutUs from './components/AboutUs';
 import Contact from './components/Contact';
 import News from './components/News';
@@ -22,10 +21,15 @@ import AISolutions from './components/AISolutions';
 import CloudProducts from './components/CloudProducts';
 import SecuritySuite from './components/SecuritySuite';
 import AnalyticsTools from './components/AnalyticsTools';
+<<<<<<< HEAD
 // NEW: Careers
 import Careers from './components/Careers';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
+=======
+import Footer from './components/Footer';
+import ChatBot from './components/ChatBot'; // Import ChatBot
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
 
 function HomePage() {
   return (
@@ -34,7 +38,10 @@ function HomePage() {
       <WhatWeDo />
       <Industries />
       <WhyZigo />
+<<<<<<< HEAD
       <Feedback />
+=======
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
       <News />
     </>
   );
@@ -49,7 +56,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
+<<<<<<< HEAD
             <Route path="/careers" element={<Careers />} /> {/* NEW */}
+=======
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/data-services" element={<DataServices />} />
             <Route path="/services/ai-services" element={<AIServices />} />
@@ -67,6 +77,10 @@ function App() {
           </Routes>
         </div>
         <Footer />
+<<<<<<< HEAD
+=======
+        {/* Add ChatBot - it will appear on all pages */}
+>>>>>>> 15693e152abf8dd84f1046becf6a8262dc28ff5c
         <ChatBot />
       </div>
     </Router>
