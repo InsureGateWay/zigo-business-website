@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Cloud, Database, Cpu, Shield } from 'lucide-react';
+import { ArrowRight, BriefcaseBusiness, Cloud, Database, Cpu, Shield, ShieldCheck, TrendingUp, Wrench } from 'lucide-react';
 
 function Hero() {
   return (
@@ -29,20 +29,32 @@ function Hero() {
                 Zigo Business Solutions helps organizations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
               </p>
               <div className="grid grid-cols-4 gap-8">
-                <div>
+                <div className="group">
+                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <BriefcaseBusiness className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                  </div>
                   <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Business</div>
                   <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">First</div>
                   <div className="text-xs text-gray-300">Goal-aligned solutions</div>
                 </div>
-                <div>
+                <div className="group">
+                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <ShieldCheck className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                  </div>
                   <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Secure</div>
                   <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">By Design</div>
                 </div>
-                <div>
+                <div className="group">
+                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <TrendingUp className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                  </div>
                   <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Scalable</div>
                   <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Foundations</div>
                 </div>
-                <div>
+                <div className="group">
+                  <div className="w-11 h-11 mb-3 rounded-xl bg-[#ECD5AB]/50 flex items-center justify-center transition-transform group-hover:scale-110">
+                    <Wrench className="w-5 h-5 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                  </div>
                   <div className="text-xl md:text-2xl font-semibold text-[#7D582E]">Practical</div>
                   <div className="text-xs text-gray-400 mt-1 tracking-wider uppercase">Delivery</div>
                 </div>
@@ -185,19 +197,31 @@ function Hero() {
               We help organizations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
             </p>
             <div className="grid grid-cols-4 gap-4 max-w-sm mx-auto">
-              <div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <BriefcaseBusiness className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
                 <div className="text-base font-semibold text-[#7D582E]">Business</div>
                 <div className="text-[10px] text-gray-400 tracking-wider uppercase">First</div>
               </div>
-              <div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <ShieldCheck className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
                 <div className="text-base font-semibold text-[#7D582E]">Secure</div>
                 <div className="text-[10px] text-gray-400 tracking-wider uppercase">By Design</div>
               </div>
-              <div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <TrendingUp className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
                 <div className="text-base font-semibold text-[#7D582E]">Scalable</div>
                 <div className="text-[10px] text-gray-400 tracking-wider uppercase">Foundations</div>
               </div>
-              <div>
+              <div className="flex flex-col items-center">
+                <div className="w-9 h-9 mb-1.5 rounded-lg bg-[#ECD5AB]/50 flex items-center justify-center">
+                  <Wrench className="w-4 h-4 text-[#7D582E]" strokeWidth={1.7} aria-hidden="true" />
+                </div>
                 <div className="text-base font-semibold text-[#7D582E]">Practical</div>
                 <div className="text-[10px] text-gray-400 tracking-wider uppercase">Delivery</div>
               </div>
