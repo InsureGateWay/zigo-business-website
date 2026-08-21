@@ -107,7 +107,7 @@ function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#ECD5AB] flex-shrink-0" strokeWidth={1.5} />
-                <span className="text-sm text-gray-400">info@zigobiz.com</span>
+                <span className="text-sm text-gray-400">admin@zigoservices.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-[#ECD5AB] flex-shrink-0" strokeWidth={1.5} />

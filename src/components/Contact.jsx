@@ -64,7 +64,7 @@ function Contact() {
     { 
       icon: <Mail className="w-5 h-5" />, 
       label: "Email Address", 
-      value: "info@zigobiz.com"
+      value: "admin@zigoservices.com"
     },
     { 
       icon: <Clock className="w-5 h-5" />, 
@@ -316,7 +316,7 @@ function Contact() {
               </div>
               <div>
                 <p className="text-[9px] text-gray-400 uppercase">Email</p>
-                <p className="text-xs font-semibold text-gray-700">info@zigobiz.com</p>
+                <p className="text-xs font-semibold text-gray-700">admin@zigoservices.com</p>
               </div>
             </div>
             <div className="bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all flex items-center gap-3">
