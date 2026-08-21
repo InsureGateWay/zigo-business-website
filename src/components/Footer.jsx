@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   MapPin, 
   Phone, 
@@ -11,24 +12,24 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Services', href: '#' },
-    { name: 'Products', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Home', to: '/' },
+    { name: 'About Us', to: '/about' },
+    { name: 'Services', to: '/services' },
+    { name: 'Products', to: '#' }, // No product listing page yet
+     { name: 'Careers', to: '/careers' },   // <-- now points to the new page
+    { name: 'Contact', to: '/contact' }
   ];
 
   const services = [
-    { name: 'IT Consulting', href: '#' },
-    { name: 'Data Solutions', href: '#' },
-    { name: 'AI & Analytics', href: '#' },
-    { name: 'Cloud Services', href: '#' },
-    { name: 'Cybersecurity', href: '#' },
-    { name: 'Digital Transformation', href: '#' }
+    { name: 'IT Consulting', to: '/services/it-consulting' },
+    { name: 'Data Solutions', to: '/services/data-services' },
+    { name: 'AI & Analytics', to: '/services/ai-services' },
+    { name: 'Cloud Services', to: '/services/infrastructure-services' },
+    { name: 'Cybersecurity', to: '/services/it-consulting' }, // mapped to consulting
+    { name: 'Digital Transformation', to: '/services' } // overview page
   ];
 
-  // Social Media Icons as SVG components
+  // Social Media Icons as SVG components (unchanged)
   const FacebookIcon = () => (
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -122,31 +123,31 @@ function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.to} 
                     className="text-sm text-gray-400 hover:text-[#ECD5AB] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" strokeWidth={2} />
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services - 2 columns */}
+          {/* Services - 3 columns */}
           <div className="lg:col-span-3">
             <h4 className="text-white font-semibold text-lg mb-4">Our Services</h4>
             <ul className="space-y-2.5">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a 
-                    href={service.href} 
+                  <Link 
+                    to={service.to} 
                     className="text-sm text-gray-400 hover:text-[#ECD5AB] transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" strokeWidth={2} />
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

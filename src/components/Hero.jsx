@@ -1,7 +1,37 @@
-import React from 'react';
-import { ArrowRight, Cloud, Database, Cpu, Shield } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Cloud, Database, Cpu, Shield, X } from 'lucide-react';
 
 function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') closeModal();
+    };
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEsc);
+      // Prevent scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEsc);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // For now, just show an alert
+    alert('Thank you! We will contact you shortly.');
+    closeModal();
+  };
+
   return (
     <>
       {/* Desktop Layout */}
@@ -21,7 +51,10 @@ function Hero() {
               <p className="text-xl md:text-2xl text-gray-500 font-light mb-6">
                 Creating Insights, Empowering Decisions
               </p>
-              <button className="bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2 mb-8">
+              <button
+                onClick={openModal}
+                className="bg-[#7D582E] text-white px-8 py-3 rounded-lg text-sm font-semibold transition-all hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2 mb-8"
+              >
                 Schedule a Free Consultation
                 <ArrowRight className="w-4 h-4" />
               </button>
@@ -177,7 +210,10 @@ function Hero() {
             <p className="text-sm sm:text-base text-gray-500 font-light mb-3">
               Creating Insights, Empowering Decisions
             </p>
-            <button className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3">
+            <button
+              onClick={openModal}
+              className="bg-[#7D582E] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:shadow-xl flex items-center gap-2 mx-auto mb-3"
+            >
               Schedule a Free Consultation
               <ArrowRight className="w-4 h-4" />
             </button>
@@ -205,6 +241,115 @@ function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto relative animate-fade-in"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-[#7D582E] transition-colors p-1"
+              aria-label="Close modal"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="p-6 md:p-8">
+              <h2 className="text-2xl md:text-3xl font-light text-[#7D582E] mb-2">
+                Schedule a <span className="font-bold">Free Consultation</span>
+              </h2>
+              <p className="text-gray-500 text-sm mb-6">
+                Fill in your details and we'll get back to you within 24 hours.
+              </p>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    required
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                    placeholder="john@company.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
+                    Company Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    required
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                    placeholder="Your company"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                    placeholder="+234 800 000 0000"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-1">
+                    Preferred Date & Time
+                  </label>
+                  <input
+                    type="datetime-local"
+                    id="date"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    Message (Optional)
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="3"
+                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition resize-none"
+                    placeholder="Tell us about your needs..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#7D582E] text-white py-3 rounded-lg font-semibold hover:bg-[#6a4a26] transition-all transform hover:scale-[1.02] shadow-md flex items-center justify-center gap-2"
+                >
+                  Send Request
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }

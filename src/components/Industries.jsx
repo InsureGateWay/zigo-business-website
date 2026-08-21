@@ -8,11 +8,25 @@ import {
   Wifi,
   ArrowRight,
   CheckCircle,
-  Globe
+  Globe,
+  X
 } from 'lucide-react';
 
 function Industries() {
   const [flippedIndex, setFlippedIndex] = useState(null);
+
+  // --- Modal state ---
+  const [showExpertModal, setShowExpertModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    company: '',
+    industry: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const industries = [
     {
@@ -97,6 +111,46 @@ function Industries() {
 
   const handleFlip = (index) => {
     setFlippedIndex(flippedIndex === index ? null : index);
+  };
+
+  // --- Modal handlers ---
+  const openExpertModal = () => {
+    setShowExpertModal(true);
+    setSubmitSuccess(false);
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      industry: '',
+      message: '',
+    });
+  };
+
+  const closeExpertModal = () => {
+    setShowExpertModal(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.phone || !formData.company) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    setIsSubmitting(true);
+    setTimeout(() => {
+      console.log('Expert consultation request:', formData);
+      setSubmitSuccess(true);
+      setIsSubmitting(false);
+      setTimeout(() => {
+        closeExpertModal();
+      }, 3000);
+    }, 1500);
   };
 
   return (
@@ -251,31 +305,188 @@ function Industries() {
           })}
         </div>
 
-        {/* CTA Section */}
+        {/* Simplified CTA Section - No country list */}
         <div className="mt-20 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white shadow-md">
-            <Globe className="w-5 h-5 text-[#7D582E]" strokeWidth={1.5} />
-            <span className="text-sm text-gray-600">
-              Serving <span className="font-bold text-[#7D582E]">9 countries</span> across Africa
-            </span>
-          </div>
-          <div className="mt-6">
-            <button
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105"
-              style={{ backgroundColor: '#7D582E' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#6a4a26';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#7D582E';
-              }}
-            >
-              <span>Talk to Our Industry Experts</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
-            </button>
-          </div>
+          <h3 className="text-2xl md:text-3xl font-light text-gray-800 mb-4">
+            Ready to <span className="font-bold text-[#7D582E]">Transform</span> Your Business?
+          </h3>
+          <p className="text-gray-500 text-sm mb-6">
+            Let's discuss how our industry‑specific solutions can drive your success.
+          </p>
+          <button
+            onClick={openExpertModal}
+            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            style={{ backgroundColor: '#7D582E' }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#6a4a26';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#7D582E';
+            }}
+          >
+            <span>Talk to Our Industry Experts</span>
+            <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
+          </button>
         </div>
       </div>
+
+      {/* --- Expert Consultation Modal --- */}
+      {showExpertModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto"
+          onClick={closeExpertModal}
+        >
+          <div 
+            className="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeExpertModal}
+              className="absolute top-4 right-4 text-gray-400 hover:text-[#7D582E] transition-colors z-10"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <div className="p-6 md:p-8">
+              <h2 className="text-2xl font-light text-[#7D582E] mb-2">
+                Talk to Our <span className="font-bold">Industry Experts</span>
+              </h2>
+              <p className="text-sm text-gray-500 mb-6">
+                Fill in your details and we'll connect you with a specialist who understands your industry.
+              </p>
+
+              {!submitSuccess ? (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="expertName" className="block text-sm font-medium text-gray-700 mb-1">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="expertName"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="expertEmail" className="block text-sm font-medium text-gray-700 mb-1">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="expertEmail"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                      placeholder="john@company.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="expertPhone" className="block text-sm font-medium text-gray-700 mb-1">
+                      Phone Number *
+                    </label>
+                    <input
+                      type="tel"
+                      id="expertPhone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                      placeholder="+234 800 000 0000"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="expertCompany" className="block text-sm font-medium text-gray-700 mb-1">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="expertCompany"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                      placeholder="Your company"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="expertIndustry" className="block text-sm font-medium text-gray-700 mb-1">
+                      Industry
+                    </label>
+                    <select
+                      id="expertIndustry"
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition"
+                    >
+                      <option value="">Select your industry...</option>
+                      <option value="Manufacturing">Manufacturing</option>
+                      <option value="Oil & Gas">Oil & Gas</option>
+                      <option value="FMCG">FMCG</option>
+                      <option value="Banks & Financial Services">Banks & Financial Services</option>
+                      <option value="Public Sector">Public Sector</option>
+                      <option value="Telcos">Telcos</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="expertMessage" className="block text-sm font-medium text-gray-700 mb-1">
+                      Message (Optional)
+                    </label>
+                    <textarea
+                      id="expertMessage"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows="3"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#ECD5AB] focus:border-[#7D582E] outline-none transition resize-none"
+                      placeholder="Tell us about your challenges or goals..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#7D582E] text-white py-3 rounded-lg font-semibold hover:bg-[#6a4a26] transition-all transform hover:scale-[1.02] shadow-md flex items-center justify-center gap-2 disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Sending...' : (
+                      <>
+                        Send Request <ArrowRight className="w-4 h-4" />
+                      </>
+                    )}
+                  </button>
+                </form>
+              ) : (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-800">Request Sent!</h3>
+                  <p className="text-gray-500 mt-2">
+                    An industry expert will reach out to you within 24 hours.
+                  </p>
+                  <button
+                    onClick={closeExpertModal}
+                    className="mt-6 px-6 py-2 bg-[#7D582E] text-white rounded-lg font-semibold hover:bg-[#6a4a26] transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Custom CSS for 3D Flip */}
       <style jsx>{`
