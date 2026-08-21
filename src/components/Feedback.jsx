@@ -12,7 +12,7 @@ function Feedback() {
       name: "Sarah Johnson",
       position: "CTO, Shell Nigeria",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&q=80",
-      quote: "ZigoBiz has transformed our data infrastructure. Their AI solutions have increased our operational efficiency by 40%. The team's expertise and dedication to excellence is unmatched.",
+      quote: "Zigo Business Solutions has transformed our data infrastructure. Their AI solutions have increased our operational efficiency by 40%. The team's expertise and dedication to excellence is unmatched.",
       rating: 5,
       company: "Shell"
     },
@@ -21,7 +21,7 @@ function Feedback() {
       name: "Michael Okonkwo",
       position: "Head of Digital Transformation, MTN",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&q=80",
-      quote: "The cloud migration strategy provided by ZigoBiz was seamless. We've seen significant cost savings and improved scalability across our operations. Highly recommended!",
+      quote: "The cloud migration strategy provided by Zigo Business Solutions was seamless. We've seen significant cost savings and improved scalability across our operations. Highly recommended!",
       rating: 5,
       company: "MTN"
     },
@@ -30,7 +30,7 @@ function Feedback() {
       name: "Dr. Amina Mohammed",
       position: "Director of Innovation, Ericsson",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&q=80",
-      quote: "Working with ZigoBiz has been transformative. Their cybersecurity solutions gave us the confidence to expand our digital footprint. A true partner in innovation.",
+      quote: "Working with Zigo Business Solutions has been transformative. Their cybersecurity solutions gave us the confidence to expand our digital footprint. A true partner in innovation.",
       rating: 5,
       company: "Ericsson"
     },
@@ -39,7 +39,7 @@ function Feedback() {
       name: "James Ogunleye",
       position: "IT Director, Nestle Nigeria",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&q=80",
-      quote: "The data analytics platform developed by ZigoBiz has revolutionized how we understand our supply chain. Real-time insights have improved decision-making across all levels.",
+      quote: "The data analytics platform developed by Zigo Business Solutions has revolutionized how we understand our supply chain. Real-time insights have improved decision-making across all levels.",
       rating: 5,
       company: "Nestle"
     },
@@ -48,7 +48,7 @@ function Feedback() {
       name: "Grace Muthoni",
       position: "VP Technology, Coca-Cola",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&q=80",
-      quote: "ZigoBiz delivered beyond our expectations. Their innovative approach to digital transformation has positioned us as industry leaders. The ROI has been exceptional.",
+      quote: "Zigo Business Solutions delivered beyond our expectations. Their innovative approach to digital transformation has positioned us as industry leaders. The ROI has been exceptional.",
       rating: 5,
       company: "Coca-Cola"
     }

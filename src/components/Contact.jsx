@@ -282,7 +282,7 @@ function Contact() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="ZigoBiz Office Location"
+            title="Zigo Business Solutions Office Location"
             className="w-full"
           ></iframe>
 
@@ -292,7 +292,7 @@ function Contact() {
                 <MapPin className="w-4 h-4 text-[#7D582E]" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-gray-800">ZigoBiz HQ</h4>
+                <h4 className="text-sm font-bold text-gray-800">Zigo Business Solutions HQ</h4>
                 <p className="text-xs text-gray-500">Victoria Island, Lagos</p>
               </div>
             </div>

@@ -24,9 +24,9 @@ function News() {
   const newsArticles = [
     {
       id: 1,
-      title: "ZigoBiz Launches Next-Generation AI Platform for African Enterprises",
+      title: "Zigo Business Solutions Launches Next-Generation AI Platform for African Enterprises",
       excerpt: "The new AI platform promises to revolutionize how businesses leverage data analytics and machine learning across the continent.",
-      content: "ZigoBiz has unveiled its most ambitious AI platform to date, designed specifically for African enterprises. The platform leverages cutting-edge machine learning algorithms and big data analytics to provide businesses with unprecedented insights into their operations. This launch marks a significant milestone in Africa's digital transformation journey, positioning ZigoBiz as a leader in enterprise AI solutions across the continent. The platform features advanced natural language processing capabilities, predictive analytics, and automated decision-making tools that will help businesses optimize their operations and drive growth.",
+      content: "Zigo Business Solutions has unveiled its most ambitious AI platform to date, designed specifically for African enterprises. The platform leverages cutting-edge machine learning algorithms and big data analytics to provide businesses with unprecedented insights into their operations. This launch marks a significant milestone in Africa's digital transformation journey, positioning Zigo Business Solutions as a leader in enterprise AI solutions across the continent. The platform features advanced natural language processing capabilities, predictive analytics, and automated decision-making tools that will help businesses optimize their operations and drive growth.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=500&fit=crop&q=80",
       category: "Technology",
       date: "December 15, 2024",
@@ -39,9 +39,9 @@ function News() {
     },
     {
       id: 2,
-      title: "ZigoBiz Named Africa's Best IT Services Provider 2024",
-      excerpt: "The prestigious award recognizes ZigoBiz's commitment to excellence and innovation in delivering IT solutions across the continent.",
-      content: "ZigoBiz has been awarded the prestigious 'Africa's Best IT Services Provider' award for 2024. This recognition comes after a comprehensive evaluation of the company's performance, innovation, and customer satisfaction across the continent. The award highlights ZigoBiz's exceptional track record in delivering innovative IT solutions, its commitment to customer success, and its significant contributions to Africa's digital transformation. This achievement reflects the hard work and dedication of the entire ZigoBiz team.",
+      title: "Zigo Business Solutions Named Africa's Best IT Services Provider 2024",
+      excerpt: "The prestigious award recognizes Zigo Business Solutions' commitment to excellence and innovation in delivering IT solutions across the continent.",
+      content: "Zigo Business Solutions has been awarded the prestigious 'Africa's Best IT Services Provider' award for 2024. This recognition comes after a comprehensive evaluation of the company's performance, innovation, and customer satisfaction across the continent. The award highlights Zigo Business Solutions' exceptional track record in delivering innovative IT solutions, its commitment to customer success, and its significant contributions to Africa's digital transformation. This achievement reflects the hard work and dedication of the entire Zigo Business Solutions team.",
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=500&fit=crop&q=80",
       category: "Awards",
       date: "December 10, 2024",
@@ -56,7 +56,7 @@ function News() {
       id: 3,
       title: "Strategic Partnership with Microsoft to Accelerate Cloud Adoption",
       excerpt: "The partnership will bring advanced cloud solutions to African businesses, enabling digital transformation at scale.",
-      content: "ZigoBiz has announced a strategic partnership with Microsoft to accelerate cloud adoption across Africa. This collaboration will bring Microsoft's advanced cloud solutions, including Azure and Microsoft 365, to African businesses at scale. The partnership aims to empower organizations with the tools and expertise needed to drive digital transformation, improve operational efficiency, and enhance customer experiences. Through this partnership, ZigoBiz will provide comprehensive cloud migration services, managed services, and ongoing support.",
+      content: "Zigo Business Solutions has announced a strategic partnership with Microsoft to accelerate cloud adoption across Africa. This collaboration will bring Microsoft's advanced cloud solutions, including Azure and Microsoft 365, to African businesses at scale. The partnership aims to empower organizations with the tools and expertise needed to drive digital transformation, improve operational efficiency, and enhance customer experiences. Through this partnership, Zigo Business Solutions will provide comprehensive cloud migration services, managed services, and ongoing support.",
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&h=500&fit=crop&q=80",
       category: "Partnerships",
       date: "December 5, 2024",
@@ -71,7 +71,7 @@ function News() {
       id: 4,
       title: "Innovation Hub Launches in Lagos to Nurture Tech Talent",
       excerpt: "The hub aims to train 1,000 young developers in AI, cloud computing, and cybersecurity over the next two years.",
-      content: "ZigoBiz has launched a state-of-the-art Innovation Hub in Lagos, Nigeria, aimed at nurturing the next generation of tech talent in Africa. The hub will provide training programs, mentorship, and resources for young developers interested in AI, cloud computing, and cybersecurity. Over the next two years, the hub aims to train 1,000 developers, creating a pipeline of skilled professionals who can drive Africa's digital economy forward. The hub also features co-working spaces, innovation labs, and networking opportunities.",
+      content: "Zigo Business Solutions has launched a state-of-the-art Innovation Hub in Lagos, Nigeria, aimed at nurturing the next generation of tech talent in Africa. The hub will provide training programs, mentorship, and resources for young developers interested in AI, cloud computing, and cybersecurity. Over the next two years, the hub aims to train 1,000 developers, creating a pipeline of skilled professionals who can drive Africa's digital economy forward. The hub also features co-working spaces, innovation labs, and networking opportunities.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=500&fit=crop&q=80",
       category: "Innovation",
       date: "December 1, 2024",
@@ -84,9 +84,9 @@ function News() {
     },
     {
       id: 5,
-      title: "ZigoBiz Celebrates 18 Years of Technology Excellence",
+      title: "Zigo Business Solutions Celebrates 18 Years of Technology Excellence",
       excerpt: "A look back at 18 years of transforming businesses and driving digital innovation across Africa.",
-      content: "ZigoBiz marks 18 years of technology excellence, celebrating a journey of transformation and innovation across Africa. Since its founding in 2006, the company has grown from a small IT consultancy to a pan-African technology leader serving over 50 corporate customers across 9 countries. This anniversary reflects the company's commitment to innovation, customer success, and sustainable growth. As ZigoBiz looks to the future, it remains dedicated to driving digital transformation and creating value for businesses across the continent.",
+      content: "Zigo Business Solutions marks 18 years of technology excellence, celebrating a journey of transformation and innovation across Africa. Since its founding in 2006, the company has grown from a small IT consultancy to a pan-African technology leader serving over 50 corporate customers across 9 countries. This anniversary reflects the company's commitment to innovation, customer success, and sustainable growth. As Zigo Business Solutions looks to the future, it remains dedicated to driving digital transformation and creating value for businesses across the continent.",
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=500&fit=crop&q=80",
       category: "Company",
       date: "November 25, 2024",
@@ -101,7 +101,7 @@ function News() {
       id: 6,
       title: "New Cybersecurity Framework Launched to Protect African Businesses",
       excerpt: "The comprehensive framework addresses the growing cybersecurity threats facing enterprises across the continent.",
-      content: "ZigoBiz has launched a comprehensive cybersecurity framework designed to protect African businesses from evolving cyber threats. The framework addresses key areas including network security, data protection, threat detection, and compliance. With cyber attacks on the rise across the continent, this framework provides organizations with the tools and strategies needed to safeguard their digital assets and maintain business continuity. The framework is tailored to meet the specific needs and regulatory requirements of African businesses.",
+      content: "Zigo Business Solutions has launched a comprehensive cybersecurity framework designed to protect African businesses from evolving cyber threats. The framework addresses key areas including network security, data protection, threat detection, and compliance. With cyber attacks on the rise across the continent, this framework provides organizations with the tools and strategies needed to safeguard their digital assets and maintain business continuity. The framework is tailored to meet the specific needs and regulatory requirements of African businesses.",
       image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=500&fit=crop&q=80",
       category: "Technology",
       date: "November 20, 2024",
@@ -114,9 +114,9 @@ function News() {
     },
     {
       id: 7,
-      title: "ZigoBiz Expands Operations to East Africa",
+      title: "Zigo Business Solutions Expands Operations to East Africa",
       excerpt: "New offices in Nairobi and Kigali mark the company's continued commitment to pan-African growth and innovation.",
-      content: "ZigoBiz has expanded its operations to East Africa with new offices in Nairobi, Kenya and Kigali, Rwanda. This expansion marks a significant milestone in the company's pan-African growth strategy, bringing its innovative IT solutions to more businesses across the continent. The new offices will serve as regional hubs, providing local support and expertise to customers in East Africa. This expansion reflects ZigoBiz's commitment to driving digital transformation across all of Africa.",
+      content: "Zigo Business Solutions has expanded its operations to East Africa with new offices in Nairobi, Kenya and Kigali, Rwanda. This expansion marks a significant milestone in the company's pan-African growth strategy, bringing its innovative IT solutions to more businesses across the continent. The new offices will serve as regional hubs, providing local support and expertise to customers in East Africa. This expansion reflects Zigo Business Solutions' commitment to driving digital transformation across all of Africa.",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop&q=80",
       category: "Company",
       date: "November 15, 2024",
@@ -130,8 +130,8 @@ function News() {
     {
       id: 8,
       title: "AI Summit 2024: Shaping the Future of African Technology",
-      excerpt: "ZigoBiz hosts the continent's largest AI summit, bringing together industry leaders and innovators.",
-      content: "ZigoBiz hosted the continent's largest AI summit, bringing together over 500 industry leaders, innovators, and technology enthusiasts. The summit featured keynote speeches from global AI experts, panel discussions on the future of AI in Africa, and workshops on practical AI applications. The event highlighted Africa's growing role in the global AI landscape and showcased the innovative work being done by ZigoBiz and its partners to advance AI capabilities across the continent.",
+      excerpt: "Zigo Business Solutions hosts the continent's largest AI summit, bringing together industry leaders and innovators.",
+      content: "Zigo Business Solutions hosted the continent's largest AI summit, bringing together over 500 industry leaders, innovators, and technology enthusiasts. The summit featured keynote speeches from global AI experts, panel discussions on the future of AI in Africa, and workshops on practical AI applications. The event highlighted Africa's growing role in the global AI landscape and showcased the innovative work being done by Zigo Business Solutions and its partners to advance AI capabilities across the continent.",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop&q=80",
       category: "Innovation",
       date: "November 10, 2024",
@@ -190,7 +190,7 @@ function News() {
               Latest <span className="font-bold" style={{ color: '#7D582E' }}>Stories</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Stay updated with the latest news, innovations, and achievements from ZigoBiz.
+              Stay updated with the latest news, innovations, and achievements from Zigo Business Solutions.
             </p>
           </div>
 

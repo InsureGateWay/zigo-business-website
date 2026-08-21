@@ -74,7 +74,7 @@ function ChatBot() {
     
     // About
     if (lowerMsg.includes('about') || lowerMsg.includes('who') || lowerMsg.includes('company')) {
-      return "ZigoBiz is Africa's Premier IT Firm. We are a pan-African IT company committed to transforming businesses through innovative technology solutions. With 18 years of experience, we've helped over 50 corporate customers across 9 countries achieve their digital ambitions.";
+      return "Zigo Business Solutions is Africa's Premier IT Firm. We are a pan-African IT company committed to transforming businesses through innovative technology solutions. With 18 years of experience, we've helped over 50 corporate customers across 9 countries achieve their digital ambitions.";
     }
     
     // Industries

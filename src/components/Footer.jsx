@@ -77,7 +77,7 @@ function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <img
                 src="/logo512.png"
-                alt="ZigoBiz Logo"
+                alt="Zigo Business Solutions Logo"
                 className="h-12 w-12 object-contain"
               />
               <div>
@@ -205,7 +205,7 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-400">
-              &copy; {currentYear} ZigoBiz LTD. All rights reserved.
+              &copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center gap-6">
               <button type="button" className="text-xs text-gray-500 hover:text-[#ECD5AB] transition-colors">

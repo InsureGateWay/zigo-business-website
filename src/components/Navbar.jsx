@@ -62,7 +62,7 @@ function Navbar() {
           <Link to="/" className="flex items-center gap-2">
             <img
               src="/logo512.png"
-              alt="ZigoBiz Logo"
+              alt="Zigo Business Solutions Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 object-contain"
             />
             <div className="flex items-center">

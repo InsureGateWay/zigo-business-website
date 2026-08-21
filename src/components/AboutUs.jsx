@@ -99,7 +99,7 @@ function AboutUs() {
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-block mb-4">
               <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full" style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}>
-                About ZigoBiz
+                About Zigo Business Solutions
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 mt-4 mb-6 leading-tight">
@@ -243,7 +243,7 @@ function AboutUs() {
         <div className="max-w-7xl mx-auto px-6 py-16 text-white relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold mb-4">Why Choose ZigoBiz?</h3>
+              <h3 className="text-3xl font-bold mb-4">Why Choose Zigo Business Solutions?</h3>
               <p className="text-white/80 text-lg leading-relaxed mb-6">
                 We combine deep industry expertise with cutting-edge technology to deliver 
                 solutions that drive real business value.
