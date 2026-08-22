@@ -1,366 +1,240 @@
 import React, { useState } from 'react';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Send, 
+import {
+  ArrowRight,
+  BriefcaseBusiness,
   CheckCircle,
-  Building2,
-  Globe,
-  Users,
+  Clock,
+  Mail,
+  MessageSquareText,
+  Send,
   ShieldCheck,
-  Zap,
-  ChevronRight
 } from 'lucide-react';
+
+const contactEmail = 'admin@zigoservices.com';
+
+const nextSteps = [
+  {
+    icon: MessageSquareText,
+    title: 'We review your request',
+    description: 'We look at the challenge, intended outcome, and any context you provide.',
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: 'We identify the right specialist',
+    description: 'Your enquiry is directed to someone familiar with the relevant service or solution area.',
+  },
+  {
+    icon: CheckCircle,
+    title: 'We agree a practical next step',
+    description: 'That may be a short discovery call, a request for more detail, or clear guidance on fit.',
+  },
+];
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: ''
+    organization: '',
+    interest: '',
+    message: '',
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const handleChange = ({ target }) => {
+    setFormData((current) => ({ ...current, [target.name]: target.value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    }, 3000);
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const subject = formData.interest
+      ? `${formData.interest} enquiry from ${formData.name}`
+      : `Website enquiry from ${formData.name}`;
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Organization: ${formData.organization || 'Not provided'}`,
+      `Area of interest: ${formData.interest || 'Not selected'}`,
+      '',
+      formData.message,
+    ].join('\n');
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
-
-  const contactInfo = [
-    { 
-      icon: <MapPin className="w-5 h-5" />, 
-      label: "Office Address", 
-      value: "123 Victoria Island, Lagos, Nigeria"
-    },
-    { 
-      icon: <Phone className="w-5 h-5" />, 
-      label: "Phone Number", 
-      value: "+234 800 000 0000"
-    },
-    { 
-      icon: <Mail className="w-5 h-5" />, 
-      label: "Email Address", 
-      value: "admin@zigoservices.com"
-    },
-    { 
-      icon: <Clock className="w-5 h-5" />, 
-      label: "Working Hours", 
-      value: "Mon - Fri: 8:00 AM - 6:00 PM"
-    }
-  ];
 
   return (
-    <>
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full inline-block" style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}>
-              Get in Touch
-            </span>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mt-4 mb-4">
-              Let's Start a <span className="font-bold" style={{ color: '#7D582E' }}>Conversation</span>
-            </h2>
-            <p className="text-gray-500 text-lg">
-              Whether you have a question, project, or partnership opportunity — we're here to help.
+    <main className="overflow-hidden bg-white">
+      <section className="relative bg-[#5f421f] px-6 py-20 text-white md:py-28">
+        <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-white/5" />
+        <div className="absolute -bottom-48 -left-28 h-[28rem] w-[28rem] rounded-full bg-[#ECD5AB]/10" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]">Contact Zigo Business Solutions</span>
+            <h1 className="mt-5 max-w-4xl text-4xl font-light leading-tight md:text-6xl">
+              Tell us what you need to <span className="font-bold text-[#ECD5AB]">solve or improve.</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
+              Share the business challenge, the outcome you are working toward, and where you need support. We will help you identify a sensible next step.
             </p>
+            <a
+              href={`mailto:${contactEmail}`}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ECD5AB] px-7 py-3.5 font-semibold text-[#5f421f] transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-xl"
+            >
+              Email our team
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
           </div>
 
-          {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Left Side - Flip Card */}
-            <div 
-              className="relative h-[480px] cursor-pointer group"
-              onClick={handleFlip}
-            >
-              <div 
-                className={`relative w-full h-full transition-all duration-700 transform-style-3d ${
-                  isFlipped ? 'rotate-y-180' : ''
-                }`}
-              >
-                {/* Front Side */}
-                <div className="absolute w-full h-full backface-hidden rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=80"
-                    alt="Team"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#7D582E]/90 via-[#7D582E]/40 to-transparent"></div>
-                  
-                  <div className="absolute inset-0 flex flex-col justify-between p-8">
-                    <div className="flex justify-between items-start">
-                      <span className="bg-white/20 backdrop-blur-sm text-white text-xs font-medium px-4 py-2 rounded-full">
-                        24/7 Support
-                      </span>
-                      <span className="bg-white/20 backdrop-blur-sm p-2 rounded-full">
-                        <Users className="w-4 h-4 text-white" />
-                      </span>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">We're Here to Help</h3>
-                      <p className="text-white/70 text-sm">Click to view our contact details</p>
-                      <div className="mt-3 flex items-center gap-2 text-white/40 text-xs">
-                        <span>Click to flip</span>
-                        <ChevronRight className="w-3 h-3" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <aside className="rounded-3xl border border-white/15 bg-white/10 p-7 backdrop-blur-sm md:p-9" aria-label="Contact information">
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#5f421f]">
+              <Mail className="h-7 w-7" aria-hidden="true" />
+            </div>
+            <h2 className="mt-6 text-2xl font-semibold">Start by email</h2>
+            <a href={`mailto:${contactEmail}`} className="mt-3 block text-lg text-[#ECD5AB] underline-offset-4 hover:underline">
+              {contactEmail}
+            </a>
+            <p className="mt-5 border-t border-white/15 pt-5 leading-relaxed text-white/70">
+              We have intentionally listed only verified contact information. Meeting details can be agreed directly once we understand your request.
+            </p>
+          </aside>
+        </div>
+      </section>
 
-                {/* Back Side */}
-                <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-100">
-                  <div className="p-6 h-full flex flex-col">
-                    <div className="flex items-center gap-3 mb-5 pb-4 border-b border-gray-100">
-                      <div className="p-2.5 rounded-xl" style={{ backgroundColor: '#ECD5AB' }}>
-                        <Building2 className="w-5 h-5 text-[#7D582E]" />
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-bold text-gray-800">Contact Details</h4>
-                        <p className="text-xs text-gray-400">Reach out to our team</p>
-                      </div>
-                    </div>
-
-                    <div className="flex-1 space-y-3">
-                      {contactInfo.map((item, index) => (
-                        <div 
-                          key={index}
-                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 transition-all"
-                        >
-                          <div className="p-2 rounded-lg flex-shrink-0" style={{ backgroundColor: '#ECD5AB' }}>
-                            <div style={{ color: '#7D582E' }}>{item.icon}</div>
-                          </div>
-                          <div>
-                            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">{item.label}</p>
-                            <p className="text-sm text-gray-700 font-medium">{item.value}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-3 pt-3 border-t border-gray-100 text-center">
-                      <span className="text-xs text-gray-400">Click to flip back</span>
-                    </div>
-                  </div>
-                </div>
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.75fr_1.25fr]">
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Project Enquiry</span>
+            <h2 className="mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
+              Give us enough context to make the <span className="font-bold text-[#7D582E]">first conversation useful.</span>
+            </h2>
+            <p className="mt-5 text-lg leading-relaxed text-gray-500">
+              You do not need a finished brief. A clear description of the current problem, affected teams, and desired outcome is a strong starting point.
+            </p>
+            <div className="mt-8 space-y-4">
+              <div className="flex items-start gap-3 text-gray-700">
+                <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#7D582E]" aria-hidden="true" />
+                <p>Do not include passwords, access keys, or confidential production data.</p>
+              </div>
+              <div className="flex items-start gap-3 text-gray-700">
+                <Clock className="mt-0.5 h-5 w-5 shrink-0 text-[#7D582E]" aria-hidden="true" />
+                <p>If there is a target date, include it so we can discuss realistic timing.</p>
               </div>
             </div>
+          </div>
 
-            {/* Right Side - Form */}
-            <div className="h-[480px] bg-gray-50 rounded-2xl p-8 flex flex-col">
-              <div className="mb-5">
-                <h3 className="text-2xl font-bold text-gray-800">Send a Message</h3>
-                <p className="text-gray-500 text-sm">We'll respond within 24 hours</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="flex-1 flex flex-col gap-3">
-                <div className="grid sm:grid-cols-2 gap-3">
+          <div className="rounded-3xl border border-gray-100 bg-[#faf7f2] p-6 shadow-sm md:p-9">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="block text-sm font-semibold text-gray-800">
+                  Full name <span className="text-[#7D582E]">*</span>
                   <input
                     type="text"
                     name="name"
-                    placeholder="Full Name"
                     value={formData.name}
                     onChange={handleChange}
+                    autoComplete="name"
                     required
-                    className="px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-[#7D582E] focus:outline-none focus:ring-2 focus:ring-[#ECD5AB]/30 transition-all text-sm"
+                    className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
                   />
+                </label>
+                <label className="block text-sm font-semibold text-gray-800">
+                  Work email <span className="text-[#7D582E]">*</span>
                   <input
                     type="email"
                     name="email"
-                    placeholder="Email Address"
                     value={formData.email}
                     onChange={handleChange}
+                    autoComplete="email"
                     required
-                    className="px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-[#7D582E] focus:outline-none focus:ring-2 focus:ring-[#ECD5AB]/30 transition-all text-sm"
+                    className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
                   />
-                </div>
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-[#7D582E] focus:outline-none focus:ring-2 focus:ring-[#ECD5AB]/30 transition-all text-sm"
-                />
+                </label>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="block text-sm font-semibold text-gray-800">
+                  Organization
+                  <input
+                    type="text"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    autoComplete="organization"
+                    className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
+                  />
+                </label>
+                <label className="block text-sm font-semibold text-gray-800">
+                  Area of interest
+                  <select
+                    name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                    className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
+                  >
+                    <option value="">Select an option</option>
+                    <option>Data Services</option>
+                    <option>AI Services</option>
+                    <option>Infrastructure Services</option>
+                    <option>Application Services</option>
+                    <option>Platform Services</option>
+                    <option>IT Consulting</option>
+                    <option>Solutions</option>
+                    <option>Partnership or other enquiry</option>
+                  </select>
+                </label>
+              </div>
+
+              <label className="block text-sm font-semibold text-gray-800">
+                What would you like to solve? <span className="text-[#7D582E]">*</span>
                 <textarea
                   name="message"
-                  placeholder="Your Message"
-                  rows="3"
+                  rows="6"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="flex-1 px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-[#7D582E] focus:outline-none focus:ring-2 focus:ring-[#ECD5AB]/30 transition-all resize-none text-sm min-h-[80px]"
+                  placeholder="Describe the current challenge, desired outcome, and any important timing."
+                  className="mt-2 w-full resize-y rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
                 />
-                <button
-                  type="submit"
-                  className="w-full px-6 py-3 rounded-xl text-white font-semibold transition-all hover:shadow-lg flex items-center justify-center gap-2"
-                  style={{ backgroundColor: '#7D582E' }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#6a4a26';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = '#7D582E';
-                  }}
-                >
-                  {isSubmitted ? (
-                    <>
-                      <CheckCircle className="w-5 h-5" />
-                      Message Sent!
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
-              </form>
+              </label>
 
-              <div className="grid grid-cols-3 gap-2 mt-3">
-                <div className="text-center p-2 rounded-xl bg-white">
-                  <ShieldCheck className="w-4 h-4 text-[#7D582E] mx-auto" />
-                  <p className="text-[9px] text-gray-400 mt-0.5">Secure</p>
-                </div>
-                <div className="text-center p-2 rounded-xl bg-white">
-                  <Zap className="w-4 h-4 text-[#7D582E] mx-auto" />
-                  <p className="text-[9px] text-gray-400 mt-0.5">Fast</p>
-                </div>
-                <div className="text-center p-2 rounded-xl bg-white">
-                  <Users className="w-4 h-4 text-[#7D582E] mx-auto" />
-                  <p className="text-[9px] text-gray-400 mt-0.5">Expert</p>
-                </div>
-              </div>
-            </div>
+              <button
+                type="submit"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6a4a26] hover:shadow-xl sm:w-auto"
+              >
+                Prepare email
+                <Send className="h-4 w-4" aria-hidden="true" />
+              </button>
+              <p className="text-sm leading-relaxed text-gray-500">
+                This button opens your email application with the enquiry filled in. Your message is sent only after you review and send it there.
+              </p>
+            </form>
           </div>
         </div>
       </section>
 
-      {/* Google Maps Section - Full Width */}
-      <div className="w-full bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 pt-14 pb-0">
-          <div className="text-center max-w-3xl mx-auto mb-8">
-            <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full inline-block" style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}>
-              Visit Us
-            </span>
-            <h3 className="text-3xl font-light text-gray-900 mt-3">
-              Find Us at Our <span className="font-bold" style={{ color: '#7D582E' }}>Headquarters</span>
-            </h3>
+      <section className="bg-[#faf7f2] px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">What Happens Next</span>
+            <h2 className="mt-4 text-4xl font-light text-gray-900 md:text-5xl">
+              A clear and useful <span className="font-bold text-[#7D582E]">first response</span>
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            {nextSteps.map(({ icon: Icon, title, description }, index) => (
+              <article key={title} className="rounded-3xl border border-[#ECD5AB]/55 bg-white p-8">
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECD5AB]/60 text-[#7D582E]">
+                    <Icon className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <span className="text-sm font-bold tracking-widest text-[#7D582E]/35">0{index + 1}</span>
+                </div>
+                <h3 className="mt-6 text-xl font-semibold text-gray-900">{title}</h3>
+                <p className="mt-3 leading-relaxed text-gray-500">{description}</p>
+              </article>
+            ))}
           </div>
         </div>
-
-        <div className="w-full relative">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.195722067639!2d3.4214848!3d6.5033354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2b2b2b2b2b%3A0x2b2b2b2b2b2b2b2b!2sVictoria%20Island%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-            width="100%"
-            height="350"
-            style={{ border: 0, display: 'block' }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Zigo Business Solutions Office Location"
-            className="w-full"
-          ></iframe>
-
-          <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl border border-gray-100">
-            <div className="flex items-center gap-3">
-              <div className="p-2 rounded-xl" style={{ backgroundColor: '#ECD5AB' }}>
-                <MapPin className="w-4 h-4 text-[#7D582E]" />
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-gray-800">Zigo Business Solutions HQ</h4>
-                <p className="text-xs text-gray-500">Victoria Island, Lagos</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-6xl mx-auto px-6 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all flex items-center gap-3">
-              <div className="p-2 rounded-lg flex-shrink-0" style={{ backgroundColor: '#ECD5AB' }}>
-                <Phone className="w-4 h-4 text-[#7D582E]" />
-              </div>
-              <div>
-                <p className="text-[9px] text-gray-400 uppercase">Call</p>
-                <p className="text-xs font-semibold text-gray-700">+234 800 000 0000</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all flex items-center gap-3">
-              <div className="p-2 rounded-lg flex-shrink-0" style={{ backgroundColor: '#ECD5AB' }}>
-                <Mail className="w-4 h-4 text-[#7D582E]" />
-              </div>
-              <div>
-                <p className="text-[9px] text-gray-400 uppercase">Email</p>
-                <p className="text-xs font-semibold text-gray-700">admin@zigoservices.com</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all flex items-center gap-3">
-              <div className="p-2 rounded-lg flex-shrink-0" style={{ backgroundColor: '#ECD5AB' }}>
-                <Clock className="w-4 h-4 text-[#7D582E]" />
-              </div>
-              <div>
-                <p className="text-[9px] text-gray-400 uppercase">Hours</p>
-                <p className="text-xs font-semibold text-gray-700">Mon-Fri 8AM-6PM</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl p-3 shadow-sm hover:shadow-md transition-all flex items-center gap-3">
-              <div className="p-2 rounded-lg flex-shrink-0" style={{ backgroundColor: '#ECD5AB' }}>
-                <Globe className="w-4 h-4 text-[#7D582E]" />
-              </div>
-              <div>
-                <p className="text-[9px] text-gray-400 uppercase">Follow</p>
-                <p className="text-xs font-semibold text-gray-700">@zigobiz</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Flip Card CSS */}
-      <style jsx>{`
-        .perspective-1000 {
-          perspective: 1000px;
-        }
-        
-        .transform-style-3d {
-          transform-style: preserve-3d;
-        }
-        
-        .backface-hidden {
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
-        }
-        
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
-    </>
+      </section>
+    </main>
   );
 }
 
