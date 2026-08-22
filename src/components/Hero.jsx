@@ -88,7 +88,7 @@ function Hero() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 rounded-2xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-5">
+          <div className="mt-10 grid grid-cols-4 gap-4 rounded-2xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-5">
             {[
               { icon: BriefcaseBusiness, title: 'Business First', text: 'Goal-aligned solutions' },
               { icon: ShieldCheck, title: 'Secure by Design', text: 'Protection from the start' },
