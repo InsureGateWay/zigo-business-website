@@ -1,321 +1,218 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { 
-  Award, 
-  Users, 
-  Globe, 
-  Target, 
-  CheckCircle,
+import React from 'react';
+import {
   ArrowRight,
-  Shield,
-  Zap,
-  TrendingUp,
-  Heart,
-  Lightbulb,
+  BrainCircuit,
+  CloudCog,
+  Database,
+  Eye,
   Handshake,
-  Rocket
+  Lightbulb,
+  Scale,
+  ShieldCheck,
+  Target,
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const capabilities = [
+  { icon: Database, label: 'Data' },
+  { icon: BrainCircuit, label: 'AI' },
+  { icon: CloudCog, label: 'Cloud' },
+  { icon: ShieldCheck, label: 'Security' },
+];
+
+const values = [
+  {
+    icon: Scale,
+    title: 'Integrity in Practice',
+    description: 'We communicate clearly, set realistic expectations, and take responsibility for the work we deliver.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Practical Innovation',
+    description: 'We apply modern technology where it creates useful outcomes—not simply because it is new.',
+  },
+  {
+    icon: Handshake,
+    title: 'Collaborative Delivery',
+    description: 'We work closely with stakeholders so solutions reflect real workflows, constraints, and priorities.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Responsible Technology',
+    description: 'We consider security, privacy, access, and long-term maintainability from the beginning.',
+  },
+];
+
+const commitments = [
+  'Start with the business problem before choosing the technology.',
+  'Make progress, trade-offs, and next steps visible throughout delivery.',
+  'Build foundations that can evolve as the organization grows.',
+];
 
 function AboutUs() {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const section = sectionRef.current;
-
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
-  }, []);
-
-  const stats = [
-    { number: "18", label: "Years of Excellence", icon: <Award className="w-6 h-6" /> },
-    { number: "9", label: "Countries Operating", icon: <Globe className="w-6 h-6" /> },
-    { number: "50+", label: "Corporate Customers", icon: <Users className="w-6 h-6" /> },
-    { number: "400+", label: "IT Professionals", icon: <Target className="w-6 h-6" /> }
-  ];
-
-  const values = [
-    {
-      icon: <Heart className="w-8 h-8" />,
-      title: "Passion for Excellence",
-      description: "We are driven by a relentless pursuit of excellence in everything we do."
-    },
-    {
-      icon: <Handshake className="w-8 h-8" />,
-      title: "Customer First",
-      description: "Our customers' success is our success. We build lasting partnerships."
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation at Heart",
-      description: "We embrace innovation and continuously push the boundaries of what's possible."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Integrity & Trust",
-      description: "We operate with the highest standards of integrity, transparency, and ethics."
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Agility & Speed",
-      description: "We adapt quickly to change and deliver solutions with speed and precision."
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Sustainable Growth",
-      description: "We create sustainable value for our clients, employees, and communities."
-    }
-  ];
-
-  const milestones = [
-    { year: "2008", title: "Founded in Lagos", description: "Started with a vision to transform Africa's IT landscape" },
-    { year: "2012", title: "First International Office", description: "Expanded operations to Ghana and Kenya" },
-    { year: "2016", title: "AI & Data Practice", description: "Launched specialized AI and data analytics division" },
-    { year: "2020", title: "Cloud Innovation Hub", description: "Established cloud innovation center of excellence" },
-    { year: "2023", title: "Pan-African Expansion", description: "Now serving 9 countries across Africa" },
-    { year: "2024", title: "Industry Leadership", description: "Recognized as Africa's premier IT firm" }
-  ];
-
   return (
-    <section ref={sectionRef} className="bg-white overflow-hidden">
-      {/* Section Header */}
-      <div className="py-28 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-block mb-4">
-              <span className="text-sm font-semibold tracking-widest uppercase px-4 py-2 rounded-full" style={{ backgroundColor: '#ECD5AB', color: '#7D582E' }}>
-                About Zigo Business Solutions
-              </span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mt-4 mb-6 leading-tight">
-              Africa's Premier 
-              <br />
-              <span className="font-bold relative">
-                <span className="relative" style={{ color: '#7D582E' }}>
-                  IT Innovation Firm
-                </span>
-                <span className="absolute -bottom-2 left-0 w-full h-1 rounded-full" style={{ backgroundColor: '#ECD5AB' }}></span>
-              </span>
-            </h2>
-            <p className="text-gray-500 text-lg font-light max-w-2xl mx-auto leading-relaxed">
-              We are a pan-African IT company committed to transforming businesses through 
-              innovative technology solutions. With 18 years of experience, we've helped 
-              over 50 corporate customers across 9 countries achieve their digital ambitions.
+    <main className="overflow-hidden bg-white">
+      <section className="relative bg-[#faf7f2] px-6 py-20 md:py-28">
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#ECD5AB]/25" />
+        <div className="absolute -bottom-36 -left-28 h-96 w-96 rounded-full bg-[#7D582E]/5" />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <span className="inline-block rounded-full bg-[#ECD5AB] px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#7D582E]">
+              About Zigo Business Solutions
+            </span>
+            <h1 className="mt-7 max-w-4xl text-4xl font-light leading-tight text-gray-900 md:text-6xl">
+              Technology should make business
+              <span className="font-bold text-[#7D582E]"> clearer, safer, and more capable.</span>
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
+              Zigo Business Solutions helps organizations use data, artificial intelligence, cloud platforms, and secure digital systems to solve practical challenges and prepare for sustainable growth.
             </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 rounded-2xl p-6 text-center transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6a4a26] hover:shadow-xl"
               >
-                <div className="flex justify-center mb-3">
-                  <div className="p-3 rounded-full" style={{ backgroundColor: '#ECD5AB' }}>
-                    <div style={{ color: '#7D582E' }}>{stat.icon}</div>
-                  </div>
-                </div>
-                <div className="text-4xl font-bold" style={{ color: '#7D582E' }}>
-                  {stat.number}
-                </div>
-                <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Our Values - Full Width Light Grey Background */}
-      <div className="w-full bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-light text-gray-900">
-              Our Core <span className="font-bold" style={{ color: '#7D582E' }}>Values</span>
-            </h3>
-            <p className="text-gray-500 mt-2">The principles that guide everything we do</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className={`group p-6 rounded-2xl bg-white border border-gray-100 hover:border-[#ECD5AB] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                Book a Consultation
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#7D582E]/25 bg-white px-7 py-3.5 font-semibold text-[#7D582E] transition-all hover:border-[#7D582E] hover:shadow-md"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="p-3 rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:shadow-md" style={{ backgroundColor: '#ECD5AB' }}>
-                      <div style={{ color: '#7D582E' }}>{value.icon}</div>
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-2">{value.title}</h4>
-                    <p className="text-sm text-gray-500 leading-relaxed">{value.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Our Journey / Milestones */}
-      <div className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-light text-gray-900">
-              Our <span className="font-bold" style={{ color: '#7D582E' }}>Journey</span>
-            </h3>
-            <p className="text-gray-500 mt-2">Key milestones in our growth story</p>
-          </div>
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#ECD5AB] hidden md:block"></div>
-            
-            <div className="space-y-8 md:space-y-0">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`md:flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  {/* Content */}
-                  <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12'}`}>
-                    <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow border border-gray-100">
-                      <div className="flex items-center gap-3 mb-2" style={{ color: '#7D582E' }}>
-                        <span className="text-sm font-bold">{milestone.year}</span>
-                        <span className="text-xs text-gray-400">|</span>
-                        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: '#7D582E' }}>
-                          Milestone
-                        </span>
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-1">{milestone.title}</h4>
-                      <p className="text-sm text-gray-500">{milestone.description}</p>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline Dot */}
-                  <div className="hidden md:flex items-center justify-center w-16">
-                    <div className="w-4 h-4 rounded-full border-4" style={{ backgroundColor: '#7D582E', borderColor: '#ECD5AB' }}></div>
-                  </div>
-                  
-                  {/* Empty space for alignment */}
-                  <div className="md:w-1/2"></div>
-                </div>
-              ))}
+                Explore Our Services
+              </Link>
             </div>
           </div>
-        </div>
-      </div>
 
-      {/* Why Choose Us - Full Width Section */}
-      <div className="w-full bg-gradient-to-r from-[#7D582E] to-[#a87a4a] relative overflow-hidden">
-        {/* Decorative background elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/4"></div>
-        
-        <div className="max-w-7xl mx-auto px-6 py-16 text-white relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold mb-4">Why Choose Zigo Business Solutions?</h3>
-              <p className="text-white/80 text-lg leading-relaxed mb-6">
-                We combine deep industry expertise with cutting-edge technology to deliver 
-                solutions that drive real business value.
+          <div className="relative mx-auto w-full max-w-xl rounded-[2rem] border border-[#ECD5AB]/70 bg-white p-7 shadow-xl md:p-9">
+            <div className="absolute -right-4 -top-4 h-24 w-24 rounded-3xl bg-[#ECD5AB]/35" />
+            <div className="relative">
+              <p className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">What we bring together</p>
+              <h2 className="mt-3 text-3xl font-semibold text-gray-900">Connected digital capabilities</h2>
+              <p className="mt-3 leading-relaxed text-gray-500">
+                The right solution often crosses disciplines. We connect the capabilities needed around one business outcome.
               </p>
-              <div className="space-y-3">
-                {[
-                  "18 years of proven track record",
-                  "400+ skilled IT professionals",
-                  "9 countries across Africa",
-                  "50+ corporate customers",
-                  "Industry-specific expertise"
-                ].map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-[#ECD5AB]" strokeWidth={2} />
-                    <span className="text-sm text-white/90">{item}</span>
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {capabilities.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex items-center gap-3 rounded-2xl bg-[#faf7f2] p-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#ECD5AB] text-[#7D582E]">
+                      <Icon className="h-5 w-5" strokeWidth={1.6} aria-hidden="true" />
+                    </div>
+                    <span className="font-semibold text-gray-800">{label}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <Rocket className="w-6 h-6 text-[#ECD5AB]" />
-                  <h4 className="font-semibold">Innovation First</h4>
-                </div>
-                <p className="text-sm text-white/80">We invest heavily in R&D to bring you the latest technologies.</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <Users className="w-6 h-6 text-[#ECD5AB]" />
-                  <h4 className="font-semibold">Customer-Centric</h4>
-                </div>
-                <p className="text-sm text-white/80">Your success is our success. We build long-term partnerships.</p>
-              </div>
-              <button
-                className="bg-white text-[#7D582E] px-6 py-3 rounded-xl font-semibold transition-all hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2 mt-2 group"
-              >
-                Learn More About Us
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Connect Section */}
-      <div className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-light text-gray-900 mb-2">
-              Ready to <span className="font-bold" style={{ color: '#7D582E' }}>Transform</span> Your Business?
-            </h3>
-            <p className="text-gray-500 text-sm mb-6">
-              Let's discuss how we can help you achieve your digital goals.
-            </p>
-            <button
-              className="group inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold transition-all duration-300 hover:shadow-2xl hover:scale-105"
-              style={{ backgroundColor: '#7D582E' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#6a4a26';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#7D582E';
-              }}
-            >
-              <span>Contact Our Team</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
-            </button>
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-3xl">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Why We Exist</span>
+            <h2 className="mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
+              Building useful technology around
+              <span className="font-bold text-[#7D582E]"> meaningful outcomes</span>
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <article className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm md:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#7D582E]">
+                <Target className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
+              </div>
+              <p className="mt-7 text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Our Mission</p>
+              <h3 className="mt-3 text-2xl font-semibold text-gray-900">Make advanced technology practical.</h3>
+              <p className="mt-4 leading-relaxed text-gray-500">
+                Help organizations turn complex technology choices into clear, secure, and workable solutions that improve how people operate and make decisions.
+              </p>
+            </article>
+
+            <article className="rounded-3xl bg-[#5f421f] p-8 text-white shadow-xl md:p-10">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#5f421f]">
+                <Eye className="h-7 w-7" strokeWidth={1.6} aria-hidden="true" />
+              </div>
+              <p className="mt-7 text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]">Our Vision</p>
+              <h3 className="mt-3 text-2xl font-semibold">Help ambitious businesses grow with confidence.</h3>
+              <p className="mt-4 leading-relaxed text-white/70">
+                Contribute to a future where organizations can use data and digital systems responsibly, protect what matters, and adapt as their needs change.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="bg-gray-50 px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">How We Show Up</span>
+            <h2 className="mt-4 text-4xl font-light text-gray-900 md:text-5xl">
+              Principles that guide <span className="font-bold text-[#7D582E]">our work</span>
+            </h2>
+            <p className="mt-4 text-lg text-gray-500">
+              Trust is built through consistent decisions and delivery—not unsupported claims.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {values.map(({ icon: Icon, title, description }) => (
+              <article key={title} className="group rounded-2xl border border-gray-100 bg-white p-7 transition-all hover:-translate-y-1 hover:border-[#ECD5AB] hover:shadow-lg">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#ECD5AB]/60 text-[#7D582E] transition-transform group-hover:scale-110">
+                  <Icon className="h-6 w-6" strokeWidth={1.6} aria-hidden="true" />
+                </div>
+                <h3 className="mt-6 text-xl font-semibold text-gray-900">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-500">{description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-[#5f421f] px-6 py-24 text-white">
+        <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/5" />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+          <div>
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]">Growing With Purpose</span>
+            <h2 className="mt-4 text-4xl font-light leading-tight md:text-5xl">
+              Building our track record through
+              <span className="font-bold text-[#ECD5AB]"> thoughtful delivery</span>
+            </h2>
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/70">
+              We are focused on earning trust one engagement at a time through transparent collaboration, practical solutions, and results clients can evaluate for themselves.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {commitments.map((commitment, index) => (
+              <div key={commitment} className="flex gap-4 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-sm">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ECD5AB] text-sm font-bold text-[#5f421f]">
+                  {index + 1}
+                </span>
+                <p className="pt-1 leading-relaxed text-white/85">{commitment}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-[#faf7f2] px-6 py-12 text-center md:px-12">
+          <h2 className="text-3xl font-semibold text-gray-900 md:text-4xl">Let&apos;s solve something meaningful.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-gray-500">
+            Tell us about the business challenge you are working through, and we will help you identify a practical next step.
+          </p>
+          <Link
+            to="/contact"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-[#6a4a26] hover:shadow-xl"
+          >
+            Book a Consultation
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
 
