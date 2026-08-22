@@ -59,11 +59,11 @@ function ProductsShowcase() {
               key={name}
               className="group flex min-h-[360px] flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className={`relative flex h-36 items-center justify-center bg-gradient-to-br ${background}`}>
-                <div className="absolute left-6 top-5 text-xs font-semibold uppercase tracking-widest text-gray-600">
+              <div className={`flex h-48 flex-col bg-gradient-to-br p-6 ${background}`}>
+                <div className="text-xs font-semibold uppercase tracking-widest text-gray-600">
                   {category}
                 </div>
-                <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-white shadow-lg transition-transform duration-300 group-hover:scale-105">
+                <div className="mt-6 flex h-20 w-20 shrink-0 self-center items-center justify-center rounded-3xl bg-white shadow-lg transition-transform duration-300 group-hover:scale-105">
                   <Icon className="h-10 w-10" style={{ color: accent }} strokeWidth={1.5} aria-hidden="true" />
                 </div>
               </div>
