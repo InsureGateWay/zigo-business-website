@@ -11,8 +11,8 @@ const services = [
   },
   {
     icon: BrainCircuit,
-    title: 'Artificial Intelligence',
-    description: 'Apply automation and AI to practical workflows, customer experiences, and operational challenges.',
+    title: 'Enterprise AI & Copilot',
+    description: 'Securely adopt, integrate, and extend Microsoft Copilot, ChatGPT, and other enterprise AI platforms.',
     link: '/services/ai-services',
   },
   {
@@ -23,8 +23,8 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: 'Cybersecurity',
-    description: 'Strengthen systems, data, and operations with security considered from the beginning.',
+    title: 'Cybersecurity & AI Governance',
+    description: 'Protect identities, data, and AI usage with appropriate controls, governance, and information protection.',
     link: '/products/security-suite',
   },
   {
@@ -53,7 +53,7 @@ function WhatWeDo() {
             </h2>
           </div>
           <p className="max-w-xl text-lg leading-relaxed text-gray-500 lg:justify-self-end">
-            From strategy to implementation, we help organizations build useful, secure, and scalable digital capabilities.
+            From AI readiness to data, integration, security, and managed support, we turn technology investments into operational capability.
           </p>
         </div>
 

@@ -5,6 +5,7 @@ import {
   CheckCircle,
   Clock,
   Mail,
+  Phone,
   MessageSquareText,
   Send,
   ShieldCheck,
@@ -91,6 +92,9 @@ function Contact() {
             <a href={`mailto:${contactEmail}`} className="mt-3 block text-lg text-[#ECD5AB] underline-offset-4 hover:underline">
               {contactEmail}
             </a>
+            <a href='tel:+2347033033047' className='mt-3 flex items-center gap-2 text-lg text-[#ECD5AB] underline-offset-4 hover:underline'>
+              <Phone className='h-5 w-5' /> +234 703 303 3047
+            </a>
             <p className="mt-5 border-t border-white/15 pt-5 leading-relaxed text-white/70">
               We have intentionally listed only verified contact information. Meeting details can be agreed directly once we understand your request.
             </p>
@@ -170,14 +174,16 @@ function Contact() {
                     className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
                   >
                     <option value="">Select an option</option>
-                    <option>Data Services</option>
-                    <option>AI Services</option>
-                    <option>Infrastructure Services</option>
-                    <option>Application Services</option>
-                    <option>Platform Services</option>
-                    <option>IT Consulting</option>
-                    <option>Solutions</option>
-                    <option>Partnership or other enquiry</option>
+                    <option>AI Readiness Assessment</option>
+                    <option>Microsoft Copilot</option>
+                    <option>AI Governance & Security</option>
+                    <option>AI Agents & Automation</option>
+                    <option>Data & Integration</option>
+                    <option>Managed AI Support</option>
+                    <option>Data Engineering</option>
+                    <option>Power BI / Analytics</option>
+                    <option>Technology Partnership</option>
+                    <option>Other</option>
                   </select>
                 </label>
               </div>

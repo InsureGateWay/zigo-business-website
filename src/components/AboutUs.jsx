@@ -66,7 +66,7 @@ function AboutUs() {
               <span className="font-bold text-[#7D582E]"> clearer, safer, and more capable.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
-              Zigo Business Solutions helps organizations use data, artificial intelligence, cloud platforms, and secure digital systems to solve practical challenges and prepare for sustainable growth.
+              Zigo Business Solutions is a Nigerian technology company helping organizations modernize their data, systems, and business processes and successfully adopt enterprise AI.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link

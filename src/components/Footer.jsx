@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const quickLinks = [
@@ -11,7 +11,10 @@ const quickLinks = [
 
 const serviceLinks = [
   { name: 'Data Services', to: '/services/data-services' },
-  { name: 'AI Services', to: '/services/ai-services' },
+  { name: 'Enterprise AI Services', to: '/services/ai-services' },
+  { name: 'Microsoft Copilot', to: '/services/microsoft-copilot' },
+  { name: 'AI Governance', to: '/services/ai-governance' },
+  { name: 'Managed AI Services', to: '/services/managed-ai-services' },
   { name: 'Infrastructure Services', to: '/services/infrastructure-services' },
   { name: 'Applications Services', to: '/services/applications-services' },
   { name: 'Platform Services', to: '/services/platforms-services' },
@@ -46,7 +49,7 @@ function Footer() {
             </Link>
 
             <p className="mb-6 max-w-md text-sm leading-relaxed text-gray-400">
-              Practical data, AI, cloud, security, and digital-platform solutions designed around real business needs.
+              Enterprise AI, data, cloud, security, and digital-transformation services designed around practical business outcomes.
             </p>
 
             <div className="space-y-3">
@@ -56,6 +59,10 @@ function Footer() {
               >
                 <Mail className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
                 admin@zigoservices.com
+              </a>
+              <a href='tel:+2347033033047' className='flex w-fit items-center gap-3 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]'>
+                <Phone className='h-5 w-5 shrink-0 text-[#ECD5AB]' strokeWidth={1.5} />
+                +234 703 303 3047
               </a>
             </div>
           </div>
