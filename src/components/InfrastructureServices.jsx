@@ -129,20 +129,20 @@ function InfrastructureServices() {
 
   const caseStudies = [
     {
-      title: "LAPO Microfinance Bank",
-      description: "Exadata Cloud at Customer Deployment for optimized cloud infrastructure"
+      title: "Secure Cloud Modernisation",
+      description: "Example opportunity: modernise cloud and data-centre foundations for resilience, governance, and efficient operations"
     },
     {
-      title: "AXA Mansard",
-      description: "HPE Synergy Servers and Nimble Storage Deployment for data center efficiency"
+      title: "Data-Centre Efficiency",
+      description: "Example opportunity: improve compute, storage, capacity management, and operational visibility"
     },
     {
-      title: "MTN Nigeria",
-      description: "Managing Large Network Infrastructure for optimal performance"
+      title: "Network Operations",
+      description: "Example opportunity: strengthen monitoring, service reliability, and response across complex network environments"
     },
     {
-      title: "Equity Bank Kenya",
-      description: "HPE Proliant Servers for HCI Platform Deployment"
+      title: "Hybrid Infrastructure",
+      description: "Example opportunity: design scalable hybrid infrastructure aligned with security and continuity requirements"
     }
   ];
 
@@ -288,15 +288,15 @@ function InfrastructureServices() {
         </div>
       </div>
 
-      {/* Case Studies Section */}
+      {/* Example Opportunities Section */}
       <div className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              <span className="font-bold text-[#7D582E]">Case Studies</span>
+              <span className="font-bold text-[#7D582E]">Example Infrastructure Opportunities</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Real-world success stories from our infrastructure implementations
+              Illustrative scenarios showing where our infrastructure capabilities may help. These are not presented as completed client engagements.
             </p>
           </div>
 

@@ -137,19 +137,19 @@ function PlatformsServices() {
   const caseStudies = [
     {
       title: "Enterprise Data Platform Implementation",
-      description: "Built scalable data platform for improved data accessibility and processing"
+      description: "Example opportunity: build a governed platform that improves approved access to business data"
     },
     {
       title: "Database Modernization Project",
-      description: "Migrated legacy databases to modern, high-performance platforms"
+      description: "Example opportunity: assess and modernise legacy databases with controlled migration and validation"
     },
     {
       title: "Big Data Analytics Solution",
-      description: "Implemented big data ecosystem for real-time analytics and insights"
+      description: "Example opportunity: establish scalable processing for timely analytics where the business case supports it"
     },
     {
       title: "DevOps Transformation",
-      description: "Incorporated DevOps principles for efficient data platform development"
+      description: "Example opportunity: improve delivery through version control, automation, testing, and observable operations"
     }
   ];
 
@@ -328,15 +328,15 @@ function PlatformsServices() {
         </div>
       </div>
 
-      {/* Case Studies Section */}
+      {/* Example Opportunities Section */}
       <div className="bg-gray-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              <span className="font-bold text-[#7D582E]">Case Studies</span>
+              <span className="font-bold text-[#7D582E]">Example Platform Opportunities</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Real-world success stories from our platform implementations
+              Illustrative scenarios showing where our platform capabilities may help. These are not presented as completed client engagements.
             </p>
           </div>
 

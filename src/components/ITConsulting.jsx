@@ -140,19 +140,19 @@ function ITConsulting() {
   const caseStudies = [
     {
       title: "Digital Transformation Strategy",
-      description: "Developed comprehensive digital strategy for financial services institution"
+      description: "Example opportunity: create a practical digital strategy aligned with business priorities and constraints"
     },
     {
       title: "Business Process Optimization",
-      description: "Streamlined operations for improved efficiency and cost reduction"
+      description: "Example opportunity: review processes and identify well-governed opportunities for simplification and automation"
     },
     {
       title: "Data Governance Framework",
-      description: "Implemented enterprise-wide data governance for compliance and security"
+      description: "Example opportunity: establish ownership, controls, quality practices, and a workable data-governance roadmap"
     },
     {
       title: "IT Strategy & Architecture",
-      description: "Designed scalable IT architecture for business growth and innovation"
+      description: "Example opportunity: design a maintainable target architecture and phased technology roadmap"
     }
   ];
 
@@ -331,15 +331,15 @@ function ITConsulting() {
         </div>
       </div>
 
-      {/* Case Studies Section */}
+      {/* Example Opportunities Section */}
       <div className="bg-gray-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              <span className="font-bold text-[#7D582E]">Case Studies</span>
+              <span className="font-bold text-[#7D582E]">Example Consulting Opportunities</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Real-world success stories from our consultancy engagements
+              Illustrative scenarios showing where our advisory capabilities may help. These are not presented as completed client engagements.
             </p>
           </div>
 

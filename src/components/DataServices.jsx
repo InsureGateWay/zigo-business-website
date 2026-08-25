@@ -134,20 +134,20 @@ function DataServices() {
 
   const caseStudies = [
     {
-      title: "Data Reservoir for Stanbic Bank Kenya",
-      description: "Successfully built a comprehensive data reservoir to support analytics and reporting"
+      title: "Enterprise Data Foundation",
+      description: "Example opportunity: create a governed data foundation that supports dependable analytics and reporting"
     },
     {
-      title: "Business Intelligence for MTN Zambia",
-      description: "Implemented BI solutions for improved decision-making across operations"
+      title: "Operational Business Intelligence",
+      description: "Example opportunity: deliver Power BI reporting that improves visibility across operations"
     },
     {
-      title: "Azure EDW & BI for Keystone Bank Nigeria",
-      description: "Developed and implemented Microsoft Azure Enterprise Data Warehouse"
+      title: "Cloud Data Warehouse",
+      description: "Example opportunity: modernise enterprise data warehousing using appropriate cloud services"
     },
     {
-      title: "Enterprise Risk Data Management for Access Bank",
-      description: "Implementation of comprehensive risk data management solution"
+      title: "Risk Data Management",
+      description: "Example opportunity: improve data quality, lineage, controls, and risk reporting"
     }
   ];
 
@@ -325,15 +325,15 @@ function DataServices() {
         </div>
       </div>
 
-      {/* Case Studies Section */}
+      {/* Example Opportunities Section */}
       <div className="bg-gray-50 py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              <span className="font-bold text-[#7D582E]">Case Studies</span>
+              <span className="font-bold text-[#7D582E]">Example Data Opportunities</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Real-world success stories from our data services
+              Illustrative scenarios showing where our data capabilities may help. These are not presented as completed client engagements.
             </p>
           </div>
 
