@@ -18,6 +18,11 @@ const serviceLinks = [
   { name: 'IT Consulting', to: '/services/it-consulting' },
 ];
 
+const policyLinks = [
+  { name: 'Environmental Policy', href: 'https://zigoai.app/environmental-policy' },
+  { name: 'Sustainability Statement', href: 'https://zigoai.app/sustainability-statement' },
+];
+
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -104,8 +109,22 @@ function Footer() {
       </div>
 
       <div className="border-t border-gray-800">
-        <div className="mx-auto max-w-7xl px-6 py-6 text-center text-sm text-gray-400">
-          &copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-center text-sm text-gray-400 sm:flex-row sm:text-left">
+          <p>&copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.</p>
+          <nav aria-label="Corporate policies">
+            <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:justify-end">
+              {policyLinks.map(({ name, href }) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="transition-colors hover:text-[#ECD5AB]"
+                  >
+                    {name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>
