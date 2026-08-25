@@ -1,15 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { CheckCircle2, ExternalLink, Handshake, Leaf, Recycle, Scale, ShieldCheck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const contactEmail = 'admin@zigoservices.com';
 
 function PolicyShell({ eyebrow, title, summary, effective, review, highlights, children, aside }) {
-  useEffect(() => {
-    document.title = `${title} | Zigo Business Solutions Ltd`;
-    return () => { document.title = 'Zigo Business Solutions'; };
-  }, [title]);
-
   return (
     <div className="bg-[#fbfaf8]">
       <header className="relative overflow-hidden border-b border-[#ECD5AB]/60 bg-gray-950 text-white">

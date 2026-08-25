@@ -25,6 +25,7 @@ import AnalyticsTools from './components/AnalyticsTools';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot'; // Import ChatBot
 import { EnvironmentalPolicy, SustainabilityStatement } from './components/CorporatePolicies';
+import Seo from './components/Seo';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -54,6 +55,7 @@ function App() {
     <Router>
       <div className="flex min-h-screen flex-col bg-white text-gray-900">
         <ScrollToTop />
+        <Seo />
         <Navbar />
         <main className="flex-1 pt-16">
           <Routes>

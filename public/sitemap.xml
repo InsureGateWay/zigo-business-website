@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.zigoservices.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.zigoservices.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.zigoservices.com/services/data-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services/ai-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services/infrastructure-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services/applications-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services/platforms-services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/services/it-consulting</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/products/data-platforms</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/products/ai-solutions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/products/cloud-products</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/products/security-suite</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/products/analytics-tools</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.zigoservices.com/environmental-policy</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.zigoservices.com/sustainability-statement</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+</urlset>

@@ -169,11 +169,11 @@ function Hero() {
 
           {/* Content Below */}
           <div className="text-center mt-16">
-            <h1 className="text-2xl sm:text-3xl font-light text-[#7D582E] leading-[1.1] mb-2">
+            <p className="text-2xl sm:text-3xl font-light text-[#7D582E] leading-[1.1] mb-2">
               Unlocking the Potential
               <br />
               <span className="font-bold text-[#7D582E]">of Enterprise Data and AI</span>
-            </h1>
+            </p>
             <p className="text-sm sm:text-base text-gray-500 font-light mb-3">
               Creating Insights, Empowering Decisions
             </p>
