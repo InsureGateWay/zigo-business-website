@@ -19,8 +19,8 @@ const serviceLinks = [
 ];
 
 const policyLinks = [
-  { name: 'Environmental Policy', href: 'https://zigoai.app/environmental-policy' },
-  { name: 'Sustainability Statement', href: 'https://zigoai.app/sustainability-statement' },
+  { name: 'Environmental Policy', to: '/environmental-policy' },
+  { name: 'Sustainability Statement', to: '/sustainability-statement' },
 ];
 
 function Footer() {
@@ -109,14 +109,14 @@ function Footer() {
           <p>&copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.</p>
           <nav aria-label="Corporate policies">
             <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:justify-end">
-              {policyLinks.map(({ name, href }) => (
-                <li key={href}>
-                  <a
-                    href={href}
+              {policyLinks.map(({ name, to }) => (
+                <li key={to}>
+                  <Link
+                    to={to}
                     className="transition-colors hover:text-[#ECD5AB]"
                   >
                     {name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

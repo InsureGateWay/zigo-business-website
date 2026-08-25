@@ -24,6 +24,7 @@ import SecuritySuite from './components/SecuritySuite';
 import AnalyticsTools from './components/AnalyticsTools';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot'; // Import ChatBot
+import { EnvironmentalPolicy, SustainabilityStatement } from './components/CorporatePolicies';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -72,6 +73,8 @@ function App() {
             <Route path="/products/security-suite" element={<SecuritySuite />} />
             <Route path="/products/analytics-tools" element={<AnalyticsTools />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/environmental-policy" element={<EnvironmentalPolicy />} />
+            <Route path="/sustainability-statement" element={<SustainabilityStatement />} />
           </Routes>
         </main>
         <Footer />
