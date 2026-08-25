@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Clock, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const quickLinks = [
@@ -37,11 +37,11 @@ function Footer() {
                 alt="Zigo Business Solutions Logo"
                 className="h-12 w-12 object-contain"
               />
-              <div>
-                <span className="text-3xl font-light tracking-wide text-[#ECD5AB]">
-                  ZIGO<span className="font-bold text-white">BIZ</span>
+              <div className="leading-tight">
+                <span className="block text-xl font-semibold tracking-wide text-white">
+                  Zigo Business Solutions
                 </span>
-                <span className="ml-1 text-xs font-light text-gray-400">LTD</span>
+                <span className="mt-1 block text-xs font-medium uppercase tracking-[0.2em] text-[#ECD5AB]">Limited</span>
               </div>
             </Link>
 
@@ -57,10 +57,6 @@ function Footer() {
                 <Mail className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
                 admin@zigoservices.com
               </a>
-              <div className="flex items-center gap-3 text-sm text-gray-400">
-                <Clock className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
-                Monday–Friday, 8:00 AM–6:00 PM
-              </div>
             </div>
           </div>
 

@@ -51,10 +51,10 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div>
+      <div className="flex min-h-screen flex-col bg-white text-gray-900">
         <ScrollToTop />
         <Navbar />
-        <div className="pt-16">
+        <main className="flex-1 pt-16">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
@@ -73,7 +73,7 @@ function App() {
             <Route path="/products/analytics-tools" element={<AnalyticsTools />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </div>
+        </main>
         <Footer />
         {/* Add ChatBot - it will appear on all pages */}
         <ChatBot />
