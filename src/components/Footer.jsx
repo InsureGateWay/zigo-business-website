@@ -34,18 +34,12 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <Link to="/" className="mb-6 flex w-fit items-center gap-3">
+            <Link to="/" className="mb-6 flex w-fit items-center rounded-2xl bg-white px-4 py-3">
               <img
-                src="/logo512.png"
+                src="/zigo-business-solutions-logo.png"
                 alt="Zigo Business Solutions Logo"
-                className="h-12 w-12 object-contain"
+                className="h-16 w-auto max-w-[280px] object-contain"
               />
-              <div className="leading-tight">
-                <span className="block text-xl font-semibold tracking-wide text-white">
-                  Zigo Business Solutions
-                </span>
-                <span className="mt-1 block text-xs font-medium uppercase tracking-[0.2em] text-[#ECD5AB]">Limited</span>
-              </div>
             </Link>
 
             <p className="mb-6 max-w-md text-sm leading-relaxed text-gray-400">

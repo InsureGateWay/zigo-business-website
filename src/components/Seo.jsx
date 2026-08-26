@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 const siteUrl = 'https://www.zigoservices.com';
 const siteName = 'Zigo Business Solutions Ltd';
-const defaultImage = `${siteUrl}/logo512.png`;
+const defaultImage = `${siteUrl}/zigo-business-solutions-logo.png`;
 
 const pages = {
   '/': ['Enterprise AI & Microsoft Copilot Services Nigeria | Zigo Business', 'Zigo Business Solutions helps organisations in Nigeria and Africa securely adopt Microsoft Copilot, ChatGPT and enterprise AI through readiness, governance, integration, automation, training and managed support.', 'WebPage'],

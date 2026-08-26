@@ -39,9 +39,8 @@ export default function Navbar() {
     <nav className={`fixed top-0 z-50 w-full border-b border-gray-100 bg-white ${scrolled ? 'shadow-lg' : 'shadow-sm'}`} aria-label='Primary navigation'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6'>
         <div className='flex h-16 items-center justify-between sm:h-20'>
-          <Link to='/' className='flex items-center gap-2' aria-label='Zigo Business Solutions home'>
-            <img src='/logo512.png' alt='' className='h-10 w-10 object-contain sm:h-12 sm:w-12' />
-            <span className='text-xl font-light tracking-wide text-[#7D582E] sm:text-2xl'>ZIGO<span className='font-bold text-[#ECD5AB]'>BIZ</span><span className='ml-1 text-[10px] text-gray-400'>LTD</span></span>
+          <Link to='/' className='flex shrink-0 items-center' aria-label='Zigo Business Solutions home'>
+            <img src='/zigo-business-solutions-logo.png' alt='Zigo Business Solutions' className='h-10 w-auto object-contain sm:h-12' />
           </Link>
           <div className='hidden items-center gap-5 lg:flex xl:gap-7'>
             <Link to='/' className={navClass('/')}>Home</Link>
