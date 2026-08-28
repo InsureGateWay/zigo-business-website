@@ -70,7 +70,7 @@ function ApplicationsServices() {
         "CI/CD Pipeline Implementation",
         "Cloud Application Deployment",
         "Application Integration",
-        "Performance Optimization"
+        "Performance Optimisation"
       ]
     },
     {

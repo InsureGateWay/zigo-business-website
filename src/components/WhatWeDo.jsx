@@ -18,7 +18,7 @@ const services = [
   {
     icon: CloudCog,
     title: 'Cloud & Infrastructure',
-    description: 'Modernize infrastructure with secure, resilient, and scalable cloud environments.',
+    description: 'Modernise infrastructure with secure, resilient, and scalable cloud environments.',
     link: '/services/infrastructure-services',
   },
   {

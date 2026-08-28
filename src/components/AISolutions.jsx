@@ -6,7 +6,7 @@ const offerings = [
   {
     icon: FileSearch,
     title: 'Document Intelligence',
-    description: 'Extract, classify, search, and analyze business documents while keeping answers connected to source evidence.',
+    description: 'Extract, classify, search, and analyse business documents while keeping answers connected to source evidence.',
     features: ['Document classification', 'Structured extraction', 'Evidence-linked retrieval', 'Permission-aware search'],
   },
   {
@@ -39,7 +39,7 @@ const useCases = [
     description: 'Pre-screen documents, organize information, and surface exceptions so people can focus on judgment-intensive work.',
   },
   {
-    title: 'Prioritize operational action',
+    title: 'Prioritise operational action',
     description: 'Use data signals to highlight likely risks, emerging patterns, and cases that require earlier attention.',
   },
 ];

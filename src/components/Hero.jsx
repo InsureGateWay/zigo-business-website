@@ -27,7 +27,7 @@ function Hero() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed">
-                Zigo Business Solutions helps organizations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
+                Zigo Business Solutions helps organisations use data, AI, cloud, and secure digital platforms to solve practical challenges and build for sustainable growth.
               </p>
             </div>
 
@@ -182,7 +182,7 @@ function Hero() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <p className="text-gray-500 text-sm sm:text-base max-w-md mx-auto leading-relaxed mb-4">
-              We help organizations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
+              We help organisations use data, AI, cloud, and secure digital platforms to solve practical business challenges.
             </p>
             <div className="grid grid-cols-4 gap-4 max-w-sm mx-auto">
               <div className="flex flex-col items-center">

@@ -59,7 +59,7 @@ function ChatBot() {
     
     // Cloud Services
     if (lowerMsg.includes('cloud') || lowerMsg.includes('infrastructure')) {
-      return "Our Cloud & Infrastructure Services include:\n• Cloud Migration & Management\n• Data Center Solutions\n• Network Infrastructure\n• Server & Storage Solutions\n\nWe help you build robust, scalable infrastructure. Interested in learning more?";
+      return "Our Cloud & Infrastructure Services include:\n• Cloud Migration & Management\n• Data Centre Solutions\n• Network Infrastructure\n• Server & Storage Solutions\n\nWe help you build robust, scalable infrastructure. Interested in learning more?";
     }
     
     // Products
@@ -69,7 +69,7 @@ function ChatBot() {
     
     // Contact/Consultation
     if (lowerMsg.includes('contact') || lowerMsg.includes('consult') || lowerMsg.includes('schedule') || lowerMsg.includes('meeting')) {
-      return "You can schedule a free consultation by:\n• Clicking the 'Get Started' button in the navigation\n• Visiting our Contact page\n• Email us at admin@zigoservices.com\n\nWould you like me to connect you with our sales team?";
+      return "You can schedule a consultation by:\n• Clicking 'Book a Consultation' in the navigation\n• Visiting our Contact page\n• Emailing us at enterprise@zigoservices.com\n\nWould you like me to connect you with our enterprise services team?";
     }
     
     // About
@@ -84,7 +84,7 @@ function ChatBot() {
     
     // Pricing
     if (lowerMsg.includes('price') || lowerMsg.includes('cost') || lowerMsg.includes('pricing')) {
-      return "Our pricing is tailored to each client's specific needs. We offer flexible engagement models including:\n• Project-based pricing\n• Monthly retainer\n• Managed services\n\nContact us for a customized quote!";
+      return "Our pricing is tailored to each client's specific needs. We offer flexible engagement models including:\n• Project-based pricing\n• Monthly retainer\n• Managed services\n\nContact us for a tailored quote!";
     }
     
     // General greeting

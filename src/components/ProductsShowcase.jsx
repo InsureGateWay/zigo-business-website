@@ -6,7 +6,7 @@ const products = [
     name: 'CheckIt24',
     category: 'On-ground verification',
     description:
-      'Request property, business, supplier, and location checks from verified field agents, with documented evidence and secure payment handling.',
+      'Request property, business, supplier, address, and location checks from verified field agents, with documented evidence and secure payment handling.',
     href: 'https://checkit24-6e5bf.web.app',
     icon: MapPinned,
     accent: '#B7791F',
@@ -24,9 +24,9 @@ const products = [
   },
   {
     name: 'Zigo Trust',
-    category: 'Safer digital transactions',
+    category: 'Documented digital transactions',
     description:
-      'Manage documented marketplace deals and clearer transaction workflows, with payments processed through licensed payment partners.',
+      'Reduce counterparty, non-delivery, and payment-dispute risk through documented deal terms, evidence-led transaction workflows, and payments processed by licensed payment partners.',
     href: 'https://trust.zigoai.app/',
     icon: Handshake,
     accent: '#176B57',
@@ -79,7 +79,7 @@ function ProductsShowcase() {
                   style={{ color: accent }}
                   aria-label={`Visit ${name} (opens in a new tab)`}
                 >
-                  Visit Product
+                  Explore {name}
                   <ExternalLink className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>

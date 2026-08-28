@@ -10,7 +10,7 @@ const challenges = [
     label: 'AI & Automation',
   },
   {
-    title: 'Modernize without compromising security',
+    title: 'Modernise without compromising security',
     description: 'Plan cloud and infrastructure improvements that balance flexibility, reliability, cost, and protection.',
     icon: CloudCog,
     label: 'Cloud & Security',

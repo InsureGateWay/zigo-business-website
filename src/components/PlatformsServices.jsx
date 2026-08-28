@@ -70,7 +70,7 @@ function PlatformsServices() {
         "Environmental Assessments",
         "Backup and Rollback Planning",
         "Platform Configuration",
-        "Performance Optimization"
+        "Performance Optimisation"
       ]
     },
     {
@@ -107,13 +107,13 @@ function PlatformsServices() {
     },
     {
       icon: <Workflow className="w-6 h-6" />,
-      title: "Optimized Operations",
+      title: "Optimised Operations",
       description: "Data integration and automation reduces redundancies and accelerates workflows"
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Cost Reduction",
-      description: "Automated data management lowers labor costs and optimizes infrastructure"
+      description: "Automated data management lowers labour costs and optimises infrastructure"
     },
     {
       icon: <Shield className="w-6 h-6" />,
@@ -169,7 +169,7 @@ function PlatformsServices() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-4">
-                Modernize Your
+                Modernise Your
                 <br />
                 <span className="font-bold">Data Landscape</span>
               </h1>
@@ -371,7 +371,7 @@ function PlatformsServices() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Modernize Your Data Platforms?
+            Ready to Modernise Your Data Platforms?
           </h2>
           <p className="text-xl text-white/80 mb-8 font-light">
             Let's discuss how we can help you build scalable data platforms

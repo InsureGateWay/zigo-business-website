@@ -68,7 +68,7 @@ function CloudProducts() {
       eyebrow="Cloud Solutions"
       title="Build cloud foundations that"
       highlightedTitle="support change without losing control."
-      description="Modernize infrastructure with a clear path from assessment to operation, balancing flexibility, resilience, security, and cost visibility."
+      description="Modernise infrastructure with a clear path from assessment to operation, balancing flexibility, resilience, security, and cost visibility."
       heroIcon={Cloud}
       offerings={offerings}
       useCases={useCases}

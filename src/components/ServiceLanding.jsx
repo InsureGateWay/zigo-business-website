@@ -37,7 +37,7 @@ export default function ServiceLanding({ eyebrow, title, intro, services, outcom
       <section className='bg-[#7D582E] px-6 py-16 text-center text-white'>
         <h2 className='text-3xl font-semibold'>Move from AI interest to a controlled business capability.</h2>
         <p className='mx-auto mt-4 max-w-2xl text-white/75'>Start with one valuable workflow, establish the right foundations, and scale with evidence.</p>
-        <Link to='/contact' className='mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-[#7D582E]'>Talk to Zigo <ArrowRight className='h-4 w-4' /></Link>
+        <Link to='/contact' className='mt-7 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-[#7D582E]'>Discuss Your Requirements <ArrowRight className='h-4 w-4' /></Link>
       </section>
     </main>
   );

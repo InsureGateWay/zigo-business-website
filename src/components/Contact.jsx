@@ -11,7 +11,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 
-const contactEmail = 'admin@zigoservices.com';
+const contactEmail = 'enterprise@zigoservices.com';
 
 const nextSteps = [
   {
@@ -52,7 +52,7 @@ function Contact() {
     const body = [
       `Name: ${formData.name}`,
       `Email: ${formData.email}`,
-      `Organization: ${formData.organization || 'Not provided'}`,
+      `Organisation: ${formData.organization || 'Not provided'}`,
       `Area of interest: ${formData.interest || 'Not selected'}`,
       '',
       formData.message,
@@ -160,7 +160,7 @@ function Contact() {
 
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className="block text-sm font-semibold text-gray-800">
-                  Organization
+                  Organisation
                   <input
                     type="text"
                     name="organization"

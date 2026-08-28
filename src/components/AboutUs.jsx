@@ -46,7 +46,7 @@ const values = [
 const commitments = [
   'Start with the business problem before choosing the technology.',
   'Make progress, trade-offs, and next steps visible throughout delivery.',
-  'Build foundations that can evolve as the organization grows.',
+  'Build foundations that can evolve as the organisation grows.',
 ];
 
 function AboutUs() {
@@ -66,7 +66,7 @@ function AboutUs() {
               <span className="font-bold text-[#7D582E]"> clearer, safer, and more capable.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600">
-              Zigo Business Solutions is a Nigerian technology company helping organizations modernize their data, systems, and business processes and successfully adopt enterprise AI.
+              Zigo Business Solutions is a Nigerian technology company helping organisations modernise their data, systems, and business processes and successfully adopt enterprise AI.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
@@ -126,7 +126,7 @@ function AboutUs() {
               <p className="mt-7 text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Our Mission</p>
               <h3 className="mt-3 text-2xl font-semibold text-gray-900">Make advanced technology practical.</h3>
               <p className="mt-4 leading-relaxed text-gray-500">
-                Help organizations turn complex technology choices into clear, secure, and workable solutions that improve how people operate and make decisions.
+                Help organisations turn complex technology choices into clear, secure, and workable solutions that improve how people operate and make decisions.
               </p>
             </article>
 
@@ -137,7 +137,7 @@ function AboutUs() {
               <p className="mt-7 text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]">Our Vision</p>
               <h3 className="mt-3 text-2xl font-semibold">Help ambitious businesses grow with confidence.</h3>
               <p className="mt-4 leading-relaxed text-white/70">
-                Contribute to a future where organizations can use data and digital systems responsibly, protect what matters, and adapt as their needs change.
+                Contribute to a future where organisations can use data and digital systems responsibly, protect what matters, and adapt as their needs change.
               </p>
             </article>
           </div>

@@ -82,7 +82,7 @@ export default function Seo() {
       name: siteName,
       url: siteUrl,
       logo: defaultImage,
-      email: 'admin@zigoservices.com',
+      email: 'enterprise@zigoservices.com',
       areaServed: ['Nigeria', 'Africa'],
     };
     const graph = [organization, {

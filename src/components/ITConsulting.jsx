@@ -77,7 +77,7 @@ function ITConsulting() {
     {
       icon: <Database className="w-8 h-8" />,
       title: "Data & Technical Consultancy",
-      description: "Become data-driven and optimize your IT strategy",
+      description: "Become data-driven and optimise your IT strategy",
       items: [
         "Data Governance Frameworks",
         "Solution Architecture",
@@ -89,7 +89,7 @@ function ITConsulting() {
     {
       icon: <Users className="w-8 h-8" />,
       title: "Industry & SME Expertise",
-      description: "Specialized expertise across multiple industries",
+      description: "Cross-functional expertise adapted to varied operating contexts",
       items: [
         "Banking & Financial Services",
         "Telecommunications",
@@ -143,7 +143,7 @@ function ITConsulting() {
       description: "Example opportunity: create a practical digital strategy aligned with business priorities and constraints"
     },
     {
-      title: "Business Process Optimization",
+      title: "Business Process Optimisation",
       description: "Example opportunity: review processes and identify well-governed opportunities for simplification and automation"
     },
     {

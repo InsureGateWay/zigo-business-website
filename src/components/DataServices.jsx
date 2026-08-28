@@ -54,7 +54,7 @@ function DataServices() {
     {
       icon: <Network className="w-8 h-8" />,
       title: "Data Integration & Ingestion",
-      description: "Streamline data movement and transformation across your organization",
+      description: "Streamline data movement and transformation across your organisation",
       items: [
         "EDW/BI Implementation & Support",
         "ETL as a Service",
@@ -71,7 +71,7 @@ function DataServices() {
         "Data Modeling as a Service",
         "Diverse Data Source Modeling",
         "Cross-Platform Data Architecture",
-        "Performance Optimization",
+        "Performance Optimisation",
         "Schema Design & Management"
       ]
     },
@@ -173,7 +173,7 @@ function DataServices() {
               </h1>
               <p className="text-lg text-white/80 max-w-xl font-light mb-6">
                 Comprehensive data services designed to empower your business to effectively manage, 
-                analyze, and leverage data for sustainable growth and competitive advantage.
+                analyse, and leverage data for sustainable growth and competitive advantage.
               </p>
               <button className="bg-white text-[#7D582E] px-8 py-3 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 flex items-center gap-2">
                 Schedule a Free Consultation

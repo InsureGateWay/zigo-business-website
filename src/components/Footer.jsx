@@ -48,11 +48,11 @@ function Footer() {
 
             <div className="space-y-3">
               <a
-                href="mailto:admin@zigoservices.com"
+                href="mailto:enterprise@zigoservices.com"
                 className="flex w-fit items-center gap-3 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]"
               >
                 <Mail className="h-5 w-5 shrink-0 text-[#ECD5AB]" strokeWidth={1.5} />
-                admin@zigoservices.com
+                enterprise@zigoservices.com
               </a>
               <a href='tel:+2347033033047' className='flex w-fit items-center gap-3 text-sm text-gray-400 transition-colors hover:text-[#ECD5AB]'>
                 <Phone className='h-5 w-5 shrink-0 text-[#ECD5AB]' strokeWidth={1.5} />

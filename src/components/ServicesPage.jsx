@@ -35,7 +35,7 @@ const services = [
   {
     icon: CloudCog,
     title: 'Infrastructure Services',
-    description: 'Design, modernize, and support secure cloud and infrastructure foundations for dependable operations.',
+    description: 'Design, modernise, and support secure cloud and infrastructure foundations for dependable operations.',
     outcome: 'Resilient systems ready to scale',
     to: '/services/infrastructure-services',
   },
@@ -116,7 +116,7 @@ function ServicesPage() {
               <span className="font-bold text-[#ECD5AB]"> business outcomes.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
-              We help organizations move from a business challenge to a practical digital capability across data, AI, cloud, applications, platforms, and technology strategy.
+              We help organisations move from a business challenge to a practical digital capability across data, AI, cloud, applications, platforms, and technology strategy.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link

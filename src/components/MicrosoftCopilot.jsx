@@ -13,5 +13,5 @@ const services = [
 ];
 
 export default function MicrosoftCopilot() {
-  return <ServiceLanding eyebrow='Microsoft Copilot Services' title={<>Get more value from <span className='font-bold text-[#ECD5AB]'>Microsoft Copilot.</span></>} intro='Buying Copilot licences is the beginning. Successful adoption depends on data readiness, security, governance, integration, useful business scenarios, and employee adoption.' services={services} outcomes={['Safer access to business information', 'Useful department-specific scenarios', 'A measurable path from pilot to scale']} cta='Assess your Copilot adoption' />;
+  return <ServiceLanding eyebrow='Microsoft Copilot Services' title={<>Get more value from <span className='font-bold text-[#ECD5AB]'>Microsoft Copilot.</span></>} intro='Buying Copilot licences is the beginning. Successful adoption depends on data readiness, security, governance, integration, high-value business use cases, and employee adoption.' services={services} outcomes={['Safer access to business information', 'High-value department-specific use cases', 'A measurable path from pilot to scale']} cta='Assess your Copilot adoption' />;
 }

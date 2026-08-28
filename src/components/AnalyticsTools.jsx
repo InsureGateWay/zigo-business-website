@@ -48,7 +48,7 @@ const principles = [
   {
     icon: Database,
     title: 'Consistent definitions',
-    description: 'Important measures have agreed meaning, calculation logic, ownership, and context across the organization.',
+    description: 'Important measures have agreed meaning, calculation logic, ownership, and context across the organisation.',
   },
   {
     icon: SearchCheck,

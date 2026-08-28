@@ -24,7 +24,7 @@ const industries = [
   {
     icon: Building2,
     name: 'Financial Services',
-    description: 'Modernize data and customer operations with security at the core.',
+    description: 'Modernise data and customer operations with security at the core.',
     solutions: ['Risk analytics', 'Fraud monitoring', 'Customer experience'],
   },
   {

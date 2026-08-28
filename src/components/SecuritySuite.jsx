@@ -48,7 +48,7 @@ const principles = [
   {
     icon: Target,
     title: 'Risk-based scope',
-    description: 'Controls are prioritized around credible threats, important assets, and business consequences—not a generic checklist.',
+    description: 'Controls are prioritised around credible threats, important assets, and business consequences—not a generic checklist.',
   },
   {
     icon: Users,

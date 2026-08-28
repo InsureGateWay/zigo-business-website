@@ -56,20 +56,20 @@ function InfrastructureServices() {
       items: [
         "Cloud Migration and Management",
         "Hybrid Cloud Integration",
-        "Cloud Performance Optimization",
+        "Cloud Performance Optimisation",
         "Cloud Cost Management",
         "Cloud Security & Compliance"
       ]
     },
     {
       icon: <Server className="w-8 h-8" />,
-      title: "Data Center Solutions",
-      description: "Build secure and efficient data center environments",
+      title: "Data Centre Solutions",
+      description: "Build secure and efficient data centre environments",
       items: [
-        "Data Center Design and Deployment",
+        "Data Centre Design and Deployment",
         "High Availability Solutions",
         "Disaster Recovery Planning",
-        "Data Center Optimization",
+        "Data Centre Optimisation",
         "Continuous Uptime Management"
       ]
     },
@@ -81,19 +81,19 @@ function InfrastructureServices() {
         "Network Design and Implementation",
         "Cybersecurity Integration",
         "Network Monitoring and Management",
-        "Performance Optimization",
+        "Performance Optimisation",
         "Large-scale Network Management"
       ]
     },
     {
       icon: <HardDrive className="w-8 h-8" />,
       title: "Server & Storage Solutions",
-      description: "Optimize server utilization and storage systems",
+      description: "Optimise server utilisation and storage systems",
       items: [
         "Server Virtualization",
         "Scalable Storage Systems",
         "HCI Platform Deployment",
-        "Storage Optimization",
+        "Storage Optimisation",
         "Backup and Recovery Solutions"
       ]
     }
@@ -113,7 +113,7 @@ function InfrastructureServices() {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Reduced Costs",
-      description: "Optimize cloud resources to reduce hardware, energy, and personnel costs"
+      description: "Optimise cloud resources to reduce hardware, energy, and personnel costs"
     },
     {
       icon: <Globe className="w-6 h-6" />,
