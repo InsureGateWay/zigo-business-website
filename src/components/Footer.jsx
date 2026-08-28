@@ -61,7 +61,7 @@ function Footer() {
             </div>
             <div className='mt-6 flex items-center gap-3' aria-label='Zigo Business Solutions social profiles'>
               <a href='https://www.linkedin.com/company/zigo-business-solutions-ltd/' target='_blank' rel='noopener noreferrer' aria-label='Zigo Business Solutions on LinkedIn' className='flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-sm font-bold text-gray-300 transition hover:border-[#ECD5AB] hover:text-[#ECD5AB]'>in</a>
-              <a href='https://x.com/ZigoBusiness' target='_blank' rel='noopener noreferrer' aria-label='Zigo Business Solutions on X' className='flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-300 transition hover:border-[#ECD5AB] hover:text-[#ECD5AB]'><span className='text-lg'>𝕏</span></a>
+              <a href='https://x.com/ZigoBusiness' target='_blank' rel='noopener noreferrer' aria-label='Zigo Business Solutions on X' className='flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-300 transition hover:border-[#ECD5AB] hover:text-[#ECD5AB]'><span className='text-sm font-bold'>X</span></a>
             </div>
           </div>
 

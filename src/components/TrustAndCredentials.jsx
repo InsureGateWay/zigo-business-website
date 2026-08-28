@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom';
 const trustPoints = [
   { icon: Building2, title: 'A clear company identity', description: 'Zigo Business Solutions Ltd is a Nigerian technology company focused on enterprise AI, data, cloud, security, applications, and integration.' },
   { icon: UsersRound, title: 'Specialists matched to the work', description: 'We shape the delivery team around the requirement, bringing the relevant business, data, AI, software, infrastructure, and security capabilities into the engagement.' },
-  { icon: BadgeCheck, title: 'Evidence before claims', description: 'We share the proposed scope, delivery responsibilities, controls, and measurable outcomes before work begins—and only publish credentials or client results we can support.' },
+  { icon: BadgeCheck, title: 'Evidence before claims', description: 'We share the proposed scope, delivery responsibilities, controls, and measurable outcomes before work begins - and only publish credentials or client results we can support.' },
+];
+
+const team = [
+  { name: 'Ekene Amah', role: 'Principal Consultant', initials: 'EA', linkedin: 'https://www.linkedin.com/in/ekeneamah' },
+  { name: 'Patrick Mua', role: 'Data Engineer', initials: 'PM', linkedin: 'https://www.linkedin.com/in/patrick-mua-9b3a4527/' },
+  { name: 'Segun Akinjola', role: 'Project Manager & Business Analyst', initials: 'SA', linkedin: 'https://www.linkedin.com/in/segunakinjola/' },
 ];
 
 export default function TrustAndCredentials() {
@@ -19,7 +25,7 @@ export default function TrustAndCredentials() {
             <p className='mt-5 max-w-xl text-lg leading-relaxed text-gray-500'>Enterprise work depends on trust. We make the company behind the engagement visible and keep our public claims grounded in information that can be verified.</p>
             <div className='mt-7 flex flex-wrap gap-3'>
               <a href='https://www.linkedin.com/company/zigo-business-solutions-ltd/' target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full bg-[#0A66C2] px-5 py-3 font-semibold text-white hover:opacity-90'><span aria-hidden='true' className='font-bold'>in</span> Follow on LinkedIn <ArrowUpRight className='h-4 w-4' aria-hidden='true' /></a>
-              <a href='https://x.com/ZigoBusiness' target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 font-semibold text-gray-800 hover:border-gray-900'><span aria-hidden='true' className='text-lg leading-none'>𝕏</span> @ZigoBusiness <ArrowUpRight className='h-4 w-4' aria-hidden='true' /></a>
+              <a href='https://x.com/ZigoBusiness' target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 font-semibold text-gray-800 hover:border-gray-900'><span aria-hidden='true' className='text-sm font-bold'>X</span> @ZigoBusiness <ArrowUpRight className='h-4 w-4' aria-hidden='true' /></a>
             </div>
           </div>
           <div className='grid gap-4 md:grid-cols-3'>
@@ -29,6 +35,18 @@ export default function TrustAndCredentials() {
                 <h3 className='mt-6 text-xl font-semibold text-gray-900'>{title}</h3>
                 <p className='mt-3 text-sm leading-relaxed text-gray-600'>{description}</p>
               </article>
+            ))}
+          </div>
+        </div>
+        <div className='mt-14'>
+          <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Core Delivery Team</p>
+          <h3 className='mt-3 text-3xl font-light text-gray-900 md:text-4xl'>Experienced people, <span className='font-bold text-[#7D582E]'>visible and accountable.</span></h3>
+          <div className='mt-7 grid gap-5 md:grid-cols-3'>
+            {team.map(({ name, role, initials, linkedin }) => (
+              <a key={name} href={linkedin} target='_blank' rel='noopener noreferrer' className='group flex items-center gap-5 rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ECD5AB] hover:shadow-lg' aria-label={`${name}, ${role} on LinkedIn`}>
+                <span className='flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#ECD5AB] text-lg font-bold text-[#5f421f]' aria-hidden='true'>{initials}</span>
+                <span className='min-w-0'><span className='flex items-center gap-2 text-xl font-semibold text-gray-900'>{name}<ArrowUpRight className='h-4 w-4 shrink-0 text-[#7D582E] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5' /></span><span className='mt-1 block text-sm leading-relaxed text-gray-500'>{role}</span><span className='mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#0A66C2]'><span aria-hidden='true'>in</span> LinkedIn profile</span></span>
+              </a>
             ))}
           </div>
         </div>
