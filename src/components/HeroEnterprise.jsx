@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowLeft, ArrowRight, BarChart3, BriefcaseBusiness, CloudCog, Code2, Database, ExternalLink, Link2, Pause, Play, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BarChart3, CloudCog, Code2, Database, Link2, Pause, Play, ShieldCheck, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const slides = [
@@ -10,7 +10,7 @@ const slides = [
     title: 'Enterprise AI,',
     emphasis: 'implemented properly.',
     description: 'Securely adopt, integrate, and get measurable value from Microsoft Copilot, ChatGPT, and enterprise AI - connected to the data, systems, and workflows your business already uses.',
-    primary: { label: 'Book an AI Readiness Call', to: '/contact' },
+    primary: { label: 'Book a Consultation', to: '/contact' },
     secondary: { label: 'Explore Enterprise AI Services', to: '/services/ai-services' },
     capabilityLine: 'Microsoft Copilot / Enterprise AI / Governance / Automation / Managed Support',
     cards: [
@@ -27,30 +27,14 @@ const slides = [
     title: 'Build the foundations',
     emphasis: 'your business can rely on.',
     description: 'Zigo brings together data engineering, Microsoft Fabric, Power BI, cloud, cybersecurity, software engineering, and systems integration around practical business outcomes.',
-    primary: { label: 'Explore Technology Services', to: '/services' },
-    secondary: { label: 'Discuss Your Requirement', to: '/contact' },
+    primary: { label: 'Book a Consultation', to: '/contact' },
+    secondary: { label: 'Explore Technology Services', to: '/services' },
     capabilityLine: 'Data Engineering / Microsoft Fabric / Power BI / Cloud / Security / Software',
     cards: [
       { icon: Database, title: 'Data & Analytics', text: 'Reliable pipelines, platforms, reporting, and governance' },
       { icon: CloudCog, title: 'Cloud & Infrastructure', text: 'Secure, resilient, and scalable environments' },
       { icon: Code2, title: 'Applications', text: 'Custom software and connected business workflows' },
       { icon: ShieldCheck, title: 'Cybersecurity', text: 'Protection designed into systems and operations' },
-    ],
-  },
-  {
-    id: 'innovations',
-    eyebrow: 'Zigo Innovations',
-    icon: BriefcaseBusiness,
-    title: 'Products built around',
-    emphasis: 'focused business problems.',
-    description: 'Alongside our enterprise services, Zigo develops focused products and proprietary technology that support verification, safer transactions, document intelligence, enterprise search, and automation.',
-    primary: { label: 'Talk to Zigo', to: '/contact' },
-    capabilityLine: 'Products and ventures remain distinct from our enterprise implementation services',
-    cards: [
-      { title: 'CheckIt24', text: 'On-ground verification services', href: 'https://checkit24-6e5bf.web.app' },
-      { title: 'Zigo AI', text: 'Document intelligence and enterprise knowledge technology', href: 'https://zigoai.app/' },
-      { title: 'Zigo Trust', text: 'Technology for safer digital transactions', href: 'https://trust.zigoai.app/' },
-      { icon: Link2, title: 'Delivery Accelerators', text: 'Reusable components supporting custom AI and automation engagements' },
     ],
   },
 ];
@@ -89,10 +73,10 @@ export default function HeroEnterprise() {
           <p className='mt-7 text-sm font-medium leading-relaxed text-gray-500'>{slide.capabilityLine}</p>
         </div>
         <div className='grid gap-4 sm:grid-cols-2'>
-          {slide.cards.map(({ icon: Icon, title, text, href }, index) => {
-            const content = <><div className='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#7D582E]'>{Icon ? <Icon className='h-6 w-6' /> : <BriefcaseBusiness className='h-6 w-6' />}</div><h2 className='mt-6 flex items-center gap-2 text-xl font-semibold text-gray-900'>{title}{href && <ExternalLink className='h-4 w-4 text-[#7D582E]' />}</h2><p className='mt-2 text-sm leading-relaxed text-gray-500'>{text}</p></>;
+          {slide.cards.map(({ icon: Icon, title, text }, index) => {
+            const content = <><div className='flex h-12 w-12 items-center justify-center rounded-2xl bg-[#ECD5AB] text-[#7D582E]'><Icon className='h-6 w-6' /></div><h2 className='mt-6 flex items-center gap-2 text-xl font-semibold text-gray-900'>{title}</h2><p className='mt-2 text-sm leading-relaxed text-gray-500'>{text}</p></>;
             const classes = `rounded-3xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg ${index % 2 ? 'sm:translate-y-7' : ''}`;
-            return href ? <a key={title} href={href} target='_blank' rel='noopener noreferrer' className={classes}>{content}</a> : <article key={title} className={classes}>{content}</article>;
+            return <article key={title} className={classes}>{content}</article>;
           })}
         </div>
       </div>

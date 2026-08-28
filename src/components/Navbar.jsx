@@ -56,7 +56,7 @@ export default function Navbar() {
             <Link to='/partners' className={navClass('/partners')}>Partners</Link>
             <Link to='/about' className={navClass('/about')}>About</Link>
             <Link to='/contact' className={navClass('/contact')}>Contact</Link>
-            <Link to='/contact' className='rounded-full bg-[#7D582E] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#6a4a26]'>Book an AI Readiness Call</Link>
+            <Link to='/contact' className='rounded-full bg-[#7D582E] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#6a4a26]'>Book a Consultation</Link>
           </div>
           <button type='button' onClick={() => setMobileOpen(!mobileOpen)} className='rounded-lg p-2 text-gray-600 lg:hidden' aria-expanded={mobileOpen} aria-label='Toggle navigation'>{mobileOpen ? <X /> : <Menu />}</button>
         </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
             <Link to='/partners' className='block px-4 py-3 font-medium text-gray-700'>Partners</Link>
             <Link to='/about' className='block px-4 py-3 font-medium text-gray-700'>About</Link>
             <Link to='/contact' className='block px-4 py-3 font-medium text-gray-700'>Contact</Link>
-            <Link to='/contact' className='mt-3 block rounded-full bg-[#7D582E] px-6 py-3 text-center text-sm font-medium text-white'>Book an AI Readiness Call</Link>
+            <Link to='/contact' className='mt-3 block rounded-full bg-[#7D582E] px-6 py-3 text-center text-sm font-medium text-white'>Book a Consultation</Link>
           </div>
         </div>
       </div>

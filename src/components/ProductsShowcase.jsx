@@ -41,15 +41,15 @@ function ProductsShowcase() {
         <div className="mb-14 grid items-end gap-6 lg:grid-cols-[1fr_0.8fr]">
           <div>
             <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">
-              Our Products
+              Zigo Products
             </span>
             <h2 className="mt-4 max-w-3xl text-4xl font-light leading-tight text-gray-900 md:text-5xl">
-              Digital products built for
-              <span className="font-bold text-[#7D582E]"> practical business needs</span>
+              Products that extend our
+              <span className="font-bold text-[#7D582E]"> enterprise capabilities</span>
             </h2>
           </div>
           <p className="max-w-xl text-lg leading-relaxed text-gray-500 lg:justify-self-end">
-            Explore platforms from Zigo Business Solutions for verification, enterprise knowledge, and trusted transactions.
+            Our primary work is enterprise services. We also develop focused platforms for verification, enterprise knowledge, and trusted transactions.
           </p>
         </div>
 

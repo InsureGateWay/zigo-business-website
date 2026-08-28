@@ -48,10 +48,10 @@ function HomePage() {
       <Hero />
       <TechnologyCompetencies />
       <WhatWeDo />
-      <ProductsShowcase />
       <Industries />
       <WhyZigo />
       <TrustAndCredentials />
+      <ProductsShowcase />
       <News />
     </>
   );
