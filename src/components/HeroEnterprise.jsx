@@ -9,10 +9,14 @@ const slides = [
     icon: Sparkles,
     title: 'Enterprise AI,',
     emphasis: 'implemented properly.',
-    description: 'Securely adopt, integrate, and get measurable value from Microsoft Copilot, ChatGPT, and enterprise AI — connected to the data, systems, and workflows your business already uses.',
+    description: 'Securely adopt, integrate and generate measurable value from enterprise AI—using the platforms best suited to your data, systems, workflows and governance requirements.',
     primary: { label: 'Book a Consultation', to: '/contact' },
     secondary: { label: 'Explore Enterprise AI Services', to: '/services/ai-services' },
-    capabilityLine: 'Microsoft Copilot / Enterprise AI / Governance / Automation / Managed Support',
+    capabilityLine: 'Enterprise AI / Platform Selection / Governance / Integration / Automation / Managed Support',
+    principle: {
+      title: 'Platform-agnostic by design',
+      text: 'We select and integrate enterprise AI technologies based on your business requirements, existing environment, security obligations, data architecture and total cost—not vendor preference.',
+    },
     cards: [
       { icon: Sparkles, title: 'Adopt', text: 'Readiness, rollout, and high-value business use cases' },
       { icon: ShieldCheck, title: 'Govern', text: 'Identity, access, information protection, and policy' },
@@ -26,7 +30,7 @@ const slides = [
     icon: Database,
     title: 'Build the foundations',
     emphasis: 'your business can rely on.',
-    description: 'Zigo brings together data engineering, Microsoft Fabric, Power BI, cloud, cybersecurity, software engineering, and systems integration around practical business outcomes.',
+    description: 'Zigo brings together data engineering, analytics, cloud, cybersecurity, software engineering and systems integration around practical business outcomes.',
     primary: { label: 'Book a Consultation', to: '/contact' },
     secondary: { label: 'Explore Technology Services', to: '/services' },
     capabilityLine: 'Data Engineering / Microsoft Fabric / Power BI / Cloud / Security / Software',
@@ -70,7 +74,13 @@ export default function HeroEnterprise() {
           <h1 className='mt-7 max-w-4xl text-5xl font-light leading-[1.05] text-[#7D582E] md:text-7xl'>{slide.title} <span className='font-bold'>{slide.emphasis}</span></h1>
           <p className='mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl'>{slide.description}</p>
           <div className='mt-8 flex flex-col gap-3 sm:flex-row'><Action action={slide.primary} primary /><Action action={slide.secondary} /></div>
-          <p className='mt-7 text-sm font-medium leading-relaxed text-gray-500'>{slide.capabilityLine}</p>
+          {slide.principle && (
+            <div className='mt-7 max-w-2xl border-l-4 border-[#7D582E] bg-[#faf7f2] px-5 py-4'>
+              <p className='font-semibold text-gray-900'>{slide.principle.title}</p>
+              <p className='mt-1 text-sm leading-relaxed text-gray-600'>{slide.principle.text}</p>
+            </div>
+          )}
+          <p className={`${slide.principle ? 'mt-5' : 'mt-7'} text-sm font-medium leading-relaxed text-gray-500`}>{slide.capabilityLine}</p>
         </div>
         <div className='grid gap-4 sm:grid-cols-2'>
           {slide.cards.map(({ icon: Icon, title, text }, index) => {

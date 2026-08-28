@@ -12,12 +12,13 @@ const technologies = [
 
 export default function TechnologyCompetencies() {
   return (
-    <section className='border-y border-gray-100 bg-[#faf7f2] px-6 py-10' aria-labelledby='technology-heading'>
+    <section className='border-y border-gray-100 bg-[#faf7f2] px-6 py-16' aria-labelledby='technology-heading'>
       <div className='mx-auto max-w-7xl'>
-        <div className='flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between'>
-          <div className='max-w-sm'>
-            <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Technology Competencies</p>
-            <h2 id='technology-heading' className='mt-2 text-xl font-semibold text-gray-900'>Platforms connected around your business outcome</h2>
+        <div className='flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between'>
+          <div className='max-w-md'>
+            <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Platforms and technologies we work with</p>
+            <h2 id='technology-heading' className='mt-3 text-2xl font-semibold text-gray-900'>Specific expertise, applied independently</h2>
+            <p className='mt-3 text-sm leading-relaxed text-gray-600'>We work across enterprise AI ecosystems and integrate the technologies that best fit each engagement.</p>
           </div>
           <ul className='grid flex-1 gap-3 sm:grid-cols-2 lg:max-w-4xl lg:grid-cols-4'>
             {technologies.map(([name, detail]) => (
@@ -29,6 +30,7 @@ export default function TechnologyCompetencies() {
           </ul>
         </div>
       </div>
+      <p className='mx-auto mt-8 max-w-7xl border-t border-[#ECD5AB]/70 pt-6 text-center text-lg font-semibold text-[#7D582E]'>Independent guidance. Appropriate technology. Measurable outcomes.</p>
     </section>
   );
 }

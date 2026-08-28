@@ -11,8 +11,8 @@ const services = [
   },
   {
     icon: BrainCircuit,
-    title: 'Enterprise AI & Copilot',
-    description: 'Securely adopt, integrate, and extend Microsoft Copilot, ChatGPT, and other enterprise AI platforms.',
+    title: 'Enterprise AI Platforms',
+    description: 'Evaluate, adopt, integrate and extend enterprise AI platforms suited to your organisation’s requirements.',
     link: '/services/ai-services',
   },
   {
