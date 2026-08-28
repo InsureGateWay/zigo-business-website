@@ -28,6 +28,9 @@ import Seo from './components/Seo';
 import MicrosoftCopilot from './components/MicrosoftCopilot';
 import EnterpriseAIService from './components/EnterpriseAIService';
 import Partners from './components/Partners';
+import ProductsShowcase from './components/ProductsShowcase';
+import TrustAndCredentials from './components/TrustAndCredentials';
+import TechnologyCompetencies from './components/TechnologyCompetencies';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,9 +46,12 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <TechnologyCompetencies />
       <WhatWeDo />
+      <ProductsShowcase />
       <Industries />
       <WhyZigo />
+      <TrustAndCredentials />
       <News />
     </>
   );

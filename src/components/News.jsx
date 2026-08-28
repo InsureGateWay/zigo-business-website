@@ -28,12 +28,12 @@ function News() {
     <section className="bg-white px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto mb-14 max-w-3xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Where We Can Help</span>
+          <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Representative Engagement Scenarios</span>
           <h2 className="mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
-            Challenges we help businesses <span className="font-bold text-[#7D582E]">solve</span>
+            See what a focused engagement <span className="font-bold text-[#7D582E]">could look like</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-500">
-            Start with a pressing business challenge and build the right technology response around it.
+            These are examples of how we can structure work around common business needs. They are not presented as completed client case studies.
           </p>
         </div>
 
