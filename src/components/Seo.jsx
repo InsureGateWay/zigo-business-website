@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom';
 
 const siteUrl = 'https://www.zigoservices.com';
 const siteName = 'Zigo Business Solutions Ltd';
-const defaultImage = `${siteUrl}/zigo-business-solutions-logo.png`;
+const defaultImage = `${siteUrl}/zigo-social-preview.png`;
 
 const pages = {
-  '/': ['Enterprise AI & Microsoft Copilot Services Nigeria | Zigo Business', 'Zigo Business Solutions helps organisations in Nigeria and Africa securely adopt Microsoft Copilot, ChatGPT and enterprise AI through readiness, governance, integration, automation, training and managed support.', 'WebPage'],
+  '/': ['Senior-Led Enterprise AI & Data Delivery | Zigo Business', 'Senior-led enterprise AI and data delivery for organisations across Nigeria and Africa—built around your systems, security requirements and business priorities.', 'WebPage'],
   '/about': ['About Zigo Business Solutions | Technology Partner in Nigeria', 'Learn how Zigo Business Solutions delivers practical, secure and scalable data, AI, cloud and digital transformation services for organisations across Africa.', 'AboutPage'],
   '/services': ['Enterprise Technology Services in Nigeria | Zigo Business', 'Explore Zigo Business services for data, artificial intelligence, cloud infrastructure, applications, digital platforms and IT consulting.', 'CollectionPage'],
   '/services/data-services': ['Enterprise Data Services & Analytics | Zigo Business', 'Build reliable data foundations with enterprise data engineering, integration, governance, analytics and business intelligence services from Zigo Business.', 'Service'],
@@ -60,7 +60,10 @@ export default function Seo() {
     setMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' });
     setMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
     setMeta('meta[property="og:image"]', { property: 'og:image', content: defaultImage });
-    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'Zigo Business Solutions logo' });
+    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'Zigo Business Solutions: Senior-led AI and data delivery, without platform bias.' });
+    setMeta('meta[property="og:image:type"]', { property: 'og:image:type', content: 'image/png' });
+    setMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: '1200' });
+    setMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: '630' });
     setMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: siteName });
     setMeta('meta[property="og:locale"]', { property: 'og:locale', content: 'en_NG' });
     setMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
