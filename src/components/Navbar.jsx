@@ -52,7 +52,6 @@ export default function Navbar() {
                 {openMenu === key && <div className='absolute left-0 top-full w-64 rounded-xl border border-gray-100 bg-white py-2 shadow-xl'>{menu.items.map(([name, to]) => <Link key={to} to={to} className='block px-5 py-2.5 text-sm text-gray-600 hover:bg-[#ECD5AB]/10 hover:text-[#7D582E]'>{name}</Link>)}</div>}
               </div>
             ))}
-            <Link to='/#industries' className={navClass('/industries')}>Industries</Link>
             <Link to='/partners' className={navClass('/partners')}>Partner With Zigo</Link>
             <Link to='/insights' className={navClass('/insights')}>Insights</Link>
             <Link to='/about' className={navClass('/about')}>About</Link>
@@ -65,7 +64,6 @@ export default function Navbar() {
           <div className='max-h-[70vh] overflow-y-auto border-t border-gray-100 py-4'>
             <Link to='/' className='block px-4 py-3 font-medium text-gray-700'>Home</Link>
             {Object.entries(menus).map(([key, menu]) => <div key={key}><button type='button' onClick={() => setOpenMenu(openMenu === key ? null : key)} className='flex w-full items-center justify-between px-4 py-3 font-medium text-gray-700'>{menu.label}<ChevronDown className='h-4 w-4' /></button>{openMenu === key && <div className='pl-4'>{menu.items.map(([name, to]) => <Link key={to} to={to} className='block px-4 py-2.5 text-sm text-gray-500'>{name}</Link>)}</div>}</div>)}
-            <Link to='/#industries' className='block px-4 py-3 font-medium text-gray-700'>Industries</Link>
             <Link to='/partners' className='block px-4 py-3 font-medium text-gray-700'>Partner With Zigo</Link>
             <Link to='/insights' className='block px-4 py-3 font-medium text-gray-700'>Insights</Link>
             <Link to='/about' className='block px-4 py-3 font-medium text-gray-700'>About</Link>
