@@ -6,7 +6,10 @@ const technologies = [
   ['Power BI', 'Analytics & reporting'],
   ['Microsoft 365', 'Modern work'],
   ['Microsoft Azure', 'Cloud & AI services'],
+  ['AWS', 'Cloud & AI services'],
+  ['Google Cloud', 'Cloud & AI services'],
   ['ChatGPT', 'Enterprise AI enablement'],
+  ['Anthropic', 'Enterprise AI models'],
   ['APIs & Enterprise Systems', 'Secure integration'],
 ];
 
