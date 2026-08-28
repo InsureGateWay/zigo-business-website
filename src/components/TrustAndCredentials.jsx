@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const trustPoints = [
   { icon: Building2, title: 'A clear company identity', description: 'Zigo Business Solutions Ltd is a Nigerian technology company. Company registration number: 9394101.' },
-  { icon: UsersRound, title: 'Specialists matched to the work', description: 'We shape the delivery team around the requirement, bringing the relevant business, data, AI, software, infrastructure, and security capabilities into the engagement.' },
-  { icon: BadgeCheck, title: 'Evidence before claims', description: 'We share the proposed scope, delivery responsibilities, controls, and measurable outcomes before work begins - and only publish credentials or client results we can support.' },
+  { icon: UsersRound, title: 'Direct access to delivery leads', description: 'Work directly with the senior specialists responsible for discovery, decisions, and delivery—not layers of account management.' },
+  { icon: BadgeCheck, title: 'Controlled scope, measurable progress', description: 'We define scope, responsibilities, controls, and success criteria before work begins, often starting with a focused pilot before a larger programme.' },
 ];
 
 const team = [
@@ -22,7 +22,7 @@ export default function TrustAndCredentials() {
           <div>
             <span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>People, Credentials & Accountability</span>
             <h2 id='trust-heading' className='mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl'>Know who you are <span className='font-bold text-[#7D582E]'>working with.</span></h2>
-            <p className='mt-5 max-w-xl text-lg leading-relaxed text-gray-500'>Enterprise work depends on trust. We make the company behind the engagement visible and keep our public claims grounded in information that can be verified.</p>
+          <p className='mt-5 max-w-xl text-lg leading-relaxed text-gray-500'>Enterprise work depends on trust. We offer direct senior involvement, transparent delivery ownership, and public claims grounded in information that can be verified.</p>
             <div className='mt-7 flex flex-wrap gap-3'>
               <a href='https://www.linkedin.com/company/zigo-business-solutions-ltd/' target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full bg-[#0A66C2] px-5 py-3 font-semibold text-white hover:opacity-90'><span aria-hidden='true' className='font-bold'>in</span> Follow on LinkedIn <ArrowUpRight className='h-4 w-4' aria-hidden='true' /></a>
               <a href='https://x.com/ZigoBusiness' target='_blank' rel='noopener noreferrer' className='inline-flex items-center gap-2 rounded-full border border-gray-300 px-5 py-3 font-semibold text-gray-800 hover:border-gray-900'><span aria-hidden='true' className='text-sm font-bold'>X</span> @ZigoBusiness <ArrowUpRight className='h-4 w-4' aria-hidden='true' /></a>
@@ -52,7 +52,7 @@ export default function TrustAndCredentials() {
           </div>
         </div>
         <div className='mt-10 flex flex-col items-start justify-between gap-5 rounded-3xl bg-[#5f421f] px-7 py-8 text-white md:flex-row md:items-center md:px-10'>
-          <div><p className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Meet the delivery team</p><p className='mt-2 max-w-2xl text-white/75'>For a qualified requirement, we introduce the people responsible for discovery and delivery before the engagement is agreed.</p></div>
+          <div><p className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Meet the delivery team</p><p className='mt-2 max-w-2xl text-white/75'>For a qualified requirement, we introduce the senior people responsible for discovery and delivery before the engagement is agreed. Where programme scale requires it, we can collaborate with larger integrators.</p></div>
           <Link to='/contact' className='inline-flex shrink-0 items-center gap-2 rounded-full bg-[#ECD5AB] px-6 py-3 font-semibold text-[#5f421f] hover:bg-white'>Start a conversation <ArrowUpRight className='h-4 w-4' /></Link>
         </div>
       </div>
