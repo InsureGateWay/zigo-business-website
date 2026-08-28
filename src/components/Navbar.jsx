@@ -33,6 +33,7 @@ export default function Navbar() {
   useEffect(() => { const onScroll = () => setScrolled(window.scrollY > 20); window.addEventListener('scroll', onScroll); return () => window.removeEventListener('scroll', onScroll); }, []);
   useEffect(() => { setMobileOpen(false); setOpenMenu(null); }, [location.pathname]);
   const active = (path) => location.pathname === path;
+  const menuActive = (menu) => menu.items.some(([, path]) => active(path));
   const navClass = (path) => `text-sm font-medium transition-colors hover:text-[#7D582E] ${active(path) ? 'text-[#7D582E]' : 'text-gray-600'}`;
 
   return (
@@ -46,7 +47,7 @@ export default function Navbar() {
             <Link to='/' className={navClass('/')}>Home</Link>
             {Object.entries(menus).map(([key, menu]) => (
               <div key={key} className='relative' onMouseEnter={() => setOpenMenu(key)} onMouseLeave={() => setOpenMenu(null)}>
-                <button type='button' onClick={() => setOpenMenu(openMenu === key ? null : key)} className='flex items-center gap-1 py-2 text-sm font-medium text-gray-600 hover:text-[#7D582E]' aria-expanded={openMenu === key}>
+                <button type='button' onClick={() => setOpenMenu(openMenu === key ? null : key)} className={`flex items-center gap-1 py-2 text-sm font-medium hover:text-[#7D582E] ${menuActive(menu) ? 'text-[#7D582E]' : 'text-gray-600'}`} aria-expanded={openMenu === key}>
                   {menu.label}<ChevronDown className={`h-4 w-4 transition-transform ${openMenu === key ? 'rotate-180' : ''}`} />
                 </button>
                 {openMenu === key && <div className='absolute left-0 top-full w-64 rounded-xl border border-gray-100 bg-white py-2 shadow-xl'>{menu.items.map(([name, to]) => <Link key={to} to={to} className='block px-5 py-2.5 text-sm text-gray-600 hover:bg-[#ECD5AB]/10 hover:text-[#7D582E]'>{name}</Link>)}</div>}
@@ -63,7 +64,7 @@ export default function Navbar() {
         <div className={`overflow-hidden transition-all lg:hidden ${mobileOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className='max-h-[70vh] overflow-y-auto border-t border-gray-100 py-4'>
             <Link to='/' className='block px-4 py-3 font-medium text-gray-700'>Home</Link>
-            {Object.entries(menus).map(([key, menu]) => <div key={key}><button type='button' onClick={() => setOpenMenu(openMenu === key ? null : key)} className='flex w-full items-center justify-between px-4 py-3 font-medium text-gray-700'>{menu.label}<ChevronDown className='h-4 w-4' /></button>{openMenu === key && <div className='pl-4'>{menu.items.map(([name, to]) => <Link key={to} to={to} className='block px-4 py-2.5 text-sm text-gray-500'>{name}</Link>)}</div>}</div>)}
+            {Object.entries(menus).map(([key, menu]) => <div key={key}><button type='button' onClick={() => setOpenMenu(openMenu === key ? null : key)} className={`flex w-full items-center justify-between px-4 py-3 font-medium ${menuActive(menu) ? 'text-[#7D582E]' : 'text-gray-700'}`}>{menu.label}<ChevronDown className='h-4 w-4' /></button>{openMenu === key && <div className='pl-4'>{menu.items.map(([name, to]) => <Link key={to} to={to} className={`block px-4 py-2.5 text-sm ${active(to) ? 'font-semibold text-[#7D582E]' : 'text-gray-500'}`}>{name}</Link>)}</div>}</div>)}
             <Link to='/partners' className='block px-4 py-3 font-medium text-gray-700'>Partner With Zigo</Link>
             <Link to='/insights' className='block px-4 py-3 font-medium text-gray-700'>Insights</Link>
             <Link to='/about' className='block px-4 py-3 font-medium text-gray-700'>About</Link>
