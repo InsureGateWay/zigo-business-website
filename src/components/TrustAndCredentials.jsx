@@ -38,10 +38,6 @@ export default function TrustAndCredentials() {
             ))}
           </div>
         </div>
-        <div className='mt-8 grid gap-4 rounded-3xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-6 sm:grid-cols-[0.7fr_1.3fr] md:p-8'>
-          <div><p className='text-xs font-semibold uppercase tracking-widest text-[#7D582E]'>Company Registration</p><p className='mt-2 text-lg font-semibold text-gray-900'>No. 9394101</p></div>
-          <div><p className='text-xs font-semibold uppercase tracking-widest text-[#7D582E]'>Registered Office</p><address className='mt-2 text-base not-italic leading-relaxed text-gray-700'>10 Gooddy Street, Good Luck Estate, off Iwofe Road, Port Harcourt, Rivers State, Nigeria</address></div>
-        </div>
         <div className='mt-14'>
           <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Core Delivery Team</p>
           <h3 className='mt-3 text-3xl font-light text-gray-900 md:text-4xl'>Experienced people, <span className='font-bold text-[#7D582E]'>visible and accountable.</span></h3>
