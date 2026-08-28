@@ -1,13 +1,47 @@
 import React from 'react';
-import ServiceLanding from './ServiceLanding';
+import { ArrowRight, Blocks, BriefcaseBusiness, CheckCircle2, Network, ShieldCheck, UsersRound } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const services = [
-  { title: 'Enterprise AI', items: ['Microsoft Copilot', 'Copilot Studio', 'AI agents', 'Governance and adoption'] },
-  { title: 'Data & Analytics', items: ['Microsoft Fabric', 'Data engineering', 'SQL', 'Power BI'] },
-  { title: 'Integration & Applications', items: ['APIs', 'Systems integration', 'Business applications', 'Custom software'] },
-  { title: 'Cloud & Architecture', items: ['Azure', 'Cloud engineering', 'Solution architecture', 'Delivery support'] },
+const partnerTypes = ['Technology providers', 'Systems integrators', 'Consulting organisations'];
+const models = [
+  ['Specialist work packages', 'Zigo owns a clearly defined technical deliverable, with agreed acceptance criteria.'],
+  ['Co-delivery', 'Both teams deliver under an agreed responsibility model and communication structure.'],
+  ['Technical augmentation', 'Named specialists extend an existing delivery team where focused capability is needed.'],
+  ['Discovery and pilots', 'We validate a use case, implementation approach and controls before a larger programme.'],
+  ['Integration support', 'We connect approved AI, data and application systems into practical workflows.'],
+];
+const capabilities = [
+  ['Enterprise AI and agents', ['AI readiness', 'AI agents and automation', 'Governance and adoption']],
+  ['Data engineering and analytics', ['Data engineering', 'Analytics and reporting', 'Data quality and governance']],
+  ['Integration and applications', ['APIs and systems integration', 'Business applications', 'Workflow automation']],
+  ['Cloud and solution architecture', ['Solution architecture', 'Cloud engineering', 'Secure delivery foundations']],
+  ['Microsoft ecosystem expertise', ['Microsoft Copilot and Copilot Studio', 'Microsoft Fabric and Power BI', 'Azure services']],
+];
+const safeguards = ['Confidentiality and NDA readiness', 'Clear ownership and responsibilities', 'Client and partner relationship protection', 'Information-security expectations', 'Intellectual-property treatment', 'Transparent scope and acceptance criteria'];
+const team = [
+  ['Ekene Amah', 'Principal Consultant', 'Solution strategy, enterprise integration and client delivery', 'https://www.linkedin.com/in/ekeneamah'],
+  ['Patrick Mua', 'Data Engineer', 'Data pipelines and foundations for analytics and AI', 'https://www.linkedin.com/in/patrick-mua-9b3a4527/'],
+  ['Segun Akinjola', 'Project Manager & Business Analyst', 'Business requirements, stakeholder alignment and structured delivery', 'https://www.linkedin.com/in/segunakinjola/'],
 ];
 
+const PartnershipCta = ({ dark = false }) => <Link to='/contact?enquiry=partnership' className={`inline-flex items-center gap-2 rounded-full px-7 py-3.5 font-semibold transition ${dark ? 'bg-white text-[#7D582E] hover:bg-[#faf7f2]' : 'bg-[#ECD5AB] text-[#5f421f] hover:bg-white'}`}>Discuss a Delivery Partnership <ArrowRight className='h-4 w-4' /></Link>;
+
 export default function Partners() {
-  return <ServiceLanding eyebrow='Technology Delivery Partnerships' title={<>Extend your delivery capability with <span className='font-bold text-[#ECD5AB]'>Zigo.</span></>} intro='Zigo works with technology providers, systems integrators, and consulting organisations that need additional delivery capacity across enterprise AI, Microsoft technologies, data engineering, analytics, and application integration.' services={services} outcomes={['Specialist capacity around your client engagement', 'Flexible support across defined work packages', 'A practical, collaborative delivery approach']} cta='Discuss a Delivery Partnership' />;
+  return <main className='overflow-hidden bg-white'>
+    <section className='relative bg-[#5f421f] px-6 py-20 text-white md:py-28'><div className='absolute -right-24 -top-24 h-80 w-80 rounded-full bg-white/5' /><div className='relative mx-auto max-w-7xl'><span className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Partner with Zigo</span><h1 className='mt-5 max-w-4xl text-4xl font-light leading-tight md:text-6xl'>Extend your delivery capacity with <span className='font-bold text-[#ECD5AB]'>Zigo.</span></h1><p className='mt-6 max-w-3xl text-lg leading-relaxed text-white/75'>Add focused enterprise AI, data engineering, integration and application expertise to your client engagements—through clearly defined, accountable work packages.</p><div className='mt-8'><PartnershipCta /></div></div></section>
+
+    <section className='px-6 py-24'><div className='mx-auto max-w-7xl'><div className='grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end'><div><span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Who we work with</span><h2 className='mt-4 text-4xl font-light text-gray-900'>Additional capability for <span className='font-bold text-[#7D582E]'>complex delivery.</span></h2></div><p className='max-w-2xl text-lg leading-relaxed text-gray-500'>Zigo works with organisations that need focused delivery support while retaining clear ownership of their client relationships and programme outcomes.</p></div><div className='mt-10 grid gap-5 md:grid-cols-3'>{partnerTypes.map((item) => <article key={item} className='rounded-3xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-7'><BriefcaseBusiness className='h-7 w-7 text-[#7D582E]' /><h3 className='mt-5 text-xl font-semibold text-gray-900'>{item}</h3></article>)}</div></div></section>
+
+    <section className='bg-[#faf7f2] px-6 py-24'><div className='mx-auto max-w-7xl'><span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Ways we work with partners</span><h2 className='mt-4 text-4xl font-light text-gray-900'>A delivery model that is <span className='font-bold text-[#7D582E]'>clear from the start.</span></h2><div className='mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3'>{models.map(([title, text]) => <article key={title} className='rounded-3xl bg-white p-7 shadow-sm'><Blocks className='h-7 w-7 text-[#7D582E]' /><h3 className='mt-5 text-xl font-semibold text-gray-900'>{title}</h3><p className='mt-3 leading-relaxed text-gray-600'>{text}</p></article>)}</div></div></section>
+
+    <section className='px-6 py-24'><div className='mx-auto max-w-7xl'><div className='max-w-3xl'><span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Platform-agnostic delivery</span><h2 className='mt-4 text-4xl font-light text-gray-900'>Appropriate technology for <span className='font-bold text-[#7D582E]'>each engagement.</span></h2><p className='mt-5 text-lg leading-relaxed text-gray-500'>We work within the technology environment selected for each engagement, applying the platforms, architecture and controls appropriate to the client’s requirements.</p></div><div className='mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5'>{capabilities.map(([title, items]) => <article key={title} className='rounded-2xl border border-gray-100 p-6'><Network className='h-6 w-6 text-[#7D582E]' /><h3 className='mt-5 text-lg font-semibold text-gray-900'>{title}</h3><ul className='mt-4 space-y-2'>{items.map((item) => <li key={item} className='flex gap-2 text-sm leading-relaxed text-gray-600'><CheckCircle2 className='mt-0.5 h-4 w-4 shrink-0 text-[#7D582E]' />{item}</li>)}</ul></article>)}</div></div></section>
+
+    <section className='bg-[#5f421f] px-6 py-24 text-white'><div className='mx-auto max-w-7xl'><span className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Named delivery specialists</span><h2 className='mt-4 text-4xl font-light md:text-5xl'>Accountability is <span className='font-bold text-[#ECD5AB]'>visible.</span></h2><p className='mt-5 max-w-3xl text-lg leading-relaxed text-white/70'>We identify the people responsible for discovery and delivery before work begins.</p><div className='mt-10 grid gap-5 md:grid-cols-3'>{team.map(([name, role, focus, linkedin]) => <a key={name} href={linkedin} target='_blank' rel='noreferrer' className='rounded-3xl border border-white/15 bg-white/10 p-7 transition hover:bg-white/15'><UsersRound className='h-7 w-7 text-[#ECD5AB]' /><h3 className='mt-6 text-xl font-semibold'>{name}</h3><p className='mt-2 font-medium text-[#ECD5AB]'>{role}</p><p className='mt-3 text-sm leading-relaxed text-white/65'>{focus}</p></a>)}</div></div></section>
+
+    <section className='px-6 py-24'><div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]'><div><span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Engagement safeguards</span><h2 className='mt-4 text-4xl font-light text-gray-900'>Protect the delivery, <span className='font-bold text-[#7D582E]'>the relationship and the outcome.</span></h2><p className='mt-5 text-lg leading-relaxed text-gray-500'>Every partnership begins with an agreed scope, responsibility model, communication structure, security requirements and measurable acceptance criteria.</p></div><div className='grid gap-4 sm:grid-cols-2'>{safeguards.map((item) => <div key={item} className='flex gap-3 rounded-2xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-5 text-gray-700'><ShieldCheck className='h-5 w-5 shrink-0 text-[#7D582E]' />{item}</div>)}</div></div></section>
+
+    <section className='bg-[#faf7f2] px-6 py-20'><div className='mx-auto max-w-7xl'><span className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Partnership onboarding</span><div className='mt-7 grid gap-5 md:grid-cols-4'>{['Confirm fit and confidentiality requirements', 'Agree scope, responsibility model and named specialists', 'Align security expectations, communication and escalation', 'Begin against clear acceptance criteria'].map((item, index) => <article key={item} className='rounded-2xl bg-white p-6 shadow-sm'><span className='text-sm font-bold text-[#7D582E]'>0{index + 1}</span><p className='mt-5 font-semibold leading-relaxed text-gray-800'>{item}</p></article>)}</div></div></section>
+
+    <section className='bg-[#7D582E] px-6 py-16 text-center text-white'><h2 className='text-3xl font-semibold'>Discuss a delivery partnership.</h2><p className='mx-auto mt-4 max-w-2xl text-white/75'>Tell us the engagement stage, capability required and any confidentiality considerations. We will identify a practical next step.</p><div className='mt-7'><PartnershipCta dark /></div></section>
+  </main>;
 }

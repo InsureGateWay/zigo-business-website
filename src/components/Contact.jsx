@@ -10,6 +10,7 @@ import {
   Send,
   ShieldCheck,
 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 
 const contactEmail = 'enterprise@zigoservices.com';
 
@@ -32,12 +33,20 @@ const nextSteps = [
 ];
 
 function Contact() {
+  const [searchParams] = useSearchParams();
+  const isPartnership = searchParams.get('enquiry') === 'partnership';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     organization: '',
     interest: '',
     message: '',
+    partnershipType: '',
+    capabilities: '',
+    engagementStage: '',
+    startDate: '',
+    deliveryLocation: '',
+    confidentiality: '',
   });
 
   const handleChange = ({ target }) => {
@@ -46,7 +55,9 @@ function Contact() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const subject = formData.interest
+    const subject = isPartnership
+      ? `Delivery partnership enquiry from ${formData.name}`
+      : formData.interest
       ? `${formData.interest} enquiry from ${formData.name}`
       : `Website enquiry from ${formData.name}`;
     const body = [
@@ -54,6 +65,14 @@ function Contact() {
       `Email: ${formData.email}`,
       `Organisation: ${formData.organization || 'Not provided'}`,
       `Area of interest: ${formData.interest || 'Not selected'}`,
+      ...(isPartnership ? [
+        `Partnership type: ${formData.partnershipType || 'Not selected'}`,
+        `Required capabilities: ${formData.capabilities || 'Not provided'}`,
+        `Engagement stage: ${formData.engagementStage || 'Not selected'}`,
+        `Expected start date: ${formData.startDate || 'Not provided'}`,
+        `Delivery location: ${formData.deliveryLocation || 'Not provided'}`,
+        `Confidentiality requirements: ${formData.confidentiality || 'Not provided'}`,
+      ] : []),
       '',
       formData.message,
     ].join('\n');
@@ -110,12 +129,12 @@ function Contact() {
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.75fr_1.25fr]">
           <div>
-            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">Project Enquiry</span>
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">{isPartnership ? 'Delivery Partnership Enquiry' : 'Project Enquiry'}</span>
             <h2 className="mt-4 text-4xl font-light leading-tight text-gray-900 md:text-5xl">
-              Give us enough context to make the <span className="font-bold text-[#7D582E]">first conversation useful.</span>
+              {isPartnership ? <>Give us enough context to make the <span className="font-bold text-[#7D582E]">partnership conversation useful.</span></> : <>Give us enough context to make the <span className="font-bold text-[#7D582E]">first conversation useful.</span></>}
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-gray-500">
-              You do not need a finished brief. A clear description of the current problem, affected teams, and desired outcome is a strong starting point.
+              {isPartnership ? 'Tell us the engagement stage, delivery model, capability required and any confidentiality considerations.' : 'You do not need a finished brief. A clear description of the current problem, affected teams, and desired outcome is a strong starting point.'}
             </p>
             <div className="mt-8 space-y-4">
               <div className="flex items-start gap-3 text-gray-700">
@@ -158,6 +177,21 @@ function Contact() {
                 </label>
               </div>
 
+              {isPartnership && <>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <label className="block text-sm font-semibold text-gray-800">Partnership type<select name="partnershipType" value={formData.partnershipType} onChange={handleChange} className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"><option value="">Select an option</option><option>Specialist work package</option><option>Co-delivery</option><option>Technical augmentation</option><option>Discovery or pilot</option><option>Integration support</option></select></label>
+                  <label className="block text-sm font-semibold text-gray-800">Engagement stage<select name="engagementStage" value={formData.engagementStage} onChange={handleChange} className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"><option value="">Select an option</option><option>Early discovery</option><option>Proposal or bid stage</option><option>Delivery in progress</option><option>Planned programme</option></select></label>
+                </div>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <label className="block text-sm font-semibold text-gray-800">Required capabilities<input type="text" name="capabilities" value={formData.capabilities} onChange={handleChange} placeholder="e.g. data engineering, AI integration" className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50" /></label>
+                  <label className="block text-sm font-semibold text-gray-800">Expected start date<input type="text" name="startDate" value={formData.startDate} onChange={handleChange} placeholder="e.g. October 2026" className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50" /></label>
+                </div>
+                <div className="grid gap-5 sm:grid-cols-2">
+                  <label className="block text-sm font-semibold text-gray-800">Delivery location<input type="text" name="deliveryLocation" value={formData.deliveryLocation} onChange={handleChange} placeholder="Remote, onsite or hybrid" className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50" /></label>
+                  <label className="block text-sm font-semibold text-gray-800">Confidentiality requirements<input type="text" name="confidentiality" value={formData.confidentiality} onChange={handleChange} placeholder="e.g. NDA required" className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50" /></label>
+                </div>
+              </>}
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <label className="block text-sm font-semibold text-gray-800">
                   Organisation
@@ -194,14 +228,14 @@ function Contact() {
               </div>
 
               <label className="block text-sm font-semibold text-gray-800">
-                What would you like to solve? <span className="text-[#7D582E]">*</span>
+                {isPartnership ? 'Partnership context' : 'What would you like to solve?'} <span className="text-[#7D582E]">*</span>
                 <textarea
                   name="message"
                   rows="6"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  placeholder="Describe the current challenge, desired outcome, and any important timing."
+                  placeholder={isPartnership ? 'Describe the client context, intended outcome, scope and any important constraints.' : 'Describe the current challenge, desired outcome, and any important timing.'}
                   className="mt-2 w-full resize-y rounded-xl border border-gray-200 bg-white px-4 py-3 font-normal outline-none transition placeholder:text-gray-400 focus:border-[#7D582E] focus:ring-2 focus:ring-[#ECD5AB]/50"
                 />
               </label>
