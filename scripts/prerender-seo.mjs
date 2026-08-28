@@ -27,6 +27,7 @@ const pages = {
   '/products/security-suite': ['Cybersecurity Solutions for Businesses | Zigo Business', 'Protect identities, systems, networks and data with practical cybersecurity solutions designed for modern enterprise environments.'],
   '/products/analytics-tools': ['Business Intelligence & Analytics Solutions | Zigo Business', 'Transform operational data into useful dashboards, reports and decision-ready insights with enterprise analytics solutions.'],
   '/contact': ['Contact Zigo Business Solutions | Book a Consultation', 'Contact Zigo Business Solutions to discuss your data, AI, cloud, cybersecurity, applications or digital transformation requirements.'],
+  '/insights': ['Enterprise AI & Technology Insights | Zigo Business', 'Read practical perspectives from Zigo Business Solutions on enterprise AI, document intelligence, data, governance and technology delivery.'],
   '/environmental-policy': ['Corporate Environmental Policy | Zigo Business Solutions', 'Read Zigo Business Solutions Ltd’s commitments to responsible resource use, pollution prevention, lawful waste management and sustainable technology.'],
   '/sustainability-statement': ['Corporate Sustainability Statement | Zigo Business Solutions', 'Read how Zigo Business Solutions approaches environmental responsibility, human rights, ethical business and responsible technology.'],
 };

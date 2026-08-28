@@ -31,6 +31,7 @@ import Partners from './components/Partners';
 import ProductsShowcase from './components/ProductsShowcase';
 import TrustAndCredentials from './components/TrustAndCredentials';
 import Insights from './components/Insights';
+import InsightsPage from './components/InsightsPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -87,6 +88,7 @@ function App() {
             <Route path="/products/security-suite" element={<SecuritySuite />} />
             <Route path="/products/analytics-tools" element={<AnalyticsTools />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/insights" element={<InsightsPage />} />
             <Route path="/environmental-policy" element={<EnvironmentalPolicy />} />
             <Route path="/sustainability-statement" element={<SustainabilityStatement />} />
           </Routes>

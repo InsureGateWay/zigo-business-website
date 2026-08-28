@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowUpRight, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const stories = [
+export const stories = [
   {
     title: 'Building with Big AI: What We Learned Solving Nigeria’s Document Intelligence Problem',
     excerpt: 'A practical account of applying modern AI to a real document-intelligence challenge—where useful outcomes depend on the quality of the data, the workflow around it, and responsible implementation.',
@@ -39,6 +40,11 @@ export default function Insights() {
               </a>
             </article>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link to="/insights" className="inline-flex items-center gap-2 rounded-full border border-[#7D582E]/30 px-6 py-3 font-semibold text-[#7D582E] transition-colors hover:border-[#7D582E] hover:bg-white">
+            More insights <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
