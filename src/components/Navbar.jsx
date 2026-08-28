@@ -7,7 +7,6 @@ const menus = {
     label: 'Enterprise AI',
     items: [
       ['AI Readiness & Strategy', '/services/ai-readiness'],
-      ['Microsoft Copilot', '/services/microsoft-copilot'],
       ['AI Governance & Security', '/services/ai-governance'],
       ['AI Agents & Automation', '/services/ai-services'],
       ['Managed AI Services', '/services/managed-ai-services'],

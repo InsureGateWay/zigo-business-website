@@ -214,7 +214,7 @@ function Contact() {
                   >
                     <option value="">Select an option</option>
                     <option>AI Readiness Assessment</option>
-                    <option>Microsoft Copilot</option>
+                    <option>Enterprise AI Platforms</option>
                     <option>AI Governance & Security</option>
                     <option>AI Agents & Automation</option>
                     <option>Data & Integration</option>

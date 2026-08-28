@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/HeroEnterprise';
 import WhatWeDo from './components/WhatWeDo';
@@ -25,7 +25,6 @@ import Footer from './components/Footer';
 import ChatBot from './components/ChatBot'; // Import ChatBot
 import { EnvironmentalPolicy, SustainabilityStatement } from './components/CorporatePolicies';
 import Seo from './components/Seo';
-import MicrosoftCopilot from './components/MicrosoftCopilot';
 import EnterpriseAIService from './components/EnterpriseAIService';
 import GovernanceService from './components/GovernanceService';
 import Partners from './components/Partners';
@@ -77,7 +76,7 @@ function App() {
             <Route path="/services/applications-services" element={<ApplicationsServices />} />
             <Route path="/services/platforms-services" element={<PlatformsServices />} />
             <Route path="/services/it-consulting" element={<ITConsulting />} />
-            <Route path='/services/microsoft-copilot' element={<MicrosoftCopilot />} />
+            <Route path='/services/microsoft-copilot' element={<Navigate to='/services/ai-services' replace />} />
             <Route path='/services/ai-readiness' element={<EnterpriseAIService variant='readiness' />} />
             <Route path='/services/ai-governance' element={<GovernanceService />} />
             <Route path='/services/managed-ai-services' element={<EnterpriseAIService variant='managed' />} />

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const technologies = [
-  ['Microsoft Copilot', 'Adoption & extension'],
   ['Microsoft Fabric', 'Unified data platform'],
   ['Power BI', 'Analytics & reporting'],
   ['Microsoft 365', 'Modern work'],

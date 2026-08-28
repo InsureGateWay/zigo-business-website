@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const services = [
   { icon: Sparkles, title: 'AI Readiness & Strategy', text: 'Identify valuable use cases, assess technology and organisational readiness, and build a practical adoption roadmap.', to: '/services/ai-readiness', items: ['Readiness assessments', 'Use-case prioritisation', 'Implementation planning'] },
-  { icon: Users, title: 'Microsoft Copilot Enablement', text: 'Prepare Microsoft 365, deploy controlled pilots, create Copilot Studio agents, and support employee adoption.', to: '/services/microsoft-copilot', items: ['Microsoft 365 readiness', 'Copilot rollout', 'Training and adoption'] },
+  { icon: Users, title: 'Enterprise AI Enablement', text: 'Prepare the selected platform, run controlled pilots, build useful agents, and support employee adoption.', items: ['Readiness and rollout', 'Pilot enablement', 'Training and adoption'] },
   { icon: ShieldCheck, title: 'AI Governance & Security', text: 'Protect identities, permissions, sensitive information, and AI usage with proportionate enterprise controls.', to: '/services/ai-governance', items: ['AI usage policies', 'Information protection and DLP', 'Responsible AI controls'] },
   { icon: Workflow, title: 'AI Agents & Workflow Automation', text: 'Build focused agents and automated workflows connected to approved business systems and information.', items: ['Copilot Studio agents', 'Internal assistants', 'API-connected workflows'] },
   { icon: Network, title: 'Data & Systems Integration', text: 'Connect enterprise AI to SharePoint, SQL, APIs, ERP, CRM, internal applications, and governed data platforms.', items: ['Enterprise data sources', 'APIs and applications', 'Secure integration'] },
@@ -32,7 +32,7 @@ export default function AIServices() {
         <div className='mx-auto max-w-7xl'>
           <span className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Enterprise AI Services</span>
           <h1 className='mt-5 max-w-4xl text-4xl font-light leading-tight md:text-6xl'>Enterprise AI that works <span className='font-bold text-[#ECD5AB]'>inside your business.</span></h1>
-          <p className='mt-6 max-w-3xl text-lg leading-relaxed text-white/75'>Zigo helps organisations assess, secure, deploy, integrate, and operate enterprise AI using the platforms and technology investments they already trustincluding Microsoft Copilot, ChatGPT Enterprise, Google Gemini, and Claude.</p>
+          <p className='mt-6 max-w-3xl text-lg leading-relaxed text-white/75'>Zigo helps organisations assess, secure, deploy, integrate, and operate enterprise AI using the platforms and technology investments that best fit their requirements.</p>
           <div className='mt-8 flex flex-col gap-3 sm:flex-row'><Link to='/contact' className='inline-flex items-center justify-center gap-2 rounded-full bg-[#ECD5AB] px-7 py-3.5 font-semibold text-[#5f421f]'>Book an AI Readiness Call <ArrowRight className='h-4 w-4' /></Link><a href='#services' className='rounded-full border border-white/30 px-7 py-3.5 text-center font-semibold'>Explore Enterprise AI Services</a></div>
         </div>
       </section>

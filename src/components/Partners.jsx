@@ -15,7 +15,7 @@ const capabilities = [
   ['Data engineering and analytics', ['Data engineering', 'Analytics and reporting', 'Data quality and governance']],
   ['Integration and applications', ['APIs and systems integration', 'Business applications', 'Workflow automation']],
   ['Cloud and solution architecture', ['Solution architecture', 'Cloud engineering', 'Secure delivery foundations']],
-  ['Microsoft ecosystem expertise', ['Microsoft Copilot and Copilot Studio', 'Microsoft Fabric and Power BI', 'Azure services']],
+  ['Microsoft ecosystem expertise', ['Microsoft AI and Power Platform services', 'Microsoft Fabric and Power BI', 'Azure services']],
 ];
 const safeguards = ['Confidentiality and NDA readiness', 'Clear ownership and responsibilities', 'Client and partner relationship protection', 'Information-security expectations', 'Intellectual-property treatment', 'Transparent scope and acceptance criteria'];
 const team = [

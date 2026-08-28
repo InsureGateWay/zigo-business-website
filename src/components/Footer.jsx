@@ -13,7 +13,6 @@ const quickLinks = [
 const serviceLinks = [
   { name: 'Data Services', to: '/services/data-services' },
   { name: 'Enterprise AI Services', to: '/services/ai-services' },
-  { name: 'Microsoft Copilot', to: '/services/microsoft-copilot' },
   { name: 'AI Governance', to: '/services/ai-governance' },
   { name: 'Managed AI Services', to: '/services/managed-ai-services' },
   { name: 'Infrastructure Services', to: '/services/infrastructure-services' },
