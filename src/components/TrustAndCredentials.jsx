@@ -3,7 +3,7 @@ import { ArrowUpRight, BadgeCheck, Building2, UsersRound } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const trustPoints = [
-  { icon: Building2, title: 'A clear company identity', description: 'Zigo Business Solutions Ltd is a Nigerian technology company focused on enterprise AI, data, cloud, security, applications, and integration.' },
+  { icon: Building2, title: 'A clear company identity', description: 'Zigo Business Solutions Ltd is a Nigerian technology company. Company registration number: 9394101.' },
   { icon: UsersRound, title: 'Specialists matched to the work', description: 'We shape the delivery team around the requirement, bringing the relevant business, data, AI, software, infrastructure, and security capabilities into the engagement.' },
   { icon: BadgeCheck, title: 'Evidence before claims', description: 'We share the proposed scope, delivery responsibilities, controls, and measurable outcomes before work begins - and only publish credentials or client results we can support.' },
 ];
@@ -37,6 +37,10 @@ export default function TrustAndCredentials() {
               </article>
             ))}
           </div>
+        </div>
+        <div className='mt-8 grid gap-4 rounded-3xl border border-[#ECD5AB]/60 bg-[#faf7f2] p-6 sm:grid-cols-[0.7fr_1.3fr] md:p-8'>
+          <div><p className='text-xs font-semibold uppercase tracking-widest text-[#7D582E]'>Company Registration</p><p className='mt-2 text-lg font-semibold text-gray-900'>No. 9394101</p></div>
+          <div><p className='text-xs font-semibold uppercase tracking-widest text-[#7D582E]'>Registered Office</p><address className='mt-2 text-base not-italic leading-relaxed text-gray-700'>10 Gooddy Street, Good Luck Estate, off Iwofe Road, Port Harcourt, Rivers State, Nigeria</address></div>
         </div>
         <div className='mt-14'>
           <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Core Delivery Team</p>

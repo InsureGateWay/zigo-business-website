@@ -95,6 +95,11 @@ function Contact() {
             <a href='tel:+2347033033047' className='mt-3 flex items-center gap-2 text-lg text-[#ECD5AB] underline-offset-4 hover:underline'>
               <Phone className='h-5 w-5' /> +234 703 303 3047
             </a>
+            <div className='mt-5 border-t border-white/15 pt-5'>
+              <p className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Registered office</p>
+              <address className='mt-2 not-italic leading-relaxed text-white/75'>10 Gooddy Street, Good Luck Estate, off Iwofe Road, Port Harcourt, Rivers State, Nigeria</address>
+              <p className='mt-3 text-sm text-white/60'>Company registration no. 9394101</p>
+            </div>
             <p className="mt-5 border-t border-white/15 pt-5 leading-relaxed text-white/70">
               We have intentionally listed only verified contact information. Meeting details can be agreed directly once we understand your request.
             </p>

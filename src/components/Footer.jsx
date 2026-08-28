@@ -58,6 +58,8 @@ function Footer() {
                 <Phone className='h-5 w-5 shrink-0 text-[#ECD5AB]' strokeWidth={1.5} />
                 +234 703 303 3047
               </a>
+              <address className='max-w-md text-sm not-italic leading-relaxed text-gray-400'>10 Gooddy Street, Good Luck Estate, off Iwofe Road, Port Harcourt, Rivers State, Nigeria</address>
+              <p className='text-sm text-gray-400'>Company registration no. 9394101</p>
             </div>
             <div className='mt-6 flex items-center gap-3' aria-label='Zigo Business Solutions social profiles'>
               <a href='https://www.linkedin.com/company/zigo-business-solutions-ltd/' target='_blank' rel='noopener noreferrer' aria-label='Zigo Business Solutions on LinkedIn' className='flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-sm font-bold text-gray-300 transition hover:border-[#ECD5AB] hover:text-[#ECD5AB]'>in</a>
