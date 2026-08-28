@@ -22,6 +22,7 @@ import {
   HardDrive,
   PieChart
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 function DataServices() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,51 +54,57 @@ function DataServices() {
   const serviceCategories = [
     {
       icon: <Network className="w-8 h-8" />,
-      title: "Data Integration & Ingestion",
-      description: "Streamline data movement and transformation across your organisation",
+      title: "Data Strategy & Architecture",
+      description: "Create a governed, practical foundation aligned to business priorities and your existing environment",
       items: [
-        "EDW/BI Implementation & Support",
-        "ETL as a Service",
-        "Data Management as a Service",
-        "AWS: Direct Connect, Kinesis, Snowball, Data Sync",
-        "GCP: Storage Transfer, BigQuery Data Transfer, Pub/Sub"
+        "Current-state assessment and target architecture",
+        "Platform selection and operating model",
+        "Governance and migration roadmap",
+        "Security, ownership and cost considerations"
       ]
     },
     {
       icon: <Layers className="w-8 h-8" />,
-      title: "Data Modeling",
-      description: "Design efficient and effective data structures for your business",
+      title: "Data Engineering & Integration",
+      description: "Connect source systems and turn fragmented information into dependable data products",
       items: [
-        "Data Modeling as a Service",
-        "Diverse Data Source Modeling",
-        "Cross-Platform Data Architecture",
-        "Performance Optimisation",
-        "Schema Design & Management"
+        "Batch and streaming pipelines",
+        "API and application integration",
+        "ETL/ELT implementation",
+        "Data quality, observability and orchestration"
       ]
     },
     {
       icon: <HardDrive className="w-8 h-8" />,
-      title: "Data Warehousing & Storage",
-      description: "Scalable storage solutions for all your data needs",
+      title: "Data Platforms & Storage",
+      description: "Design warehouses, lakehouses and storage architectures that remain useful as needs evolve",
       items: [
-        "Enterprise Data Warehousing",
-        "Data Lake Implementation",
-        "AWS: S3 Bucket Storage",
-        "GCP: Data Store, Cloud Storage",
-        "Hadoop: HDFS, HBase, Hive",
-        "Open Source: PostgreSQL"
+        "Warehouses, lakehouses and data lakes",
+        "Cloud, hybrid and on-premises architectures",
+        "Performance and cost optimisation",
+        "Platform migration and schema design and evolution"
       ]
     },
     {
       icon: <Cpu className="w-8 h-8" />,
-      title: "Data Processing",
-      description: "Powerful processing capabilities across all platforms",
+      title: "Analytics & Business Intelligence",
+      description: "Make governed data accessible for operational reporting and better decisions",
       items: [
-        "AWS: EMR, Redshift, Glue",
-        "GCP: AI Platform, BigQuery",
-        "Hadoop: Map Reduce, Spark Streaming",
-        "Open Source: dbt Core, Druid",
-        "Real-time & Batch Processing"
+        "Semantic models and Power BI reporting",
+        "Operational dashboards and KPI governance",
+        "Self-service analytics",
+        "Reporting models designed for consistent decisions"
+      ]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Data Governance & Assurance",
+      description: "Embed the controls that make data dependable, secure and fit for business use",
+      items: [
+        "Data ownership, metadata and lineage",
+        "Quality controls and observability",
+        "Access, security and retention",
+        "Compliance-aware operating practices"
       ]
     }
   ];
@@ -126,28 +133,28 @@ function DataServices() {
   ];
 
   const platforms = [
-    { name: "AWS", icon: <Cloud className="w-8 h-8" />, color: "#FF9900" },
-    { name: "Google Cloud", icon: <Cloud className="w-8 h-8" />, color: "#4285F4" },
-    { name: "Hadoop", icon: <Server className="w-8 h-8" />, color: "#66CCFF" },
-    { name: "Open Source", icon: <Code className="w-8 h-8" />, color: "#7D582E" }
+    { name: "Microsoft", detail: "Fabric, Azure Data Factory, Power BI and Azure data services", icon: <Cloud className="w-8 h-8" />, color: "#0078D4" },
+    { name: "AWS", detail: "Amazon S3 object storage, AWS Glue, Amazon Redshift, Amazon EMR and Kinesis", icon: <Cloud className="w-8 h-8" />, color: "#FF9900" },
+    { name: "Google Cloud", detail: "BigQuery, Pub/Sub, Cloud Storage and Dataflow", icon: <Cloud className="w-8 h-8" />, color: "#4285F4" },
+    { name: "Open source", detail: "PostgreSQL, Spark, dbt Core and relevant orchestration tools", icon: <Code className="w-8 h-8" />, color: "#7D582E" }
   ];
 
   const caseStudies = [
     {
-      title: "Enterprise Data Foundation",
-      description: "Example opportunity: create a governed data foundation that supports dependable analytics and reporting"
+      title: "Operational Reporting Foundation",
+      description: "Consolidate data from finance, sales and operational systems into a governed reporting model, reducing manual reconciliation and improving access to consistent performance indicators."
     },
     {
       title: "Operational Business Intelligence",
-      description: "Example opportunity: deliver Power BI reporting that improves visibility across operations"
+      description: "Design semantic models and Power BI dashboards that give operational teams a clearer, governed view of performance, exceptions and priorities."
     },
     {
-      title: "Cloud Data Warehouse",
-      description: "Example opportunity: modernise enterprise data warehousing using appropriate cloud services"
+      title: "Data Platform Modernisation",
+      description: "Assess an existing warehouse or data lake, then plan an appropriate migration path that improves reliability, cost control and readiness for analytics and AI."
     },
     {
       title: "Risk Data Management",
-      description: "Example opportunity: improve data quality, lineage, controls, and risk reporting"
+      description: "Establish ownership, quality checks, lineage and controlled access for data used in risk reporting and important business decisions."
     }
   ];
 
@@ -167,18 +174,17 @@ function DataServices() {
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-4">
-                From Data Complexity to
+                Build trusted data foundations
                 <br />
-                <span className="font-bold">Actionable Intelligence</span>
+                <span className="font-bold">for analytics and AI.</span>
               </h1>
               <p className="text-lg text-white/80 max-w-xl font-light mb-6">
-                Comprehensive data services designed to empower your business to effectively manage, 
-                analyse, and leverage data for sustainable growth and competitive advantage.
+                Zigo designs and integrates governed data platforms, pipelines, warehouses and reporting systems around your existing environment and business requirements.
               </p>
-              <button className="bg-white text-[#7D582E] px-8 py-3 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 flex items-center gap-2">
-                Schedule a Free Consultation
+              <Link to="/contact" className="bg-white text-[#7D582E] px-8 py-3 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 flex items-center gap-2">
+                Discuss Your Data Requirements
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
             <div className="hidden lg:flex justify-center">
               <div className="relative w-80 h-80">
@@ -213,10 +219,10 @@ function DataServices() {
               Our Services
             </span>
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-4">
-              End-to-End <span className="font-bold text-[#7D582E]">Data Solutions</span>
+              Data capabilities designed for <span className="font-bold text-[#7D582E]">business confidence</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Comprehensive data services from integration to intelligence
+              From strategy and architecture to governed analytics and assurance
             </p>
           </div>
 
@@ -265,14 +271,14 @@ function DataServices() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-              Multi-Platform <span className="font-bold text-[#7D582E]">Expertise</span>
+              Technology selected around <span className="font-bold text-[#7D582E]">your requirements</span>
             </h2>
             <p className="text-gray-500 text-lg font-light">
-              Our data services span across leading cloud, on-premise, and open-source platforms
+              We design for cloud, hybrid and on-premises environments, selecting technologies according to existing investments, security requirements, workload needs, skills and total cost of ownership.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {platforms.map((platform, index) => (
               <div
                 key={index}
@@ -287,6 +293,7 @@ function DataServices() {
                   </div>
                 </div>
                 <h3 className="font-semibold text-gray-800">{platform.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-gray-500">{platform.detail}</p>
               </div>
             ))}
           </div>
@@ -368,20 +375,20 @@ function DataServices() {
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Unlock Your Data's Potential?
+            Plan a trusted data foundation.
           </h2>
           <p className="text-xl text-white/80 mb-8 font-light">
-            Partner with us for your data transformation journey
+            Start with the data requirements, decisions and outcomes that matter most.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#7D582E] px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 inline-flex items-center gap-2">
-              Schedule a Free Consultation
+            <Link to="/contact" className="bg-white text-[#7D582E] px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:scale-105 inline-flex items-center gap-2">
+              Discuss Your Data Requirements
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white hover:text-[#7D582E] inline-flex items-center gap-2">
+            </Link>
+            <Link to="/services" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white hover:text-[#7D582E] inline-flex items-center gap-2">
               View All Services
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/70">
             <span className="flex items-center gap-2">
