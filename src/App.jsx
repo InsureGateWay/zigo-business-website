@@ -27,6 +27,7 @@ import { EnvironmentalPolicy, SustainabilityStatement } from './components/Corpo
 import Seo from './components/Seo';
 import MicrosoftCopilot from './components/MicrosoftCopilot';
 import EnterpriseAIService from './components/EnterpriseAIService';
+import GovernanceService from './components/GovernanceService';
 import Partners from './components/Partners';
 import ProductsShowcase from './components/ProductsShowcase';
 import TrustAndCredentials from './components/TrustAndCredentials';
@@ -78,7 +79,7 @@ function App() {
             <Route path="/services/it-consulting" element={<ITConsulting />} />
             <Route path='/services/microsoft-copilot' element={<MicrosoftCopilot />} />
             <Route path='/services/ai-readiness' element={<EnterpriseAIService variant='readiness' />} />
-            <Route path='/services/ai-governance' element={<EnterpriseAIService variant='governance' />} />
+            <Route path='/services/ai-governance' element={<GovernanceService />} />
             <Route path='/services/managed-ai-services' element={<EnterpriseAIService variant='managed' />} />
             <Route path='/partners' element={<Partners />} />
             {/* Product Routes */}
