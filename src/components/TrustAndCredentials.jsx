@@ -9,7 +9,7 @@ const trustPoints = [
 ];
 
 const team = [
-  { name: 'Ekene Amah', role: 'Founder & Principal Solutions Architect', focus: 'Leads enterprise solution strategy, architecture and multidisciplinary delivery teams.', initials: 'EA', linkedin: 'https://www.linkedin.com/in/ekeneamah' },
+  { name: 'Ekene Amah', role: 'Founder & Principal Solutions Architect', focus: 'Leads enterprise solution strategy, architecture and multidisciplinary delivery teams.', initials: 'EA', photo: '/team/ekene-amah.png', linkedin: 'https://www.linkedin.com/in/ekeneamah' },
   { name: 'Patrick Mua', role: 'Lead Data Engineer', focus: 'Designs data pipelines and dependable foundations for analytics and AI.', initials: 'PM', photo: '/team/patrick-mua.jpeg', linkedin: 'https://www.linkedin.com/in/patrick-mua-9b3a4527/' },
   { name: 'Segun Akinjola', role: 'Project Manager & Business Analyst', focus: 'Connects business requirements, stakeholder alignment, and structured delivery.', initials: 'SA', linkedin: 'https://www.linkedin.com/in/segunakinjola/' },
 ];
