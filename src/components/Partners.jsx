@@ -19,7 +19,7 @@ const capabilities = [
 ];
 const safeguards = ['Confidentiality and NDA readiness', 'Clear ownership and responsibilities', 'Client and partner relationship protection', 'Information-security expectations', 'Intellectual-property treatment', 'Transparent scope and acceptance criteria'];
 const team = [
-  ['Ekene Amah', 'Principal Consultant', 'Solution strategy, enterprise integration and client delivery', 'https://www.linkedin.com/in/ekeneamah'],
+  ['Ekene Amah', 'Founder & Principal Solutions Architect', 'Enterprise solution strategy, architecture and multidisciplinary delivery leadership', 'https://www.linkedin.com/in/ekeneamah'],
   ['Patrick Mua', 'Data Engineer', 'Data pipelines and foundations for analytics and AI', 'https://www.linkedin.com/in/patrick-mua-9b3a4527/'],
   ['Segun Akinjola', 'Project Manager & Business Analyst', 'Business requirements, stakeholder alignment and structured delivery', 'https://www.linkedin.com/in/segunakinjola/'],
 ];
