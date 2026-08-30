@@ -113,7 +113,7 @@ function Footer() {
 
       <div className="border-t border-gray-800">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-center text-sm text-gray-400 sm:flex-row sm:text-left">
-          <p>&copy; {currentYear} Zigo Business Solutions LTD. All rights reserved.</p>
+          <p>&copy; {currentYear} Zigo Business Solutions Ltd. All rights reserved. Zigo&reg; is a registered trademark of Zigo Business Solutions Ltd.</p>
           <nav aria-label="Corporate policies">
             <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 sm:justify-end">
               {policyLinks.map(({ name, to }) => (

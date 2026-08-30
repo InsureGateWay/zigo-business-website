@@ -32,6 +32,7 @@ import ProductsShowcase from './components/ProductsShowcase';
 import TrustAndCredentials from './components/TrustAndCredentials';
 import Insights from './components/Insights';
 import InsightsPage from './components/InsightsPage';
+import TechnologyCompetencies from './components/TechnologyCompetencies';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ function HomePage() {
       <WhatWeDo />
       <Industries />
       <WhyZigo />
+      <TechnologyCompetencies />
       <TrustAndCredentials />
       <ProductsShowcase />
       <Insights />

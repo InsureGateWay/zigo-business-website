@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const trustPoints = [
   { icon: Building2, title: 'A clear company identity', description: 'Zigo Business Solutions Ltd is a Nigerian technology company. Company registration number: 9394101.' },
-  { icon: UsersRound, title: 'Direct access to delivery leads', description: 'Work directly with the senior specialists responsible for discovery, decisions, and delivery—not layers of account management.' },
+  { icon: UsersRound, title: 'Experienced people from day one', description: 'Work directly with the architects, engineers and delivery professionals responsible for discovery, decisions and implementation.' },
   { icon: BadgeCheck, title: 'Controlled scope, measurable progress', description: 'We define scope, responsibilities, controls, and success criteria before work begins, often starting with a focused pilot before a larger programme.' },
 ];
 
@@ -53,7 +53,7 @@ export default function TrustAndCredentials() {
           </div>
         </div>
         <div className='mt-10 flex flex-col items-start justify-between gap-5 rounded-3xl bg-[#5f421f] px-7 py-8 text-white md:flex-row md:items-center md:px-10'>
-          <div><p className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Meet the delivery team</p><p className='mt-2 max-w-2xl text-white/75'>For a qualified requirement, we introduce the senior people responsible for discovery and delivery before the engagement is agreed. Where programme scale requires it, we can collaborate with larger integrators.</p></div>
+          <div><p className='text-sm font-semibold uppercase tracking-widest text-[#ECD5AB]'>Meet the delivery team</p><p className='mt-2 max-w-2xl text-white/75'>For a qualified requirement, we introduce the experienced people responsible for discovery and delivery before the engagement is agreed. Where programme scale requires it, we can collaborate with larger integrators.</p></div>
           <Link to='/contact' className='inline-flex shrink-0 items-center gap-2 rounded-full bg-[#ECD5AB] px-6 py-3 font-semibold text-[#5f421f] hover:bg-white'>Start a conversation <ArrowUpRight className='h-4 w-4' /></Link>
         </div>
       </div>

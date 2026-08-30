@@ -5,16 +5,17 @@ import { Link } from 'react-router-dom';
 const slides = [
   {
     id: 'enterprise-ai',
-    eyebrow: 'Senior-led enterprise AI and data delivery',
+    eyebrow: 'AI, data, cloud and software solutions',
     icon: Sparkles,
-    title: 'Practical AI and data solutions,',
-    emphasis: 'built around your business.',
-    description: 'Zigo helps organisations assess, integrate and operationalise enterprise AI and data solutions around their existing systems, security requirements and business priorities.',
+    title: 'From business challenge',
+    emphasis: 'to working technology.',
+    description: 'We design, build and support AI, data, cloud and software solutions around the way your organisation works.',
+    supportingDescription: 'From discovery and architecture to implementation, integration and ongoing support, we bring together the people and technology needed to turn ideas and business problems into solutions that work.',
     primary: { label: 'Book a Consultation', to: '/contact' },
     secondary: { label: 'Explore Enterprise AI Services', to: '/services/ai-services' },
-    capabilityLine: 'Senior delivery / Focused pilots / Platform selection / Integration / Governance / Measurable outcomes',
+    capabilityLine: 'AI & Intelligent Solutions · Data & Analytics · Cloud & Modernisation · Digital Solutions',
     cards: [
-      { icon: Sparkles, title: 'Assess', text: 'Senior-led discovery and high-value use-case definition' },
+      { icon: Sparkles, title: 'Assess', text: 'Experienced discovery and high-value use-case definition' },
       { icon: ShieldCheck, title: 'Control', text: 'Security, governance, scope, and success criteria' },
       { icon: Link2, title: 'Integrate', text: 'AI connected to approved systems, data, and workflows' },
       { icon: BarChart3, title: 'Prove value', text: 'Focused pilots before larger transformation programmes' },
@@ -69,6 +70,7 @@ export default function HeroEnterprise() {
           <span className='inline-flex items-center gap-2 rounded-full bg-[#faf7f2] px-4 py-2 text-sm font-semibold uppercase tracking-widest text-[#7D582E]'><EyebrowIcon className='h-4 w-4' />{slide.eyebrow}</span>
           <h1 className='mt-7 max-w-4xl text-5xl font-light leading-[1.05] text-[#7D582E] md:text-7xl'>{slide.title} <span className='font-bold'>{slide.emphasis}</span></h1>
           <p className='mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl'>{slide.description}</p>
+          {slide.supportingDescription && <p className='mt-4 max-w-2xl leading-relaxed text-gray-500 md:text-lg'>{slide.supportingDescription}</p>}
           <div className='mt-8 flex flex-col gap-3 sm:flex-row'><Action action={slide.primary} primary /><Action action={slide.secondary} /></div>
           <p className='mt-7 text-sm font-medium leading-relaxed text-gray-500'>{slide.capabilityLine}</p>
         </div>

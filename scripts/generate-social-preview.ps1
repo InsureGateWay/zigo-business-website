@@ -34,10 +34,10 @@ $headlineBrush = New-Object System.Drawing.SolidBrush $brown
 $bodyBrush = New-Object System.Drawing.SolidBrush $muted
 
 $graphics.DrawString('ENTERPRISE AI & DATA DELIVERY', $eyebrowFont, $eyebrowBrush, 78, 215)
-$graphics.DrawString('Practical AI and data solutions,', $headlineFont, $headlineBrush, 78, 260)
-$graphics.DrawString('built around your business.', $headlineFont, $headlineBrush, 78, 316)
-$graphics.DrawString('Practical enterprise AI, data integration and governance', $bodyFont, $bodyBrush, 78, 440)
-$graphics.DrawString('for organisations across Nigeria and Africa.', $bodyFont, $bodyBrush, 78, 470)
+$graphics.DrawString('From business challenge', $headlineFont, $headlineBrush, 78, 260)
+$graphics.DrawString('to working technology.', $headlineFont, $headlineBrush, 78, 316)
+$graphics.DrawString('AI, data, cloud and software solutions designed, built', $bodyFont, $bodyBrush, 78, 440)
+$graphics.DrawString('and supported around the way your organisation works.', $bodyFont, $bodyBrush, 78, 470)
 
 $linePen = New-Object System.Drawing.Pen $brown, 4
 $graphics.DrawLine($linePen, 78, 545, 280, 545)

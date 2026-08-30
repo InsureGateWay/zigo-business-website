@@ -7,7 +7,7 @@ const template = await readFile(join(dist, 'index.html'), 'utf8');
 const baseUrl = 'https://www.zigoservices.com';
 
 const pages = {
-  '/': ['Senior-Led Enterprise AI & Data Delivery | Zigo Business', 'Senior-led enterprise AI and data delivery for organisations across Nigeria and Africa—built around your systems, security requirements and business priorities.'],
+  '/': ['AI, Data, Cloud & Software Solutions | Zigo Business', 'From business challenge to working technology. We design, build and support practical AI, data, cloud and software solutions around your organisation.'],
   '/about': ['About Zigo Business Solutions | Technology Partner in Nigeria', 'Learn how Zigo Business Solutions delivers practical, secure and scalable data, AI, cloud and digital transformation services for organisations across Africa.'],
   '/services': ['Enterprise Technology Services in Nigeria | Zigo Business', 'Explore Zigo Business services for data, artificial intelligence, cloud infrastructure, applications, digital platforms and IT consulting.'],
   '/services/data-services': ['Enterprise Data Services & Analytics | Zigo Business', 'Build reliable data foundations with enterprise data engineering, integration, governance, analytics and business intelligence services from Zigo Business.'],
