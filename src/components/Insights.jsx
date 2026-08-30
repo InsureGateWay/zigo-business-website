@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 
 export const stories = [
   {
+    title: 'Compliance Is a Data Model: Designing Nigerian Data Systems for the NDPA 2023 and GAID 2025',
+    excerpt: 'How Nigerian organisations can turn privacy and data-protection requirements into practical system architecture, with governance, accountability and compliance designed into the data model from the start.',
+    href: 'https://medium.com/@gatewayinsurepro/compliance-is-a-data-model-designing-nigerian-data-systems-for-the-ndpa-2023-gaid-2025-and-the-72b208433646?sharedUserId=gatewayinsurepro',
+    topic: 'Data governance & compliance',
+  },
+  {
     title: 'Building with Big AI: What We Learned Solving Nigeria’s Document Intelligence Problem',
     excerpt: 'A practical account of applying modern AI to a real document-intelligence challenge—where useful outcomes depend on the quality of the data, the workflow around it, and responsible implementation.',
     href: 'https://medium.com/@gatewayinsurepro/building-with-big-ai-what-we-learned-solving-nigerias-document-intelligence-problem-e44364483d75?sharedUserId=gatewayinsurepro',
