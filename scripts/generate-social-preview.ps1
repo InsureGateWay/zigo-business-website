@@ -34,8 +34,8 @@ $headlineBrush = New-Object System.Drawing.SolidBrush $brown
 $bodyBrush = New-Object System.Drawing.SolidBrush $muted
 
 $graphics.DrawString('ENTERPRISE AI & DATA DELIVERY', $eyebrowFont, $eyebrowBrush, 78, 215)
-$graphics.DrawString('Senior-led AI and data delivery,', $headlineFont, $headlineBrush, 78, 260)
-$graphics.DrawString('without platform bias.', $headlineFont, $headlineBrush, 78, 316)
+$graphics.DrawString('Practical AI and data solutions,', $headlineFont, $headlineBrush, 78, 260)
+$graphics.DrawString('built around your business.', $headlineFont, $headlineBrush, 78, 316)
 $graphics.DrawString('Practical enterprise AI, data integration and governance', $bodyFont, $bodyBrush, 78, 440)
 $graphics.DrawString('for organisations across Nigeria and Africa.', $bodyFont, $bodyBrush, 78, 470)
 

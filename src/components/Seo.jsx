@@ -59,7 +59,7 @@ export default function Seo() {
     setMeta('meta[property="og:type"]', { property: 'og:type', content: 'website' });
     setMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
     setMeta('meta[property="og:image"]', { property: 'og:image', content: defaultImage });
-    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'Zigo Business Solutions: Senior-led AI and data delivery, without platform bias.' });
+    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: 'Zigo Business Solutions: Practical AI and data solutions, built around your business.' });
     setMeta('meta[property="og:image:type"]', { property: 'og:image:type', content: 'image/png' });
     setMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: '1200' });
     setMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: '630' });
