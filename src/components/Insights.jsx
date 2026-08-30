@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight, ArrowUpRight, BookOpen } from 'lucide-react';
+import React, { useRef } from 'react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const stories = [
@@ -24,6 +24,14 @@ export const stories = [
 ];
 
 export default function Insights() {
+  const carouselRef = useRef(null);
+  const moveCarousel = (direction) => {
+    carouselRef.current?.scrollBy({
+      left: direction * carouselRef.current.clientWidth * 0.82,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="bg-[#faf7f2] px-6 py-24" aria-labelledby="insights-heading">
       <div className="mx-auto max-w-7xl">
@@ -35,9 +43,18 @@ export default function Insights() {
           <p className="max-w-xl leading-relaxed text-gray-500">Perspectives from Zigo on implementing AI in ways that serve the realities of local data, enterprise systems and accountable decision-making.</p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-10 flex justify-end gap-2" aria-label="Insights carousel controls">
+          <button type="button" onClick={() => moveCarousel(-1)} className="rounded-full border border-[#7D582E]/25 bg-white p-3 text-[#7D582E] transition hover:border-[#7D582E] hover:shadow-md" aria-label="Previous insight">
+            <ArrowLeft className="h-5 w-5" aria-hidden="true" />
+          </button>
+          <button type="button" onClick={() => moveCarousel(1)} className="rounded-full bg-[#7D582E] p-3 text-white transition hover:bg-[#5f421f] hover:shadow-md" aria-label="Next insight">
+            <ArrowRight className="h-5 w-5" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div ref={carouselRef} className="mt-5 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" role="region" aria-label="Zigo insights" tabIndex="0">
           {stories.map((story) => (
-            <article key={story.href} className="flex flex-col rounded-3xl border border-[#ECD5AB]/70 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl md:p-10">
+            <article key={story.href} className="flex min-w-[88%] snap-start flex-col rounded-3xl border border-[#ECD5AB]/70 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl sm:min-w-[70%] md:p-10 lg:min-w-[calc(50%-0.75rem)]">
               <p className="text-xs font-semibold uppercase tracking-widest text-[#7D582E]">{story.topic}</p>
               <h3 className="mt-5 text-2xl font-semibold leading-snug text-gray-900 md:text-3xl">{story.title}</h3>
               <p className="mt-5 flex-1 leading-relaxed text-gray-600">{story.excerpt}</p>

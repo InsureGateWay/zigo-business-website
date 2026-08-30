@@ -22,7 +22,6 @@ import CloudProducts from './components/CloudProducts';
 import SecuritySuite from './components/SecuritySuite';
 import AnalyticsTools from './components/AnalyticsTools';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot'; // Import ChatBot
 import { EnvironmentalPolicy, SustainabilityStatement } from './components/CorporatePolicies';
 import Seo from './components/Seo';
 import EnterpriseAIService from './components/EnterpriseAIService';
@@ -96,8 +95,6 @@ function App() {
           </Routes>
         </main>
         <Footer />
-        {/* Add ChatBot - it will appear on all pages */}
-        <ChatBot />
       </div>
     </Router>
   );

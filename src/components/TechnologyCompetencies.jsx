@@ -1,14 +1,14 @@
 import React from 'react';
 
 const technologies = [
-  ['Microsoft Azure', 'Cloud, data & AI'],
-  ['AWS', 'Cloud, data & AI'],
-  ['Databricks', 'Data & AI platform'],
-  ['OpenAI', 'Models & AI applications'],
-  ['Microsoft Copilot', 'Enterprise AI enablement'],
-  ['Google Gemini', 'Models & AI applications'],
-  ['Microsoft Fabric', 'Unified data platform'],
-  ['Power BI', 'Analytics & reporting'],
+  ['Microsoft Azure', 'Cloud, data & AI', 'https://api.iconify.design/logos:microsoft-azure.svg'],
+  ['AWS', 'Cloud, data & AI', 'https://api.iconify.design/logos:aws.svg'],
+  ['Databricks', 'Data & AI platform', 'https://api.iconify.design/logos:databricks.svg'],
+  ['OpenAI', 'Models & AI applications', 'https://api.iconify.design/logos:openai-icon.svg'],
+  ['Microsoft Copilot', 'Enterprise AI enablement', 'https://api.iconify.design/thesvg-color:microsoft-copilot.svg'],
+  ['Google Gemini', 'Models & AI applications', 'https://api.iconify.design/logos:google-gemini.svg'],
+  ['Microsoft Fabric', 'Unified data platform', 'https://api.iconify.design/thesvg-color:microsoft-fabric.svg'],
+  ['Power BI', 'Analytics & reporting', 'https://api.iconify.design/logos:microsoft-power-bi.svg'],
 ];
 
 export default function TechnologyCompetencies() {
@@ -23,10 +23,15 @@ export default function TechnologyCompetencies() {
             <p className='mt-4 text-lg leading-relaxed text-gray-600'>Then we bring together the right mix of AI, data, cloud and software technologies to build the solution.</p>
           </div>
           <ul className='grid gap-3 sm:grid-cols-2'>
-            {technologies.map(([name, detail]) => (
-              <li key={name} className='rounded-2xl border border-[#ECD5AB]/55 bg-white px-5 py-4 shadow-sm'>
-                <p className='font-semibold text-gray-900'>{name}</p>
-                <p className='mt-1 text-xs text-gray-500'>{detail}</p>
+            {technologies.map(([name, detail, logo]) => (
+              <li key={name} className='flex items-center gap-4 rounded-2xl border border-[#ECD5AB]/55 bg-white px-5 py-4 shadow-sm'>
+                <span className='flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#faf7f2] p-2.5' aria-hidden='true'>
+                  <img src={logo} alt='' loading='lazy' className='h-full w-full object-contain' />
+                </span>
+                <span>
+                  <span className='block font-semibold text-gray-900'>{name}</span>
+                  <span className='mt-1 block text-xs text-gray-500'>{detail}</span>
+                </span>
               </li>
             ))}
           </ul>
