@@ -32,6 +32,8 @@ import TrustAndCredentials from './components/TrustAndCredentials';
 import Insights from './components/Insights';
 import InsightsPage from './components/InsightsPage';
 import TechnologyCompetencies from './components/TechnologyCompetencies';
+import UseCaseLibrary from './components/UseCaseLibrary';
+import UseCaseLibraryPreview from './components/UseCaseLibraryPreview';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -49,6 +51,7 @@ function HomePage() {
       <Hero />
       <WhatWeDo />
       <Industries />
+      <UseCaseLibraryPreview />
       <WhyZigo />
       <TechnologyCompetencies />
       <TrustAndCredentials />
@@ -90,6 +93,7 @@ function App() {
             <Route path="/products/analytics-tools" element={<AnalyticsTools />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/insights" element={<InsightsPage />} />
+            <Route path="/use-cases" element={<UseCaseLibrary />} />
             <Route path="/environmental-policy" element={<EnvironmentalPolicy />} />
             <Route path="/sustainability-statement" element={<SustainabilityStatement />} />
           </Routes>

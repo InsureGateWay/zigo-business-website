@@ -191,6 +191,17 @@ function ServicesPage() {
         </div>
       </section>
 
+      <section className="px-6 py-20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-7 rounded-[2rem] border border-[#ECD5AB]/60 bg-[#faf7f2] p-8 md:flex-row md:items-center md:justify-between md:p-12">
+          <div className="max-w-3xl">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#7D582E]">AI & Data Use Case Library</span>
+            <h2 className="mt-3 text-3xl font-light text-gray-900 md:text-4xl">Turn industry possibilities into a <span className="font-bold text-[#7D582E]">sequenced roadmap.</span></h2>
+            <p className="mt-4 leading-relaxed text-gray-500">Explore 45 practical opportunities across five industries, grouped by short-, medium-, and long-term delivery horizons.</p>
+          </div>
+          <Link to="/use-cases" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#7D582E] px-7 py-3.5 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#5f421f]">View use cases <ArrowUpRight className="h-4 w-4" /></Link>
+        </div>
+      </section>
+
       <section className="bg-[#faf7f2] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
