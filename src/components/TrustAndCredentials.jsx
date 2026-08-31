@@ -42,12 +42,12 @@ export default function TrustAndCredentials() {
         <div className='mt-14'>
           <p className='text-sm font-semibold uppercase tracking-widest text-[#7D582E]'>Core Delivery Team</p>
           <h3 className='mt-3 text-3xl font-light text-gray-900 md:text-4xl'>Experienced people, <span className='font-bold text-[#7D582E]'>visible and accountable.</span></h3>
-          <p className='mt-3 max-w-3xl text-gray-500'>Review each team member's professional background and experience through their linked LinkedIn profile.</p>
+          <p className='mt-3 max-w-3xl text-gray-500'>Meet the experienced professionals involved in shaping and delivering our work.</p>
           <div className='mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-4'>
             {team.map(({ name, role, focus, initials, photo, linkedin }) => (
               <a key={name} href={linkedin} target='_blank' rel='noopener noreferrer' className='group flex items-center gap-5 rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#ECD5AB] hover:shadow-lg' aria-label={`${name}, ${role} on LinkedIn`}>
                 {photo ? <img src={photo} alt='' className='h-16 w-16 shrink-0 rounded-2xl object-cover object-center' /> : <span className='flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#ECD5AB] text-lg font-bold text-[#5f421f]' aria-hidden='true'>{initials}</span>}
-                <span className='min-w-0'><span className='flex items-center gap-2 text-xl font-semibold text-gray-900'>{name}<ArrowUpRight className='h-4 w-4 shrink-0 text-[#7D582E] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5' /></span><span className='mt-1 block text-sm font-medium text-[#7D582E]'>{role}</span><span className='mt-2 block text-sm leading-relaxed text-gray-500'>{focus}</span><span className='mt-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wider text-[#0A66C2]'><span aria-hidden='true'>in</span> LinkedIn profile</span></span>
+                <span className='min-w-0'><span className='flex items-center gap-2 text-xl font-semibold text-gray-900'>{name}<ArrowUpRight className='h-4 w-4 shrink-0 text-[#7D582E] transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5' /></span><span className='mt-1 block text-sm font-medium text-[#7D582E]'>{role}</span><span className='mt-2 block text-sm leading-relaxed text-gray-500'>{focus}</span></span>
               </a>
             ))}
           </div>
